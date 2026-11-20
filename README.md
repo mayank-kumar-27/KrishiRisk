@@ -7,10 +7,10 @@
 <i>Predict yields. Map climate risk. Protect smallholders.</i></p>
 
 <p align="center">
-  <b>Live demo:</b> <a href="https://krishirisk.vercel.app">krishirisk.vercel.app</a> <i>(link active once deployed)</i>
+  <b>Live demo:</b> <a href="https://krishirisk.vercel.app">krishirisk.vercel.app</a> <i>(link is active)</i>
 </p>
 
-Data Visualization &amp; Interpretation (DVI) final project — **Mayank Kumar**, B.Tech CSE, UPES Dehradun.
+Data Visualization &amp; Interpretation (DVI) team project — **Mayank Kumar and Team**, B.Tech CSE, UPES Dehradun.
 
 ---
 
