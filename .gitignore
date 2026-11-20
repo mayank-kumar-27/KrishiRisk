@@ -1,0 +1,36 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# ---- Pipeline ----
+analysis/logs/
+# Raw downloads can be large: ignore everything in data/raw except the placeholder/readme.
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+
+# ---- Node / Next.js (web/) ----
+node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+*.tsbuildinfo
+.vercel/
+
+# ---- Env / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- OS / editors ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
