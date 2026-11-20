@@ -97,9 +97,9 @@ export default function AboutView() {
             MK
           </span>
           <div>
-            <p className="font-display text-xl font-extrabold">Mayank Kumar</p>
+            <p className="font-display text-xl font-extrabold">Mayank Kumar &amp; Team</p>
             <p className="mt-0.5 flex items-center gap-1.5 text-sm text-ink-2"><GraduationCap size={16} /> B.Tech Computer Science &amp; Engineering, UPES Dehradun</p>
-            <p className="mt-0.5 text-sm text-ink-2">Course: Data Visualization &amp; Interpretation (DVI) — Final Project</p>
+            <p className="mt-0.5 text-sm text-ink-2">Course: Data Visualization &amp; Interpretation (DVI) — Team Project</p>
           </div>
         </div>
       </Reveal>

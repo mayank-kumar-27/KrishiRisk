@@ -198,4 +198,4 @@ The data files in `web/public/data/` are committed, so the deployment does not r
 
 ## License
 
-Code: [MIT](LICENSE) © 2026 Mayank Kumar. Datasets remain under their own licences (see *Datasets*).
+Code: [MIT](LICENSE) © 2026 Mayank Kumar &amp; Team. Datasets remain under their own licences (see *Datasets*).
