@@ -25,6 +25,10 @@ def year_end() -> int:
     return YEAR_END if YEAR_END is not None else _dt.date.today().year - 1
 
 
+# Crop -> season ("Kharif" or "Rabi") overrides, keyed by crop name as in the data.
+# 02_features.py has defaults for common crops; add entries here for anything else.
+CROP_SEASON_OVERRIDES: dict[str, str] = {}
+
 # ---- External sources ---------------------------------------------------------
 # District boundaries: datameet/maps, Census 2011 districts (MIT licence on GitHub).
 GEO_BASE_URL = "https://raw.githubusercontent.com/datameet/maps/master/Districts/Census_2011/"
