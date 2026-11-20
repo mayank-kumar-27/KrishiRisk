@@ -18,17 +18,15 @@ import sys
 import warnings
 
 import geopandas as gpd
-import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.colors import TwoSlopeNorm
+from scipy import stats
 
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm  # noqa: E402
-from matplotlib.lines import Line2D  # noqa: E402
-from scipy import stats  # noqa: E402
-
-from common import FIGURES, PROCESSED, RAW_CLIMATE, get_logger, rel  # noqa: E402
+from common import FIGURES, PROCESSED, RAW_CLIMATE, get_logger, rel
+from plotstyle import (AXIS, BLUE, BLUE_LIGHT, CLIMATE_FEATURES, DIVERGING, INK, INK2, MUTED,
+                       RAIN_CLASS, SEQ_BLUE, SOIL_FEATURES, fmt_p, grid_axes, headline, save_fig, style)
 
 log = get_logger("03_eda")
 warnings.filterwarnings("ignore", category=RuntimeWarning)
@@ -37,84 +35,21 @@ IN_MASTER = PROCESSED / "master.csv"
 IN_GEO = PROCESSED / "districts.geojson"
 IN_CLIMATE = RAW_CLIMATE / "climate_daily.csv"
 OUT_INSIGHTS = FIGURES / "insights.md"
+MODEL_START, MODEL_END = "<!-- model-section:start -->", "<!-- model-section:end -->"
 MAX_CROPS = 6        # small-multiple panels; further crops are listed in insights.md but not plotted
 MIN_ROWS_PLOT = 20   # a crop needs this many valid district-years to be plotted
 
-# ---- Palette (validated: CVD dE >= 8.7, normal-vision dE >= 17.8 on white, all pairs) -------
-INK, INK2, MUTED = "#0b0b0b", "#52514e", "#898781"
-GRID, AXIS = "#e1e0d9", "#c3c2b7"
-BLUE, BLUE_LIGHT = "#2a78d6", "#86b6ef"
-# Rainfall classes are polar (dry <-> wet): diverging poles + neutral gray midpoint,
-# with marker shape as the secondary (non-colour) encoding.
-RAIN_CLASS = {
-    "Drought": dict(color="#e34948", marker="v"),
-    "Normal": dict(color=MUTED, marker="o"),
-    "Excess": dict(color=BLUE, marker="^"),
-}
-SEQ_BLUE = LinearSegmentedColormap.from_list(
-    "seq_blue", ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"])
-DIVERGING = LinearSegmentedColormap.from_list(  # red (negative) - gray - blue (positive)
-    "div_rb", ["#a32f2f", "#e34948", "#f4a9a8", "#f0efec", "#9ec5f4", "#3987e5", "#184f95"])
 
 SPI_DRY, SPI_WET = -1.0, 1.0      # McKee et al.: SPI <= -1 moderately dry, >= +1 moderately wet
 DEP_DEFICIT, DEP_EXCESS = -20, 20  # IMD rainfall categories: departure from normal, %
 
-CLIMATE_FEATURES = {
-    "rain_mm": "Seasonal rainfall", "rain_anomaly_z": "Rainfall anomaly (z)",
-    "spi3_mean": "SPI-3 (mean)", "spi3_min": "SPI-3 (driest)", "dry_spell_count": "Dry spells (>=7 d)",
-    "onset_delay_days": "Monsoon onset delay", "rain_cv_weekly": "Rainfall CV (weekly)",
-    "heat_stress_days": "Heat-stress days (>35 degC)", "gdd_base10": "Growing degree days",
-    "tmax_mean_c": "Mean Tmax", "tmin_mean_c": "Mean Tmin", "rh_mean_pct": "Mean rel. humidity",
-}
-SOIL_FEATURES = {"soil_degradation_score": "Soil degradation score", "soil_oc": "Organic carbon",
-                 "soil_ph": "pH", "soil_n": "Nitrogen", "soil_p": "Phosphorus", "soil_k": "Potassium"}
 
 INSIGHTS: list[str] = []
 
 
-# =====================================================================================
-# Helpers
-# =====================================================================================
-def style() -> None:
-    plt.rcParams.update({
-        "figure.dpi": 100, "savefig.dpi": 300, "figure.facecolor": "white", "axes.facecolor": "white",
-        "font.family": "sans-serif", "font.sans-serif": ["Segoe UI", "Helvetica", "Arial", "DejaVu Sans"],
-        "font.size": 9, "axes.titlesize": 10, "axes.titleweight": "regular", "axes.labelsize": 9,
-        "axes.labelcolor": INK2, "axes.edgecolor": AXIS, "axes.linewidth": 0.6,
-        "axes.spines.top": False, "axes.spines.right": False,
-        "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.5, "grid.linestyle": "-",
-        "axes.axisbelow": True, "xtick.color": MUTED, "ytick.color": MUTED,
-        "xtick.labelcolor": INK2, "ytick.labelcolor": INK2, "xtick.major.size": 0, "ytick.major.size": 0,
-        "legend.frameon": False, "legend.fontsize": 8, "lines.linewidth": 1.5, "text.color": INK,
-    })
-
-
-def fmt_p(p: float) -> str:
-    if pd.isna(p):
-        return "p = n/a"
-    return "p < 0.001" if p < 0.001 else f"p = {p:.3f}"
-
-
-def headline(fig, title: str, subtitle: str) -> None:
-    h = fig.get_figheight()  # place in inches so spacing is the same for every figure size
-    fig.suptitle(title, x=0.01, ha="left", va="top", fontsize=12, fontweight="bold", color=INK, y=1 - 0.05 / h)
-    fig.text(0.01, 1 - 0.32 / h, subtitle, ha="left", va="top", fontsize=9, color=INK2)
-
-
-def grid_axes(n: int, ncols: int = 3, w: float = 3.4, h: float = 2.8, **kw):
-    ncols = min(ncols, n)
-    nrows = int(np.ceil(n / ncols))
-    fig, axes = plt.subplots(nrows, ncols, figsize=(w * ncols, h * nrows + 0.6), squeeze=False, **kw)
-    for ax in axes.flat[n:]:
-        ax.set_visible(False)
-    return fig, list(axes.flat[:n])
-
-
 def save(fig, name: str) -> str:
-    fig.tight_layout(rect=(0, 0, 1, 1 - 0.6 / fig.get_figheight()))
     path = FIGURES / name
-    fig.savefig(path, bbox_inches="tight", facecolor="white")
-    plt.close(fig)
+    save_fig(fig, path)
     log.info(f"  saved {rel(path)}")
     return name
 
@@ -496,7 +431,12 @@ def main() -> int:
                  f"{', '.join(skipped)})" if skipped else "") + ".\n\n"
               "> Caution: district-years are not independent (neighbouring districts share weather), so "
               "p-values overstate certainty. Correlation is not causation.\n\n")
-    OUT_INSIGHTS.write_text(header + "\n".join(INSIGHTS), encoding="utf-8")
+    model_section = ""  # written by 04_model.py between these markers; keep it on re-run
+    if OUT_INSIGHTS.exists():
+        old = OUT_INSIGHTS.read_text(encoding="utf-8")
+        if MODEL_START in old and MODEL_END in old:
+            model_section = "\n" + old[old.index(MODEL_START):old.index(MODEL_END) + len(MODEL_END)] + "\n"
+    OUT_INSIGHTS.write_text(header + "\n".join(INSIGHTS) + model_section, encoding="utf-8")
     log.info(f"  insights -> {rel(OUT_INSIGHTS)}")
     log.info("Done.")
     return 0
