@@ -27,9 +27,9 @@ export default function Footer() {
             soil shape crop yields — district by district.
           </p>
           <p className="mt-4 text-sm text-ink-2">
-            <span className="font-medium text-ink">Mayank Kumar</span> · B.Tech CSE, UPES Dehradun
+            <span className="font-medium text-ink">Mayank Kumar &amp; Team</span> · B.Tech CSE, UPES Dehradun
             <br />
-            Data Visualization &amp; Interpretation — Final Project
+            Data Visualization &amp; Interpretation — Team Project
           </p>
         </div>
         <div>

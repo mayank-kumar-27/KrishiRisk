@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: { default: TITLE, template: "%s · KrishiRisk" },
   description: DESCRIPTION,
   applicationName: "KrishiRisk",
-  authors: [{ name: "Mayank Kumar" }],
+  authors: [{ name: "Mayank Kumar & Team" }],
   openGraph: { title: TITLE, description: DESCRIPTION, siteName: "KrishiRisk", type: "website" },
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
