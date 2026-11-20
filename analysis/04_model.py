@@ -45,7 +45,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
 
-from common import ANALYSIS, FIGURES, PROCESSED, get_logger, rel
+from common import ANALYSIS, FIGURES, PROCESSED, get_logger, rel, upsert_section
 from plotstyle import (AXIS, BLUE, CLIMATE_FEATURES, INK, MUTED, SEQ_BLUE_MARKS, SOIL_FEATURES, grid_axes,
                        headline, save_fig, style)
 
@@ -55,6 +55,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 IN_MASTER = PROCESSED / "master.csv"
 OUT_METRICS = PROCESSED / "model_metrics.csv"
 OUT_METRICS_MD = PROCESSED / "model_metrics.md"
+OUT_SHAP = PROCESSED / "shap_importance.csv"
 MODELS_DIR = ANALYSIS / "models"
 OUT_INSIGHTS = FIGURES / "insights.md"
 MODEL_START, MODEL_END = "<!-- model-section:start -->", "<!-- model-section:end -->"
@@ -282,6 +283,9 @@ def fig_shap(model_name, sv: np.ndarray, X: pd.DataFrame) -> list[str]:
     S, V = sv[:, feat_idx], X.iloc[:, feat_idx]
     imp = np.abs(S).mean(axis=0)
     order = np.argsort(imp)
+    shap_table = pd.DataFrame({"feature": [X.columns[i] for i in feat_idx], "label": names,
+                               "mean_abs_shap_pct": imp, "mean_shap_pct": S.mean(axis=0)})
+    shap_table.sort_values("mean_abs_shap_pct", ascending=False).to_csv(OUT_SHAP, index=False, float_format="%.4f")
 
     # Beeswarm (drawn here so it follows the report style): one row per feature, x = SHAP,
     # colour = feature value rank within the feature (light = low, dark = high).
@@ -429,7 +433,8 @@ def main() -> int:
     (MODELS_DIR / "best_model.json").write_text(json.dumps({
         "model": best, "params": params[best], "features": design.columns, "crops": crops,
         "train_years": [int(train["year"].min()), cutoff], "test_years": [cutoff + 1, last],
-        "target": "yield / train-only district-crop trend - 1"}, indent=2), encoding="utf-8")
+        "target": "yield / train-only district-crop trend - 1", "beats_trend_only_cv": bool(beats),
+        "cv_rmse_pct": {k: round(float(v), 3) for k, v in cv_all["rmse_pct"].items()}}, indent=2), encoding="utf-8")
     log.info(f"  model -> {rel(MODELS_DIR / 'best_model.joblib')}")
 
     log.info("== Figures")
@@ -461,10 +466,7 @@ def main() -> int:
                + "\n".join(f"- {l}" for l in shap_lines) + "\n\n"
                "> SHAP shows how the model uses each feature, not proven causal effects; correlated "
                "features (e.g. rainfall, SPI, dry spells) share credit.\n" + MODEL_END + "\n")
-    old = OUT_INSIGHTS.read_text(encoding="utf-8") if OUT_INSIGHTS.exists() else "# KrishiRisk - insights\n\n"
-    if MODEL_START in old and MODEL_END in old:
-        old = old[:old.index(MODEL_START)] + old[old.index(MODEL_END) + len(MODEL_END):].lstrip("\n")
-    OUT_INSIGHTS.write_text(old.rstrip("\n") + "\n\n" + section, encoding="utf-8")
+    upsert_section(OUT_INSIGHTS, "model", section.replace(MODEL_START, "").replace(MODEL_END, ""))
     log.info(f"  insights -> {rel(OUT_INSIGHTS)} (model section)")
     log.info("Done.")
     return 0

@@ -22,9 +22,10 @@ import sys
 
 import numpy as np
 import pandas as pd
-from scipy import stats
 
+import climate
 import config
+from climate import DRY_DAY_MM, DRY_SPELL_DAYS, GDD_BASE_C, HEAT_TMAX_C, MIN_COVERAGE
 from common import PROCESSED, RAW_CLIMATE, get_logger, norm_name, rel
 
 log = get_logger("02_features")
@@ -36,18 +37,8 @@ OUT_MASTER = PROCESSED / "master.csv"
 OUT_DICT = PROCESSED / "data_dictionary.md"
 
 # ---- Parameters -------------------------------------------------------------------------
-SEASON_MONTHS = {"Kharif": (6, 10), "Rabi": (11, 3)}  # (first month, last month); Rabi wraps the year
-MIN_COVERAGE = 0.95        # share of non-missing days needed in a season window
-DRY_DAY_MM = 2.5           # IMD rainy-day threshold: a day below this is "dry"
-DRY_SPELL_DAYS = 7         # a dry spell = run of >= 7 consecutive dry days
-HEAT_TMAX_C = 35.0         # heat-stress day: Tmax > 35 degC
-GDD_BASE_C = 10.0          # growing degree days base temperature (no upper cut-off)
-ONSET_WINDOW_MM = 20.0     # onset: >= 20 mm in 3 days starting on a wet day ...
-ONSET_FALSE_SPELL_MM = 5.0  # ... not followed within 30 days by 7 days totalling < 5 mm
-ONSET_SEARCH_END = (9, 30)  # no onset found by 30 Sep -> onset missing (flagged)
 IQR_K = 1.5                # Tukey fence for yield outliers
 MIN_GROUP_YEARS = 8        # min years per district-crop for IQR flags and trend fitting
-SPI_MIN_POSITIVE = 10      # min non-zero 3-month totals to fit the SPI gamma distribution
 
 # Default crop -> season. Keys are norm_name(crop). Override in config.CROP_SEASON_OVERRIDES.
 CROP_SEASON_DEFAULT = {
@@ -240,67 +231,8 @@ def add_yield_trend(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # =====================================================================================
-# 2. Climate -> season features
+# 2. Climate -> season features (computation shared with 05_risk via climate.py)
 # =====================================================================================
-def _season_window(season: str, year: int) -> tuple[pd.Timestamp, pd.Timestamp]:
-    m0, m1 = SEASON_MONTHS[season]
-    start = pd.Timestamp(year, m0, 1)
-    end_year = year + 1 if m1 < m0 else year
-    end = pd.Timestamp(end_year, m1, 1) + pd.offsets.MonthEnd(0)
-    return start, end
-
-
-def _dry_spells(rain: np.ndarray) -> int:
-    """Count runs of >= DRY_SPELL_DAYS consecutive days with rain < DRY_DAY_MM.
-    Missing days break a run (conservative: never creates a spell from missing data)."""
-    count = run = 0
-    for r in rain:
-        if not np.isnan(r) and r < DRY_DAY_MM:
-            run += 1
-        else:
-            count += run >= DRY_SPELL_DAYS
-            run = 0
-    return count + (run >= DRY_SPELL_DAYS)
-
-
-def _onset_doy(dates: pd.DatetimeIndex, rain: np.ndarray, year: int) -> float:
-    """Agronomic monsoon onset (after Sivakumar 1988): first day from 1 Jun that is wet
-    (>= DRY_DAY_MM), starts a 3-day total >= 20 mm, and is not followed within 30 days by a
-    7-day period totalling < 5 mm (a false start). Returns day of year or NaN if not found by 30 Sep."""
-    last = pd.Timestamp(year, *ONSET_SEARCH_END)
-    r = np.nan_to_num(rain, nan=0.0)
-    roll7 = pd.Series(r).rolling(7).sum().to_numpy()  # roll7[j] = sum r[j-6..j]
-    for i, d in enumerate(dates):
-        if d > last or i + 30 >= len(r):
-            break
-        if r[i] >= DRY_DAY_MM and r[i:i + 3].sum() >= ONSET_WINDOW_MM:
-            if not (roll7[i + 7:i + 31] < ONSET_FALSE_SPELL_MM).any():
-                return float(d.dayofyear)
-    return np.nan
-
-
-def _spi3(monthly: pd.DataFrame) -> pd.DataFrame:
-    """SPI-3 per district and month. Gamma fitted per district x calendar month on the whole
-    record (zeros handled with a mixed distribution, McKee et al. 1993)."""
-    out = []
-    for district, m in monthly.groupby("district"):
-        m = m.set_index("period").sort_index()
-        m = m.reindex(pd.period_range(m.index.min(), m.index.max(), freq="M"))
-        s3 = m["rain_month"].rolling(3, min_periods=3).sum()
-        spi = pd.Series(np.nan, index=s3.index)
-        for month in range(1, 13):
-            x = s3[s3.index.month == month].dropna()
-            pos = x[x > 0]
-            if len(pos) < SPI_MIN_POSITIVE:
-                continue
-            q = (x == 0).mean()
-            a, _, scale = stats.gamma.fit(pos, floc=0)
-            h = q + (1 - q) * stats.gamma.cdf(x, a, loc=0, scale=scale)
-            spi[x.index] = stats.norm.ppf(np.clip(h, 1e-6, 1 - 1e-6))
-        out.append(pd.DataFrame({"district": district, "period": spi.index, "spi3": spi.values}))
-    return pd.concat(out, ignore_index=True)
-
-
 def climate_features(years: list[int]) -> pd.DataFrame:
     log.info("== 2. Climate -> season features")
     need(IN_CLIMATE)
@@ -309,56 +241,8 @@ def climate_features(years: list[int]) -> pd.DataFrame:
              f"{clim['date'].min().date()} .. {clim['date'].max().date()}")
     na = clim[["PRECTOTCORR", "T2M_MAX", "T2M_MIN", "RH2M"]].isna().sum().to_dict()
     log.info(f"  missing daily values (left missing): {na}")
-
-    # Monthly totals for SPI (a month counts only if >= MIN_COVERAGE of its days are present)
-    clim["period"] = clim["date"].dt.to_period("M")
-    mg = clim.groupby(["district", "period"])["PRECTOTCORR"]
-    monthly = mg.sum(min_count=1).rename("rain_month").reset_index()
-    cover = (mg.count() / mg.size()).reset_index(drop=True)
-    monthly.loc[cover.values < MIN_COVERAGE, "rain_month"] = np.nan
-    spi = _spi3(monthly)
-    spi_lookup = spi.set_index(["district", "period"])["spi3"]
-
-    rows = []
-    for district, dfd in clim.groupby("district"):
-        dfd = dfd.set_index("date").sort_index()
-        for season in SEASON_MONTHS:
-            for year in years:
-                start, end = _season_window(season, year)
-                w = dfd.loc[start:end]
-                n_days = (end - start).days + 1
-                coverage = w["PRECTOTCORR"].notna().sum() / n_days
-                rec = {"district": district, "year": year, "season": season,
-                       "climate_coverage": round(coverage, 3)}
-                if coverage >= MIN_COVERAGE:
-                    rain = w["PRECTOTCORR"].to_numpy()
-                    tmax, tmin = w["T2M_MAX"], w["T2M_MIN"]
-                    weekly = w["PRECTOTCORR"].resample("7D").sum(min_count=5)
-                    tmean = (tmax + tmin) / 2
-                    # SPI-3 windows lying fully inside the season: end months m0+2 .. m1
-                    ends = pd.period_range(pd.Period(start, "M") + 2, pd.Period(end, "M"), freq="M")
-                    spis = [spi_lookup.get((district, p), np.nan) for p in ends]
-                    rec.update({
-                        "rain_mm": np.nansum(rain),
-                        "spi3_mean": np.nanmean(spis) if np.isfinite(spis).any() else np.nan,
-                        "spi3_min": np.nanmin(spis) if np.isfinite(spis).any() else np.nan,
-                        "dry_spell_count": _dry_spells(rain),
-                        "rain_cv_weekly": weekly.std() / weekly.mean() if weekly.mean() > 0 else np.nan,
-                        "heat_stress_days": int((tmax > HEAT_TMAX_C).sum()),
-                        "gdd_base10": float((tmean - GDD_BASE_C).clip(lower=0).sum()),
-                        "tmax_mean_c": tmax.mean(),
-                        "tmin_mean_c": tmin.mean(),
-                        "rh_mean_pct": w["RH2M"].mean(),
-                        "onset_doy": _onset_doy(w.index, rain, year) if season == "Kharif" else np.nan,
-                    })
-                rows.append(rec)
-    feat = pd.DataFrame(rows)
-
-    # District long-term baselines (all years in the record)
-    g = feat.groupby(["district", "season"])["rain_mm"]
-    feat["rain_anomaly_z"] = (feat["rain_mm"] - g.transform("mean")) / g.transform("std")
-    feat["rain_cv_interannual"] = g.transform("std") / g.transform("mean")
-    feat["onset_delay_days"] = feat["onset_doy"] - feat.groupby("district")["onset_doy"].transform("median")
+    feat = climate.season_features(clim, years, climate.fit_spi(clim))
+    feat = climate.add_baseline_features(feat, climate.baselines(feat))
     kh = feat["season"] == "Kharif"
     log.info(f"  {len(feat):,} district-season-year rows; incomplete windows "
              f"(<{MIN_COVERAGE:.0%} days): {(feat['climate_coverage'] < MIN_COVERAGE).sum()}; "

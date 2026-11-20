@@ -142,3 +142,25 @@ STATE_ALIASES = {
 def norm_state(name: str) -> str:
     n = norm_name(name)
     return STATE_ALIASES.get(n, n)
+
+
+# ---- insights.md sections -------------------------------------------------------------------
+# 03 writes the EDA part of report/figures/insights.md; 04 and 05 each own a marked section that
+# they replace on re-run. 03 keeps those sections when it rewrites the file.
+_SECTION = re.compile(r"<!-- (\w+)-section:start -->.*?<!-- \1-section:end -->\n?", re.S)
+
+
+def upsert_section(path: Path, name: str, content: str) -> None:
+    text = path.read_text(encoding="utf-8") if path.exists() else "# KrishiRisk - insights\n"
+    block = f"<!-- {name}-section:start -->\n{content.strip()}\n<!-- {name}-section:end -->\n"
+    pattern = re.compile(rf"<!-- {name}-section:start -->.*?<!-- {name}-section:end -->\n?", re.S)
+    text = pattern.sub("", text).rstrip("\n") + "\n\n" + block
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+
+
+def marked_sections(path: Path) -> str:
+    """All marked sections currently in the file (to carry over when the file is rewritten)."""
+    if not path.exists():
+        return ""
+    return "".join(m.group(0) for m in _SECTION.finditer(path.read_text(encoding="utf-8")))

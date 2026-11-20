@@ -24,7 +24,7 @@ import pandas as pd
 from matplotlib.colors import TwoSlopeNorm
 from scipy import stats
 
-from common import FIGURES, PROCESSED, RAW_CLIMATE, get_logger, rel
+from common import FIGURES, PROCESSED, RAW_CLIMATE, get_logger, marked_sections, rel
 from plotstyle import (AXIS, BLUE, BLUE_LIGHT, CLIMATE_FEATURES, DIVERGING, INK, INK2, MUTED,
                        RAIN_CLASS, SEQ_BLUE, SOIL_FEATURES, fmt_p, grid_axes, headline, save_fig, style)
 
@@ -35,7 +35,6 @@ IN_MASTER = PROCESSED / "master.csv"
 IN_GEO = PROCESSED / "districts.geojson"
 IN_CLIMATE = RAW_CLIMATE / "climate_daily.csv"
 OUT_INSIGHTS = FIGURES / "insights.md"
-MODEL_START, MODEL_END = "<!-- model-section:start -->", "<!-- model-section:end -->"
 MAX_CROPS = 6        # small-multiple panels; further crops are listed in insights.md but not plotted
 MIN_ROWS_PLOT = 20   # a crop needs this many valid district-years to be plotted
 
@@ -431,12 +430,8 @@ def main() -> int:
                  f"{', '.join(skipped)})" if skipped else "") + ".\n\n"
               "> Caution: district-years are not independent (neighbouring districts share weather), so "
               "p-values overstate certainty. Correlation is not causation.\n\n")
-    model_section = ""  # written by 04_model.py between these markers; keep it on re-run
-    if OUT_INSIGHTS.exists():
-        old = OUT_INSIGHTS.read_text(encoding="utf-8")
-        if MODEL_START in old and MODEL_END in old:
-            model_section = "\n" + old[old.index(MODEL_START):old.index(MODEL_END) + len(MODEL_END)] + "\n"
-    OUT_INSIGHTS.write_text(header + "\n".join(INSIGHTS) + model_section, encoding="utf-8")
+    kept = marked_sections(OUT_INSIGHTS)  # model / risk sections written by 04 and 05
+    OUT_INSIGHTS.write_text(header + "\n".join(INSIGHTS) + ("\n" + kept if kept else ""), encoding="utf-8")
     log.info(f"  insights -> {rel(OUT_INSIGHTS)}")
     log.info("Done.")
     return 0
