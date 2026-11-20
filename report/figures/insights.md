@@ -72,7 +72,7 @@ Crops plotted: Wheat, Rice, Ragi, Maize.
 - Wheat: highest Udham Singh Nagar (3.52 t/ha), lowest Almora (0.99 t/ha) - 258% higher; 0 of 13 districts without data.
 - Rice: highest Udham Singh Nagar (2.91 t/ha), lowest Almora (1.06 t/ha) - 175% higher; 0 of 13 districts without data.
 - Ragi: highest Uttarkashi (1.63 t/ha), lowest Almora (1.13 t/ha) - 44% higher; 1 of 13 districts without data.
-- Maize: highest Udham Singh Nagar (2.00 t/ha), lowest Garhwal (1.00 t/ha) - 99% higher; 0 of 13 districts without data.
+- Maize: highest Udham Singh Nagar (2.00 t/ha), lowest Pauri Garhwal (1.00 t/ha) - 99% higher; 0 of 13 districts without data.
 
 ## 8. Dry-spell count shows no significant link to yield anomaly (4 crops tested)
 
@@ -83,12 +83,13 @@ Crops plotted: Wheat, Rice, Ragi, Maize.
 - Ragi: each extra dry spell goes with a -0.9 pt change in yield anomaly (OLS); Spearman rho = -0.10 (p = 0.200), n = 165.
 - Maize: each extra dry spell goes with a +6.4 pt change in yield anomaly (OLS); Spearman rho = 0.06 (p = 0.423), n = 195.
 
+
 <!-- model-section:start -->
 ## Model - LinearRegression
 
 Full table: `data/processed/model_metrics.md`.
 
-- Test years 2010-2014: TrendOnly RMSE 0.353 t/ha, R² 0.63; LinearRegression RMSE 0.368 t/ha, R² 0.60; RandomForest RMSE 0.352 t/ha, R² 0.64; XGBoost RMSE 0.357 t/ha, R² 0.63.
+- Test years 2010-2014: TrendOnly RMSE 0.353 t/ha, R² 0.63; LinearRegression RMSE 0.368 t/ha, R² 0.60; RandomForest RMSE 0.353 t/ha, R² 0.64; XGBoost RMSE 0.357 t/ha, R² 0.63.
 - Best model by grouped CV: LinearRegression. On the deviation from trend it reaches R² -0.08 on test vs 0 for TrendOnly.
 - Most of the overall R² on yield comes from the district-crop trend (compare TrendOnly); the 'R² of deviation' column is the honest measure of what weather and soil add.
 
@@ -104,10 +105,10 @@ Full table: `data/processed/model_metrics.md`.
 
 ![SHAP dependence](fig12_shap_dependence.png)
 
-- Mean |SHAP| ranking (percentage points of trend yield): Rainfall CV (weekly) (5.1), SPI-3 (mean) (3.2), Mean Tmin (3.2), Rainfall anomaly (z) (3.0), Mean Tmax (2.9).
-- Rainfall CV (weekly): in the top 10% of values (>= 2.24) the model lowers yield by 14.3% of trend on average (high-vs-low difference -20.3 pts).
-- SPI-3 (mean): in the top 10% of values (>= 1.34) the model lowers yield by 7.5% of trend on average (high-vs-low difference -12.3 pts).
-- Mean Tmin: in the bottom 10% of values (<= 2.11) the model lowers yield by 7.4% of trend on average (high-vs-low difference +12.7 pts).
+- Mean |SHAP| ranking (percentage points of trend yield): Rainfall CV (weekly) (5.0), SPI-3 (mean) (3.2), Mean Tmin (3.2), Rainfall anomaly (z) (3.0), Mean Tmax (2.9).
+- Rainfall CV (weekly): in the top 10% of values (>= 2.24) the model lowers yield by 14.4% of trend on average (high-vs-low difference -20.3 pts).
+- Mean Tmin: in the bottom 10% of values (<= 2.11) the model lowers yield by 7.5% of trend on average (high-vs-low difference +12.7 pts).
+- SPI-3 (mean): in the top 10% of values (>= 1.34) the model lowers yield by 7.3% of trend on average (high-vs-low difference -12.3 pts).
 - Mean Tmax: in the top 10% of values (>= 29.46) the model lowers yield by 5.2% of trend on average (high-vs-low difference -12.8 pts).
 - Rainfall anomaly (z): average effect +3.78% of trend yield per +1 SD of rainfall (linear fit to SHAP).
 - Dry spells (>=7 d): average effect +2.50% of trend yield per extra dry spell (linear fit to SHAP).
@@ -122,7 +123,7 @@ Full table: `data/processed/model_metrics.md`.
 
 Index (0-100) = weighted mean of five min-max normalised components: Rainfall variability (inter-annual CV of seasonal rain); Drought frequency (share of seasons with SPI-3 < -1); Heat stress (mean days with Tmax > 35 degC per season); Soil degradation score (0-1, from 02); Yield volatility (std. dev. of detrended yield anomaly, % = CV around trend).
 
-- Weights (shap): Rainfall variability 0.33, Drought frequency 0.32, Heat stress 0.14, Soil degradation score 0.01, Yield volatility 0.20. Basis: mean |SHAP| of each component's model features (LinearRegression), scaled to 80%; yield volatility fixed at 20%.
+- Weights (shap): Rainfall variability 0.33, Drought frequency 0.31, Heat stress 0.14, Soil degradation score 0.01, Yield volatility 0.20. Basis: mean |SHAP| of each component's model features (LinearRegression), scaled to 80%; yield volatility fixed at 20%.
 - Categories are quartiles of the index across 50 district-crop pairs: Low 0.0-10.3, Moderate 10.3-22.6, High 22.6-45.1, Severe 45.1-100.0. The index is relative within the state: 'Severe' = the most stressed quarter.
 
 ### Highest-risk district-crop pairs
@@ -130,14 +131,14 @@ Index (0-100) = weighted mean of five min-max normalised components: Rainfall va
 - Champawat - Wheat: index 60 (Severe); main drivers (normalised): erratic rainfall 0.83, drought-prone 0.80, degraded soils 0.85
 - Almora - Wheat: index 60 (Severe); main drivers (normalised): erratic rainfall 0.72, drought-prone 0.80, degraded soils 0.81
 - Uttarkashi - Wheat: index 57 (Severe); main drivers (normalised): drought-prone 1.00
-- Garhwal - Wheat: index 57 (Severe); main drivers (normalised): drought-prone 0.80
+- Pauri Garhwal - Wheat: index 57 (Severe); main drivers (normalised): drought-prone 0.80
 - Pithoragarh - Wheat: index 56 (Severe); main drivers (normalised): erratic rainfall 1.00
 
 ### Risk profiles (K-means)
 
 - k = 2 chosen by silhouette ({2: 0.33, 3: 0.3, 4: 0.31, 5: 0.29, 6: 0.26}).
-- Heat-exposed & degraded soils (3 districts: Hardwar, Nainital, Udham Singh Nagar); centroid z-scores erratic rainfall +1.0, drought-prone +0.5, heat-exposed +1.4, degraded soils +1.3, volatile yields -1.2
-- Moderate, mixed stress (10 districts: Almora, Bageshwar, Chamoli, Champawat, Dehradun, Garhwal, Pithoragarh, Rudraprayag, Tehri Garhwal, Uttarkashi); centroid z-scores erratic rainfall -0.3, drought-prone -0.1, heat-exposed -0.4, degraded soils -0.4, volatile yields +0.4
+- Heat-exposed & degraded soils (3 districts: Haridwar, Nainital, Udham Singh Nagar); centroid z-scores erratic rainfall +1.0, drought-prone +0.5, heat-exposed +1.4, degraded soils +1.3, volatile yields -1.2
+- Moderate, mixed stress (10 districts: Almora, Bageshwar, Chamoli, Champawat, Dehradun, Pauri Garhwal, Pithoragarh, Rudraprayag, Tehri Garhwal, Uttarkashi); centroid z-scores erratic rainfall -0.3, drought-prone -0.1, heat-exposed -0.4, degraded soils -0.4, volatile yields +0.4
 
 ### Climate scenarios
 

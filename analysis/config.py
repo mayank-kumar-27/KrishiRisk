@@ -44,6 +44,13 @@ SOILGRIDS_PROPERTIES = ["nitrogen", "phh2o", "soc", "clay", "sand", "silt"]
 SOILGRIDS_DEPTHS = ["0-5cm", "5-15cm", "15-30cm"]  # aggregated to a 0-30 cm weighted mean
 SOILGRIDS_MIN_INTERVAL_S = 12.5  # ISRIC fair-use limit: 5 requests / minute
 
+# The Census 2011 boundary file uses some outdated district names. These are replaced by the
+# current official names everywhere (the Census name is kept in the `census2011_name` column).
+DISTRICT_NAME_FIXES: dict[str, str] = {
+    "Hardwar": "Haridwar",
+    "Garhwal": "Pauri Garhwal",
+}
+
 # data.gov.in "District-wise, season-wise crop production statistics from 1997".
 # Used only when data/raw/crop/ is empty AND an API key is set as DATA_GOV_IN_API_KEY
 # (environment variable or the gitignored .env file). Both IDs appear on the dataset page;

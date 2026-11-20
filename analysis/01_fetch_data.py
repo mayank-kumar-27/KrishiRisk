@@ -90,6 +90,11 @@ def load_districts(state: str) -> gpd.GeoDataFrame:
     # One row per district (a few districts are stored as several polygons).
     sub = sub.dissolve(by="DISTRICT", as_index=False, aggfunc={"ST_NM": "first", "censuscode": "first"})
     sub = sub.rename(columns={"DISTRICT": "district", "ST_NM": "state"})
+    sub["census2011_name"] = sub["district"]
+    fixes = {k: v for k, v in config.DISTRICT_NAME_FIXES.items() if k in set(sub["district"])}
+    if fixes:
+        sub["district"] = sub["district"].replace(fixes)
+        log.info(f"  outdated Census 2011 names replaced with current official names: {fixes}")
 
     # Centroids in a metric CRS; fall back to a guaranteed-interior point for odd shapes.
     metric = sub.to_crs(sub.estimate_utm_crs())
@@ -106,8 +111,8 @@ def load_districts(state: str) -> gpd.GeoDataFrame:
 
     sub = sub.sort_values("district").reset_index(drop=True)
     PROCESSED.mkdir(parents=True, exist_ok=True)
-    sub[["district", "state", "censuscode", "geometry"]].to_file(OUT_DISTRICTS, driver="GeoJSON")
-    sub[["district", "state", "censuscode", "lat", "lon", "point_method"]].to_csv(OUT_CENTROIDS, index=False)
+    sub[["district", "census2011_name", "state", "censuscode", "geometry"]].to_file(OUT_DISTRICTS, driver="GeoJSON")
+    sub[["district", "census2011_name", "state", "censuscode", "lat", "lon", "point_method"]].to_csv(OUT_CENTROIDS, index=False)
     log.info(f"  {state}: {len(sub)} districts -> {rel(OUT_DISTRICTS)}, {rel(OUT_CENTROIDS)}")
     return sub
 
@@ -567,7 +572,14 @@ def build_name_map(geo_names: list[str], sources: dict[str, list[str]]) -> pd.Da
     manual = pd.DataFrame()
     if OUT_NAME_MAP.exists():
         old = pd.read_csv(OUT_NAME_MAP, dtype=str, keep_default_na=False)
-        manual = old[old["status"].str.lower() == "manual"]
+        manual = old[old["status"].str.lower() == "manual"].copy()
+        if len(manual):
+            manual["geo_name"] = manual["geo_name"].replace(config.DISTRICT_NAME_FIXES)
+            stale = ~manual["geo_name"].isin(geo_names)
+            if stale.any():
+                log.warning(f"  {int(stale.sum())} manual mapping(s) point to districts not in the map "
+                            f"({manual.loc[stale, 'geo_name'].tolist()}) - re-matching them")
+                manual = manual[~stale]
         if len(manual):
             log.info(f"  keeping {len(manual)} manual mapping(s) from existing {rel(OUT_NAME_MAP)}")
     manual_keys = set(zip(manual.get("source", []), manual.get("source_name", [])))

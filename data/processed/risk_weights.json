@@ -1,17 +1,17 @@
 {
   "method": "shap",
   "weights": {
-    "rain_variability": 0.330211069698842,
-    "drought_frequency": 0.3153919438741953,
-    "heat_stress": 0.14118509955553785,
-    "soil_degradation": 0.01321188687142487,
+    "rain_variability": 0.32973480140177547,
+    "drought_frequency": 0.31463925131717174,
+    "heat_stress": 0.14232351502417823,
+    "soil_degradation": 0.013302432256874558,
     "yield_volatility": 0.2
   },
   "shap_sum_by_component_pct": {
-    "rain_variability": 10.3548,
-    "drought_frequency": 9.8901,
-    "heat_stress": 4.4273,
-    "soil_degradation": 0.4143
+    "rain_variability": 10.279399999999999,
+    "drought_frequency": 9.8088,
+    "heat_stress": 4.4369,
+    "soil_degradation": 0.4147
   },
   "reason": "mean |SHAP| of each component's model features (LinearRegression), scaled to 80%; yield volatility fixed at 20%",
   "components": {
@@ -45,18 +45,18 @@
   "category_cutoffs": {
     "Low": [
       0,
-      10.31
+      10.29
     ],
     "Moderate": [
-      10.31,
+      10.29,
       22.62
     ],
     "High": [
       22.62,
-      45.1
+      45.08
     ],
     "Severe": [
-      45.1,
+      45.08,
       100
     ]
   },
@@ -64,18 +64,18 @@
   "district_category_cutoffs": {
     "Low": [
       0,
-      28.58
+      28.53
     ],
     "Moderate": [
-      28.58,
-      31.11
+      28.53,
+      31.1
     ],
     "High": [
-      31.11,
-      36.43
+      31.1,
+      36.38
     ],
     "Severe": [
-      36.43,
+      36.38,
       100
     ]
   },

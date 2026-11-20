@@ -1,14 +1,14 @@
 district,risk_index,rain_variability,drought_frequency,heat_stress,soil_degradation,yield_volatility,n_crops,risk_category,cluster,cluster_name
-Almora,31.1062,0.4280,0.1102,8.8793,0.7366,15.6935,4,Moderate,0,"Moderate, mixed stress"
-Bageshwar,27.3482,0.4484,0.0830,0.0000,0.4899,17.9632,4,Low,0,"Moderate, mixed stress"
-Chamoli,27.2161,0.4191,0.1431,0.0000,0.3452,11.1769,4,Low,0,"Moderate, mixed stress"
-Champawat,27.8755,0.4375,0.1014,3.3876,0.7662,13.8234,4,Low,0,"Moderate, mixed stress"
-Dehradun,36.4251,0.4515,0.1960,3.8532,0.4504,12.4514,4,High,0,"Moderate, mixed stress"
-Garhwal,36.3328,0.4156,0.1844,6.0490,0.6356,15.9517,4,High,0,"Moderate, mixed stress"
-Hardwar,44.0380,0.5111,0.2272,10.2165,0.8670,9.0302,3,Severe,1,Heat-exposed & degraded soils
-Nainital,32.2431,0.4742,0.1418,7.0868,0.8092,8.4723,4,High,1,Heat-exposed & degraded soils
-Pithoragarh,28.5791,0.4971,0.1225,0.0000,0.3197,9.0203,4,Low,0,"Moderate, mixed stress"
-Rudraprayag,30.5518,0.4198,0.1844,0.0000,0.3340,10.1164,4,Moderate,0,"Moderate, mixed stress"
-Tehri Garhwal,36.4862,0.4494,0.1977,0.0000,0.3015,15.4625,4,Severe,0,"Moderate, mixed stress"
-Udham Singh Nagar,38.2873,0.4477,0.1632,23.9214,0.8040,7.6796,3,Severe,1,Heat-exposed & degraded soils
-Uttarkashi,30.7640,0.4216,0.1762,0.0000,0.1873,12.1923,4,Moderate,0,"Moderate, mixed stress"
+Almora,31.0995,0.4280,0.1102,8.8793,0.7366,15.6935,4,Moderate,0,"Moderate, mixed stress"
+Bageshwar,27.3171,0.4484,0.0830,0.0000,0.4899,17.9632,4,Low,0,"Moderate, mixed stress"
+Chamoli,27.1719,0.4191,0.1431,0.0000,0.3452,11.1769,4,Low,0,"Moderate, mixed stress"
+Champawat,27.8546,0.4375,0.1014,3.3876,0.7662,13.8234,4,Low,0,"Moderate, mixed stress"
+Dehradun,36.3788,0.4515,0.1960,3.8532,0.4504,12.4514,4,High,0,"Moderate, mixed stress"
+Haridwar,44.0035,0.5111,0.2272,10.2165,0.8670,9.0302,3,Severe,1,Heat-exposed & degraded soils
+Nainital,32.2212,0.4742,0.1418,7.0868,0.8092,8.4723,4,High,1,Heat-exposed & degraded soils
+Pauri Garhwal,36.3009,0.4156,0.1844,6.0490,0.6356,15.9517,4,High,0,"Moderate, mixed stress"
+Pithoragarh,28.5326,0.4971,0.1225,0.0000,0.3197,9.0203,4,Low,0,"Moderate, mixed stress"
+Rudraprayag,30.4981,0.4198,0.1844,0.0000,0.3340,10.1164,4,Moderate,0,"Moderate, mixed stress"
+Tehri Garhwal,36.4265,0.4494,0.1977,0.0000,0.3015,15.4625,4,Severe,0,"Moderate, mixed stress"
+Udham Singh Nagar,38.3112,0.4477,0.1632,23.9214,0.8040,7.6796,3,Severe,1,Heat-exposed & degraded soils
+Uttarkashi,30.7101,0.4216,0.1762,0.0000,0.1873,12.1923,4,Moderate,0,"Moderate, mixed stress"

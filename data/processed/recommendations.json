@@ -82,7 +82,7 @@
   {
    "district": "Almora",
    "crop": "Maize",
-   "risk_index": 19.8,
+   "risk_index": 19.9,
    "risk_category": "Moderate",
    "actions": [
     {
@@ -138,7 +138,7 @@
   {
    "district": "Almora",
    "crop": "Wheat",
-   "risk_index": 59.7,
+   "risk_index": 59.6,
    "risk_category": "Severe",
    "actions": [
     {
@@ -302,7 +302,7 @@
   {
    "district": "Chamoli",
    "crop": "Wheat",
-   "risk_index": 54.3,
+   "risk_index": 54.2,
    "risk_category": "Severe",
    "actions": [
     {
@@ -378,7 +378,7 @@
   {
    "district": "Champawat",
    "crop": "Wheat",
-   "risk_index": 60.4,
+   "risk_index": 60.3,
    "risk_category": "Severe",
    "actions": [
     {
@@ -496,105 +496,9 @@
    ]
   },
   {
-   "district": "Garhwal",
+   "district": "Haridwar",
    "crop": "Maize",
-   "risk_index": 33.7,
-   "risk_category": "High",
-   "actions": [
-    {
-     "id": "drought_tolerant_varieties",
-     "why": "High risk category"
-    },
-    {
-     "id": "micro_irrigation",
-     "why": "High risk category"
-    },
-    {
-     "id": "soil_organic_matter",
-     "why": "High risk category"
-    },
-    {
-     "id": "pmfby_targeting",
-     "why": "High risk category"
-    }
-   ]
-  },
-  {
-   "district": "Garhwal",
-   "crop": "Ragi",
-   "risk_index": 23.2,
-   "risk_category": "High",
-   "actions": [
-    {
-     "id": "drought_tolerant_varieties",
-     "why": "High risk category"
-    },
-    {
-     "id": "micro_irrigation",
-     "why": "High risk category"
-    },
-    {
-     "id": "soil_organic_matter",
-     "why": "High risk category"
-    },
-    {
-     "id": "pmfby_targeting",
-     "why": "High risk category"
-    }
-   ]
-  },
-  {
-   "district": "Garhwal",
-   "crop": "Rice",
-   "risk_index": 22.5,
-   "risk_category": "Moderate",
-   "actions": [
-    {
-     "id": "drought_tolerant_varieties",
-     "why": "Moderate risk category"
-    },
-    {
-     "id": "soil_organic_matter",
-     "why": "Moderate risk category"
-    },
-    {
-     "id": "pmfby_targeting",
-     "why": "Moderate risk category"
-    }
-   ]
-  },
-  {
-   "district": "Garhwal",
-   "crop": "Wheat",
-   "risk_index": 57.3,
-   "risk_category": "Severe",
-   "actions": [
-    {
-     "id": "pmfby_targeting",
-     "why": "Severe risk category"
-    },
-    {
-     "id": "micro_irrigation",
-     "why": "Severe risk category"
-    },
-    {
-     "id": "drought_tolerant_varieties",
-     "why": "Severe risk category"
-    },
-    {
-     "id": "millet_diversification",
-     "why": "Severe risk category"
-    },
-    {
-     "id": "soil_organic_matter",
-     "why": "Severe risk category"
-    }
-   ]
-  },
-  {
-   "district": "Hardwar",
-   "crop": "Maize",
-   "risk_index": 32.6,
+   "risk_index": 32.7,
    "risk_category": "High",
    "actions": [
     {
@@ -620,7 +524,7 @@
    ]
   },
   {
-   "district": "Hardwar",
+   "district": "Haridwar",
    "crop": "Rice",
    "risk_index": 29.8,
    "risk_category": "High",
@@ -648,9 +552,9 @@
    ]
   },
   {
-   "district": "Hardwar",
+   "district": "Haridwar",
    "crop": "Wheat",
-   "risk_index": 50.0,
+   "risk_index": 49.9,
    "risk_category": "Severe",
    "actions": [
     {
@@ -678,7 +582,7 @@
   {
    "district": "Nainital",
    "crop": "Maize",
-   "risk_index": 12.2,
+   "risk_index": 12.3,
    "risk_category": "Moderate",
    "actions": [
     {
@@ -698,7 +602,7 @@
   {
    "district": "Nainital",
    "crop": "Ragi",
-   "risk_index": 9.4,
+   "risk_index": 9.5,
    "risk_category": "Low",
    "actions": [
     {
@@ -714,7 +618,7 @@
   {
    "district": "Nainital",
    "crop": "Rice",
-   "risk_index": 8.7,
+   "risk_index": 8.8,
    "risk_category": "Low",
    "actions": [
     {
@@ -731,6 +635,102 @@
    "district": "Nainital",
    "crop": "Wheat",
    "risk_index": 52.1,
+   "risk_category": "Severe",
+   "actions": [
+    {
+     "id": "pmfby_targeting",
+     "why": "Severe risk category"
+    },
+    {
+     "id": "micro_irrigation",
+     "why": "Severe risk category"
+    },
+    {
+     "id": "drought_tolerant_varieties",
+     "why": "Severe risk category"
+    },
+    {
+     "id": "millet_diversification",
+     "why": "Severe risk category"
+    },
+    {
+     "id": "soil_organic_matter",
+     "why": "Severe risk category"
+    }
+   ]
+  },
+  {
+   "district": "Pauri Garhwal",
+   "crop": "Maize",
+   "risk_index": 33.7,
+   "risk_category": "High",
+   "actions": [
+    {
+     "id": "drought_tolerant_varieties",
+     "why": "High risk category"
+    },
+    {
+     "id": "micro_irrigation",
+     "why": "High risk category"
+    },
+    {
+     "id": "soil_organic_matter",
+     "why": "High risk category"
+    },
+    {
+     "id": "pmfby_targeting",
+     "why": "High risk category"
+    }
+   ]
+  },
+  {
+   "district": "Pauri Garhwal",
+   "crop": "Ragi",
+   "risk_index": 23.2,
+   "risk_category": "High",
+   "actions": [
+    {
+     "id": "drought_tolerant_varieties",
+     "why": "High risk category"
+    },
+    {
+     "id": "micro_irrigation",
+     "why": "High risk category"
+    },
+    {
+     "id": "soil_organic_matter",
+     "why": "High risk category"
+    },
+    {
+     "id": "pmfby_targeting",
+     "why": "High risk category"
+    }
+   ]
+  },
+  {
+   "district": "Pauri Garhwal",
+   "crop": "Rice",
+   "risk_index": 22.5,
+   "risk_category": "Moderate",
+   "actions": [
+    {
+     "id": "drought_tolerant_varieties",
+     "why": "Moderate risk category"
+    },
+    {
+     "id": "soil_organic_matter",
+     "why": "Moderate risk category"
+    },
+    {
+     "id": "pmfby_targeting",
+     "why": "Moderate risk category"
+    }
+   ]
+  },
+  {
+   "district": "Pauri Garhwal",
+   "crop": "Wheat",
+   "risk_index": 57.2,
    "risk_category": "Severe",
    "actions": [
     {
@@ -814,7 +814,7 @@
   {
    "district": "Pithoragarh",
    "crop": "Wheat",
-   "risk_index": 56.0,
+   "risk_index": 55.9,
    "risk_category": "Severe",
    "actions": [
     {
@@ -842,7 +842,7 @@
   {
    "district": "Rudraprayag",
    "crop": "Maize",
-   "risk_index": 26.3,
+   "risk_index": 26.2,
    "risk_category": "High",
    "actions": [
     {
@@ -866,7 +866,7 @@
   {
    "district": "Rudraprayag",
    "crop": "Ragi",
-   "risk_index": 18.7,
+   "risk_index": 18.6,
    "risk_category": "Moderate",
    "actions": [
     {
@@ -886,7 +886,7 @@
   {
    "district": "Rudraprayag",
    "crop": "Rice",
-   "risk_index": 18.4,
+   "risk_index": 18.3,
    "risk_category": "Moderate",
    "actions": [
     {
@@ -958,7 +958,7 @@
   {
    "district": "Tehri Garhwal",
    "crop": "Ragi",
-   "risk_index": 19.7,
+   "risk_index": 19.6,
    "risk_category": "Moderate",
    "actions": [
     {
@@ -998,7 +998,7 @@
   {
    "district": "Tehri Garhwal",
    "crop": "Wheat",
-   "risk_index": 53.8,
+   "risk_index": 53.7,
    "risk_category": "Severe",
    "actions": [
     {
@@ -1026,7 +1026,7 @@
   {
    "district": "Udham Singh Nagar",
    "crop": "Maize",
-   "risk_index": 36.2,
+   "risk_index": 36.3,
    "risk_category": "High",
    "actions": [
     {
@@ -1054,7 +1054,7 @@
   {
    "district": "Udham Singh Nagar",
    "crop": "Rice",
-   "risk_index": 30.3,
+   "risk_index": 30.4,
    "risk_category": "High",
    "actions": [
     {
@@ -1082,7 +1082,7 @@
   {
    "district": "Udham Singh Nagar",
    "crop": "Wheat",
-   "risk_index": 48.1,
+   "risk_index": 48.0,
    "risk_category": "Severe",
    "actions": [
     {
@@ -1170,7 +1170,7 @@
   {
    "district": "Uttarkashi",
    "crop": "Wheat",
-   "risk_index": 57.4,
+   "risk_index": 57.3,
    "risk_category": "Severe",
    "actions": [
     {

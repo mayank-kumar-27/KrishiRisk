@@ -24,7 +24,7 @@ import pandas as pd
 from scipy import stats
 
 import config
-from common import ANALYSIS, PROCESSED, WEB_DATA, get_logger, rel
+from common import ANALYSIS, PROCESSED, RAW_CLIMATE, WEB_DATA, get_logger, rel
 from plotstyle import CLIMATE_FEATURES
 
 log = get_logger("06_export_web")
@@ -62,6 +62,61 @@ def write(name: str, obj, nd: int = 3) -> int:
     path.write_text(text, encoding="utf-8")
     log.info(f"  {name:<22} {len(text.encode('utf-8')) / 1024:8.1f} KB")
     return len(text.encode("utf-8"))
+
+
+def records(master, valid, risk, sc, met, shap_rows) -> dict:
+    """How much data sits behind the site - counted, never typed in."""
+    inv_path = PROCESSED / "data_inventory.csv"
+    inv = pd.read_csv(inv_path) if inv_path.exists() else pd.DataFrame(columns=["source", "rows", "years"])
+    clim = inv[inv["source"].astype(str).str.startswith("Climate daily")]
+    years = str(clim["years"].iloc[0]).split("-") if len(clim) else []
+    return {
+        "climate_daily_records": int(clim["rows"].iloc[0]) if len(clim) else None,
+        "climate_years": [int(years[0]), int(years[-1])] if len(years) == 2 else None,
+        "district_year_records": int(len(valid)),
+        "district_crop_pairs": int(len(risk)),
+        "model_features": len(shap_rows),
+        "models_compared": int(met["model"].nunique()),
+        "scenario_predictions": int(len(sc)),
+        "scenarios": int(sc[["rain_change_pct", "temp_change_c"]].drop_duplicates().shape[0]),
+    }
+
+
+def highlights(master, risk, dist, sc, st, shap_rows, dist_driver) -> dict:
+    """Headline findings for the landing page, computed from the pipeline outputs."""
+    top = dist.sort_values("risk_index", ascending=False).iloc[0]
+    crop_mean = risk.groupby("crop")["risk_index"].mean().sort_values(ascending=False)
+    top_crop = crop_mean.index[0]
+    severe_for_crop = risk[(risk["crop"] == top_crop) & (risk["risk_category"] == "Severe")]
+    seasons = master.drop_duplicates(["district", "season", "year"])["spi3_mean"].dropna()
+    s40 = sc[(sc["rain_change_pct"] == -40) & (sc["temp_change_c"] == 3.0)].dropna(subset=["pct_change_vs_baseline"])
+    worst = s40.loc[s40["pct_change_vs_baseline"].idxmin()] if len(s40) else None
+    trends = {}
+    for c, g in st.dropna(subset=["y"]).groupby("crop"):
+        if g["year"].nunique() >= 5:
+            trends[c] = 100 * float(np.polyfit(g["year"], g["y"], 1)[0]) / float(g["y"].mean())
+    monsoon = None
+    clim_path = RAW_CLIMATE / "climate_daily.csv"
+    if clim_path.exists():
+        cl = pd.read_csv(clim_path, usecols=["date", "PRECTOTCORR"], parse_dates=["date"])
+        cl = cl[cl["date"].dt.year.isin(cl.groupby(cl["date"].dt.year)["date"].nunique().loc[lambda s: s >= 365].index)]
+        total = cl["PRECTOTCORR"].sum()
+        monsoon = 100 * float(cl.loc[cl["date"].dt.month.between(6, 9), "PRECTOTCORR"].sum() / total) if total else None
+    return {
+        "top_district": {"district": top["district"], "index": top["risk_index"], "category": top["risk_category"],
+                         "driver": dist_driver.get(top["district"]), "cluster": top["cluster_name"]},
+        "severe_districts": sorted(dist.loc[dist["risk_category"] == "Severe", "district"].tolist()),
+        "top_crop": {"crop": top_crop, "mean_index": float(crop_mean.iloc[0]),
+                     "severe_districts": int(len(severe_for_crop)), "districts": int((risk["crop"] == top_crop).sum())},
+        "top_driver": ({"label": shap_rows[0]["label"], "mean_abs_shap_pct": shap_rows[0]["mean_abs_shap_pct"]}
+                       if shap_rows else None),
+        "worst_scenario": ({"district": worst["district"], "crop": worst["crop"],
+                            "pct": float(worst["pct_change_vs_baseline"]), "rain_change_pct": -40, "temp_change_c": 3.0}
+                           if worst is not None else None),
+        "drought_season_pct": 100 * float((seasons < -1).mean()) if len(seasons) else None,
+        "monsoon_share_pct": monsoon,
+        "yield_trend_pct_per_year": trends,
+    }
 
 
 def need(*names) -> bool:
@@ -206,6 +261,8 @@ def main() -> int:
         "district_category_cutoffs": weights.get("district_category_cutoffs"),
         "scenario_state_pct": {"rain_-20": state_change(-20, 0), "temp_+2": state_change(0, 2.0),
                                "rain_-40_temp_+3": state_change(-40, 3.0)},
+        "records": records(master, valid, risk, sc, met, shap_rows),
+        "highlights": highlights(master, risk, dist, sc, st, shap_rows, dist_driver),
     }
     total += write("summary.json", summary)
 

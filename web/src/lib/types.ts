@@ -123,4 +123,24 @@ export interface Summary {
   pair_category_cutoffs: Record<Category, [number, number]> | null;
   district_category_cutoffs: Record<Category, [number, number]> | null;
   scenario_state_pct: { "rain_-20": number | null; "temp_+2": number | null; "rain_-40_temp_+3": number | null };
+  records?: {
+    climate_daily_records: number | null;
+    climate_years: [number, number] | null;
+    district_year_records: number;
+    district_crop_pairs: number;
+    model_features: number;
+    models_compared: number;
+    scenario_predictions: number;
+    scenarios: number;
+  };
+  highlights?: {
+    top_district: { district: string; index: number; category: Category; driver: string | null; cluster: string | null };
+    severe_districts: string[];
+    top_crop: { crop: string; mean_index: number; severe_districts: number; districts: number };
+    top_driver: { label: string; mean_abs_shap_pct: number } | null;
+    worst_scenario: { district: string; crop: string; pct: number; rain_change_pct: number; temp_change_c: number } | null;
+    drought_season_pct: number | null;
+    monsoon_share_pct: number | null;
+    yield_trend_pct_per_year: Record<string, number>;
+  };
 }

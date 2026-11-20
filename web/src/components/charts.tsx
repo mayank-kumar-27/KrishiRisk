@@ -17,6 +17,8 @@ import {
 } from "recharts";
 import { fmt, linreg, quantile } from "@/lib/stats";
 import { usePalette, type Palette } from "@/lib/theme";
+import { usePrefersReducedMotion } from "./anim";
+import { RAIN_CLASSES, divergingColor, rainClassColor, type RainClass } from "./chart-utils";
 
 function axisProps(p: Palette) {
   return {
@@ -43,6 +45,7 @@ export function YieldTrendChart({ years, values, smooth, trend, height = 260 }: 
   height?: number;
 }) {
   const p = usePalette();
+  const anim = !usePrefersReducedMotion();
   const data = years.map((y, i) => ({ year: y, yield: values[i], smooth: smooth?.[i] ?? null, trend: trend?.[i] ?? null }));
   return (
     <ResponsiveContainer width="100%" height={height}>
@@ -52,9 +55,9 @@ export function YieldTrendChart({ years, values, smooth, trend, height = 260 }: 
         <YAxis {...axisProps(p)} width={48} label={{ value: "t/ha", angle: -90, position: "insideLeft", fill: p.ink2, fontSize: 12 }} />
         <Tooltip {...tooltipProps(p)} formatter={(v) => `${fmt(Number(v))} t/ha`} />
         <Legend wrapperStyle={{ fontSize: 12, color: p.ink2 }} />
-        <Line isAnimationActive={false} type="monotone" dataKey="yield" name="Yield" stroke={p.blueSoft} strokeWidth={1.5} dot={{ r: 2.5 }} connectNulls={false} />
-        {smooth && <Line isAnimationActive={false} type="monotone" dataKey="smooth" name="5-yr rolling mean" stroke={p.blue} strokeWidth={2.5} dot={false} />}
-        {trend && <Line isAnimationActive={false} type="linear" dataKey="trend" name="Linear trend" stroke={p.ink2} strokeWidth={1.5} strokeDasharray="0" dot={false} />}
+        <Line isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" type="monotone" dataKey="yield" name="Yield" stroke={p.blueSoft} strokeWidth={1.5} dot={{ r: 2.5 }} connectNulls={false} />
+        {smooth && <Line isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" type="monotone" dataKey="smooth" name="5-yr rolling mean" stroke={p.blue} strokeWidth={2.5} dot={false} />}
+        {trend && <Line isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" type="linear" dataKey="trend" name="Linear trend" stroke={p.ink2} strokeWidth={1.5} strokeDasharray="0" dot={false} />}
       </LineChart>
     </ResponsiveContainer>
   );
@@ -62,6 +65,7 @@ export function YieldTrendChart({ years, values, smooth, trend, height = 260 }: 
 
 export function RainBarChart({ years, values, height = 200 }: { years: number[]; values: (number | null)[]; height?: number }) {
   const p = usePalette();
+  const anim = !usePrefersReducedMotion();
   const data = years.map((y, i) => ({ year: y, rain: values[i] }));
   return (
     <ResponsiveContainer width="100%" height={height}>
@@ -70,20 +74,13 @@ export function RainBarChart({ years, values, height = 200 }: { years: number[];
         <XAxis dataKey="year" {...axisProps(p)} />
         <YAxis {...axisProps(p)} width={48} label={{ value: "mm", angle: -90, position: "insideLeft", fill: p.ink2, fontSize: 12 }} />
         <Tooltip {...tooltipProps(p)} cursor={{ fill: p.grid, opacity: 0.4 }} formatter={(v) => `${fmt(Number(v), 0)} mm`} />
-        <Bar isAnimationActive={false} dataKey="rain" name="Seasonal rainfall" fill={p.blue} radius={[3, 3, 0, 0]} />
+        <Bar isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" dataKey="rain" name="Seasonal rainfall" fill={p.blue} radius={[3, 3, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );
 }
 
 // ---------------------------------------------------------------------------------------------
-export type RainClass = "Drought" | "Normal" | "Excess";
-export const RAIN_CLASSES: RainClass[] = ["Drought", "Normal", "Excess"];
-
-export function rainClassColor(p: Palette, c: RainClass): string {
-  return c === "Drought" ? p.red : c === "Excess" ? p.blue : p.muted;
-}
-
 const SHAPES: Record<RainClass, "diamond" | "circle" | "triangle"> = { Drought: "diamond", Normal: "circle", Excess: "triangle" };
 
 export function RainYieldScatter({ points, height = 300 }: {
@@ -91,6 +88,7 @@ export function RainYieldScatter({ points, height = 300 }: {
   height?: number;
 }) {
   const p = usePalette();
+  const anim = !usePrefersReducedMotion();
   const fit = linreg(points.map((d) => [d.x, d.y] as [number, number]));
   const xs = points.map((d) => d.x);
   const x0 = Math.min(...xs);
@@ -101,12 +99,12 @@ export function RainYieldScatter({ points, height = 300 }: {
         <CartesianGrid stroke={p.grid} />
         <XAxis type="number" dataKey="x" name="Seasonal rainfall" unit=" mm" {...axisProps(p)} domain={["auto", "auto"]}
           label={{ value: "Seasonal rainfall (mm)", position: "insideBottom", offset: -12, fill: p.ink2, fontSize: 12 }} />
-        <YAxis type="number" dataKey="y" name="Yield" unit=" t/ha" {...axisProps(p)} width={56} domain={["auto", "auto"]} />
+        <YAxis type="number" dataKey="y" name="Yield" unit=" t/ha" {...axisProps(p)} width={70} domain={["auto", "auto"]} />
         <Tooltip {...tooltipProps(p)} cursor={{ strokeDasharray: "0", stroke: p.axis }}
           formatter={(v, n) => [fmt(Number(v), n === "Seasonal rainfall" ? 0 : 2), n]} />
         <Legend verticalAlign="top" height={28} wrapperStyle={{ fontSize: 12 }} />
         {RAIN_CLASSES.map((c) => (
-          <Scatter isAnimationActive={false} key={c} name={`${c} (n=${points.filter((d) => d.cls === c).length})`} data={points.filter((d) => d.cls === c)}
+          <Scatter isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" key={c} name={`${c} (n=${points.filter((d) => d.cls === c).length})`} data={points.filter((d) => d.cls === c)}
             fill={rainClassColor(p, c)} shape={SHAPES[c]} />
         ))}
         {fit && Number.isFinite(x0) && x1 > x0 && (
@@ -119,6 +117,14 @@ export function RainYieldScatter({ points, height = 300 }: {
 }
 
 // ---------------------------------------------------------------------------------------------
+/** Round axis step (1, 2 or 5 x 10^n) giving about `count` intervals over `range`. */
+function niceStep(range: number, count = 4): number {
+  const raw = range / count;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const norm = raw / mag;
+  return (norm <= 1 ? 1 : norm <= 2 ? 2 : norm <= 5 ? 5 : 10) * mag;
+}
+
 // Box plot (drawn as SVG; Recharts has no box-plot primitive). Whiskers = 1.5 IQR (Tukey).
 export function BoxPlot({ groups, yLabel, height = 280 }: {
   groups: { label: string; values: number[]; color: string }[];
@@ -131,14 +137,13 @@ export function BoxPlot({ groups, yLabel, height = 280 }: {
   const m = { t: 12, r: 12, b: 44, l: 56 };
   const all = groups.flatMap((g) => g.values);
   if (!all.length) return <p className="py-8 text-center text-sm text-muted">Not enough data for this selection.</p>;
-  let lo = Math.min(...all, 0);
-  let hi = Math.max(...all, 0);
-  const pad = (hi - lo) * 0.08 || 1;
-  lo -= pad;
-  hi += pad;
+  const step = niceStep((Math.max(...all, 0) - Math.min(...all, 0)) || 1);
+  const lo = Math.floor(Math.min(...all, 0) / step) * step;
+  const hi = Math.ceil(Math.max(...all, 0) / step) * step;
   const y = (v: number) => m.t + (H - m.t - m.b) * (1 - (v - lo) / (hi - lo));
   const bw = (W - m.l - m.r) / groups.length;
-  const ticks = Array.from({ length: 5 }, (_, i) => lo + ((hi - lo) * i) / 4);
+  const ticks: number[] = [];
+  for (let t = lo; t <= hi + step / 2; t += step) ticks.push(Math.round(t * 1e6) / 1e6);
   return (
     <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full" role="img" aria-label={`Box plots of ${yLabel}`}>
       {ticks.map((t) => (
@@ -164,7 +169,7 @@ export function BoxPlot({ groups, yLabel, height = 280 }: {
         const out = s.filter((v) => v < wLo || v > wHi);
         const half = Math.min(36, bw * 0.3);
         return (
-          <g key={g.label}>
+          <g key={g.label} className="district-in" style={{ animationDelay: `${i * 120}ms` }}>
             <title>{`${g.label}: median ${q2.toFixed(1)}, IQR ${q1.toFixed(1)} to ${q3.toFixed(1)}, n = ${s.length}`}</title>
             <line x1={cx} x2={cx} y1={y(wLo)} y2={y(q1)} stroke={p.muted} />
             <line x1={cx} x2={cx} y1={y(q3)} y2={y(wHi)} stroke={p.muted} />
@@ -184,22 +189,6 @@ export function BoxPlot({ groups, yLabel, height = 280 }: {
 }
 
 // ---------------------------------------------------------------------------------------------
-function hexToRgb(h: string): [number, number, number] {
-  const n = parseInt(h.slice(1), 16);
-  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
-}
-
-function mix(a: string, b: string, t: number): string {
-  const x = hexToRgb(a);
-  const y = hexToRgb(b);
-  return `rgb(${x.map((v, i) => Math.round(v + (y[i] - v) * t)).join(",")})`;
-}
-
-/** Diverging colour for r in [-vmax, vmax]: red (negative) - neutral - blue (positive). */
-export function divergingColor(p: Palette, r: number, vmax: number): string {
-  const t = Math.max(-1, Math.min(1, r / vmax));
-  return t < 0 ? mix(p.neutral, p.diverging[0], -t) : mix(p.neutral, p.diverging[5], t);
-}
 
 export function CorrHeatmap({ rows, cols, cell }: {
   rows: { key: string; label: string }[];
@@ -255,6 +244,7 @@ export function CorrHeatmap({ rows, cols, cell }: {
 // ---------------------------------------------------------------------------------------------
 export function HorizontalBars({ data, unit, height }: { data: { label: string; value: number }[]; unit: string; height?: number }) {
   const p = usePalette();
+  const anim = !usePrefersReducedMotion();
   return (
     <ResponsiveContainer width="100%" height={height ?? Math.max(220, data.length * 28 + 40)}>
       <BarChart data={data} layout="vertical" margin={{ top: 4, right: 24, bottom: 16, left: 8 }}>
@@ -262,7 +252,7 @@ export function HorizontalBars({ data, unit, height }: { data: { label: string; 
         <XAxis type="number" {...axisProps(p)} label={{ value: unit, position: "insideBottom", offset: -8, fill: p.ink2, fontSize: 12 }} />
         <YAxis type="category" dataKey="label" {...axisProps(p)} width={170} />
         <Tooltip {...tooltipProps(p)} cursor={{ fill: p.grid, opacity: 0.4 }} formatter={(v) => [`${fmt(Number(v))} ${unit}`, "Mean |SHAP|"]} />
-        <Bar isAnimationActive={false} dataKey="value" fill={p.blue} radius={[0, 4, 4, 0]} barSize={16} />
+        <Bar isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" dataKey="value" fill={p.blue} radius={[0, 4, 4, 0]} barSize={16} />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -270,6 +260,7 @@ export function HorizontalBars({ data, unit, height }: { data: { label: string; 
 
 export function ActualPredicted({ points, height = 320 }: { points: { x: number; y: number; label: string }[]; height?: number }) {
   const p = usePalette();
+  const anim = !usePrefersReducedMotion();
   const all = points.flatMap((d) => [d.x, d.y]);
   const lo = Math.min(...all);
   const hi = Math.max(...all);
@@ -279,13 +270,13 @@ export function ActualPredicted({ points, height = 320 }: { points: { x: number;
         <CartesianGrid stroke={p.grid} />
         <XAxis type="number" dataKey="x" name="Actual" unit=" t/ha" {...axisProps(p)} domain={["auto", "auto"]}
           label={{ value: "Actual yield (t/ha)", position: "insideBottom", offset: -12, fill: p.ink2, fontSize: 12 }} />
-        <YAxis type="number" dataKey="y" name="Predicted" unit=" t/ha" {...axisProps(p)} width={56} domain={["auto", "auto"]} />
+        <YAxis type="number" dataKey="y" name="Predicted" unit=" t/ha" {...axisProps(p)} width={70} domain={["auto", "auto"]} />
         <Tooltip {...tooltipProps(p)} formatter={(v, n) => [fmt(Number(v)), n]} />
         {Number.isFinite(lo) && hi > lo && (
           <ReferenceLine segment={[{ x: lo, y: lo }, { x: hi, y: hi }]} stroke={p.axis} strokeWidth={1.5} ifOverflow="extendDomain"
             label={{ value: "1:1", position: "insideTopLeft", fill: p.ink2, fontSize: 11 }} />
         )}
-        <Scatter isAnimationActive={false} data={points} fill={p.blue} name="District-year" />
+        <Scatter isAnimationActive={anim} animationDuration={1100} animationEasing="ease-out" data={points} fill={p.blue} name="District-year" />
       </ScatterChart>
     </ResponsiveContainer>
   );

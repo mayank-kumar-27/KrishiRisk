@@ -99,41 +99,21 @@ Dehradun,Wheat,2011,2.4407,2.3858
 Dehradun,Wheat,2012,2.2722,2.7344
 Dehradun,Wheat,2013,2.4757,2.9788
 Dehradun,Wheat,2014,1.5629,2.8295
-Garhwal,Maize,2010,0.8750,0.7955
-Garhwal,Maize,2011,0.9014,0.7923
-Garhwal,Maize,2012,1.0198,0.7092
-Garhwal,Maize,2013,1.0196,0.7037
-Garhwal,Maize,2014,1.7538,0.6821
-Garhwal,Ragi,2010,1.1791,1.2362
-Garhwal,Ragi,2011,1.3113,1.2775
-Garhwal,Ragi,2012,1.3759,1.1878
-Garhwal,Ragi,2013,1.2665,1.2262
-Garhwal,Ragi,2014,1.3601,1.2382
-Garhwal,Rice,2010,1.0853,1.0339
-Garhwal,Rice,2011,1.1538,1.0588
-Garhwal,Rice,2012,1.1729,0.9756
-Garhwal,Rice,2013,1.2863,0.9980
-Garhwal,Rice,2014,1.1917,0.9986
-Garhwal,Wheat,2010,1.1646,1.0044
-Garhwal,Wheat,2011,1.2788,0.9399
-Garhwal,Wheat,2012,1.3645,1.0269
-Garhwal,Wheat,2013,1.3675,1.0895
-Garhwal,Wheat,2014,1.2060,0.9720
-Hardwar,Maize,2010,1.8571,1.7626
-Hardwar,Maize,2011,1.4668,1.8342
-Hardwar,Maize,2012,1.7189,1.7533
-Hardwar,Maize,2013,1.8891,1.7788
-Hardwar,Maize,2014,1.4102,1.8048
-Hardwar,Rice,2010,1.6065,2.1965
-Hardwar,Rice,2011,1.9852,2.2759
-Hardwar,Rice,2012,2.2595,2.1662
-Hardwar,Rice,2013,1.9726,2.1885
-Hardwar,Rice,2014,2.2257,2.2113
-Hardwar,Wheat,2010,2.5559,3.0096
-Hardwar,Wheat,2011,2.7915,2.8959
-Hardwar,Wheat,2012,2.8965,3.2537
-Hardwar,Wheat,2013,2.7031,3.5622
-Hardwar,Wheat,2014,2.0662,3.2425
+Haridwar,Maize,2010,1.8571,1.7626
+Haridwar,Maize,2011,1.4668,1.8342
+Haridwar,Maize,2012,1.7189,1.7533
+Haridwar,Maize,2013,1.8891,1.7788
+Haridwar,Maize,2014,1.4102,1.8048
+Haridwar,Rice,2010,1.6065,2.1965
+Haridwar,Rice,2011,1.9852,2.2759
+Haridwar,Rice,2012,2.2595,2.1662
+Haridwar,Rice,2013,1.9726,2.1885
+Haridwar,Rice,2014,2.2257,2.2113
+Haridwar,Wheat,2010,2.5559,3.0096
+Haridwar,Wheat,2011,2.7915,2.8959
+Haridwar,Wheat,2012,2.8965,3.2537
+Haridwar,Wheat,2013,2.7031,3.5622
+Haridwar,Wheat,2014,2.0662,3.2425
 Nainital,Maize,2010,1.6869,1.6776
 Nainital,Maize,2011,1.8335,1.7618
 Nainital,Maize,2012,2.1479,1.6265
@@ -154,6 +134,26 @@ Nainital,Wheat,2011,2.7240,2.5731
 Nainital,Wheat,2012,3.1348,2.8475
 Nainital,Wheat,2013,2.9459,3.0005
 Nainital,Wheat,2014,2.3439,2.9908
+Pauri Garhwal,Maize,2010,0.8750,0.7955
+Pauri Garhwal,Maize,2011,0.9014,0.7923
+Pauri Garhwal,Maize,2012,1.0198,0.7092
+Pauri Garhwal,Maize,2013,1.0196,0.7037
+Pauri Garhwal,Maize,2014,1.7538,0.6821
+Pauri Garhwal,Ragi,2010,1.1791,1.2362
+Pauri Garhwal,Ragi,2011,1.3113,1.2775
+Pauri Garhwal,Ragi,2012,1.3759,1.1878
+Pauri Garhwal,Ragi,2013,1.2665,1.2262
+Pauri Garhwal,Ragi,2014,1.3601,1.2382
+Pauri Garhwal,Rice,2010,1.0853,1.0339
+Pauri Garhwal,Rice,2011,1.1538,1.0588
+Pauri Garhwal,Rice,2012,1.1729,0.9756
+Pauri Garhwal,Rice,2013,1.2863,0.9980
+Pauri Garhwal,Rice,2014,1.1917,0.9986
+Pauri Garhwal,Wheat,2010,1.1646,1.0044
+Pauri Garhwal,Wheat,2011,1.2788,0.9399
+Pauri Garhwal,Wheat,2012,1.3645,1.0269
+Pauri Garhwal,Wheat,2013,1.3675,1.0895
+Pauri Garhwal,Wheat,2014,1.2060,0.9720
 Pithoragarh,Maize,2010,1.1501,1.0167
 Pithoragarh,Maize,2011,1.1550,1.0783
 Pithoragarh,Maize,2012,1.2850,0.9113

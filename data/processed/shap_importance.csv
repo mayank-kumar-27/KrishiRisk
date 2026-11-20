@@ -1,14 +1,14 @@
 feature,label,mean_abs_shap_pct,mean_shap_pct
-rain_cv_weekly,Rainfall CV (weekly),5.0836,0.4638
-spi3_mean,SPI-3 (mean),3.1869,-1.3335
-tmin_mean_c,Mean Tmin,3.1716,0.1040
-rain_anomaly_z,Rainfall anomaly (z),2.9977,1.2766
-tmax_mean_c,Mean Tmax,2.9487,0.1148
-dry_spell_count,Dry spells (>=7 d),2.6330,0.1912
-rain_mm,Seasonal rainfall,2.2735,-0.5423
-onset_delay_days,Monsoon onset delay,2.1055,-0.1816
-spi3_min,SPI-3 (driest),1.9647,0.8011
-rh_mean_pct,Mean rel. humidity,1.2995,0.3561
-gdd_base10,Growing degree days,1.2011,-0.0298
-soil_degradation_score,Soil degradation score,0.4143,-0.0212
-heat_stress_days,Heat-stress days (>35 degC),0.2775,-0.0161
+rain_cv_weekly,Rainfall CV (weekly),5.0462,0.3793
+spi3_mean,SPI-3 (mean),3.1587,-1.2116
+tmin_mean_c,Mean Tmin,3.1535,-0.0134
+rain_anomaly_z,Rainfall anomaly (z),2.9884,1.1887
+tmax_mean_c,Mean Tmax,2.9427,0.1844
+dry_spell_count,Dry spells (>=7 d),2.6223,0.2413
+rain_mm,Seasonal rainfall,2.2448,-0.3857
+onset_delay_days,Monsoon onset delay,2.0796,-0.0756
+spi3_min,SPI-3 (driest),1.9482,0.7318
+rh_mean_pct,Mean rel. humidity,1.2681,0.2779
+gdd_base10,Growing degree days,1.2047,-0.0763
+soil_degradation_score,Soil degradation score,0.4147,-0.0247
+heat_stress_days,Heat-stress days (>35 degC),0.2895,-0.0394

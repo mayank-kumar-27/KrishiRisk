@@ -39,7 +39,7 @@
   "cv_rmse_pct": {
     "TrendOnly": 16.309,
     "LinearRegression": 15.345,
-    "RandomForest": 16.411,
-    "XGBoost": 16.534
+    "RandomForest": 16.483,
+    "XGBoost": 16.512
   }
 }

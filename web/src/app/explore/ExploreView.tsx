@@ -1,8 +1,11 @@
 "use client";
 
+import { ChartColumn, ChartLine, ChartScatter, Grid3x3, TrendingUp } from "lucide-react";
 import { useMemo, useState } from "react";
-import { BoxPlot, CorrHeatmap, RAIN_CLASSES, RainYieldScatter, YieldTrendChart, rainClassColor, type RainClass } from "@/components/charts";
-import { Card, Insight, Loading, NoData, PageHeader, Select } from "@/components/ui";
+import { Reveal, WhenVisible } from "@/components/anim";
+import { RAIN_CLASSES, rainClassColor, type RainClass } from "@/components/chart-utils";
+import { BoxPlot, CorrHeatmap, RainYieldScatter, YieldTrendChart } from "@/components/charts-lazy";
+import { Card, Insight, Loading, NoData, PageHeader, Segmented, Select } from "@/components/ui";
 import { useData } from "@/lib/data";
 import { fmt, linreg, mean, median, pairs, pearson, rollingMean, signed } from "@/lib/stats";
 import { usePalette } from "@/lib/theme";
@@ -85,64 +88,82 @@ export default function ExploreView() {
   const where = dSel === ALL ? "the state" : dSel;
   return (
     <div>
-      <PageHeader title="Explore the data" lead="How yields have moved, and how they respond to rainfall and climate, for any crop and district." />
-      <div className="mb-5 flex flex-wrap gap-4">
-        <Select label="Crop" value={crop} onChange={(v) => setCrop(v)} options={crops.map((c) => ({ value: c, label: c }))} />
-        <Select label="District" value={dSel} onChange={setDistrict}
-          options={[{ value: ALL, label: "All districts" }, ...districts.map((d) => ({ value: d, label: d }))]} />
+      <PageHeader eyebrow="Explore the data" icon={ChartLine} title="How climate shapes the harvest"
+        lead="How yields have moved, and how they respond to rainfall and climate — for any crop and district. Every insight below is computed live from the data on screen." />
+
+      <div className="sticky top-16 z-[500] -mx-4 mb-6 border-b border-line/70 bg-page/80 px-4 py-3 backdrop-blur-xl sm:-mx-6 sm:px-6">
+        <div className="flex flex-wrap items-end gap-4">
+          <Segmented id="explore-crop" label="Crop" value={crop} onChange={setCrop} options={crops.map((c) => ({ value: c, label: c }))} />
+          <Select label="District" value={dSel} onChange={setDistrict}
+            options={[{ value: ALL, label: "All districts" }, ...districts.map((d) => ({ value: d, label: d }))]} />
+        </div>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <Card title={`Yield trend — ${crop}, ${where}`}>
-          {trendSeries ? (
-            <>
-              <YieldTrendChart years={trendSeries.year} values={trendSeries.yield}
-                smooth={dSel === ALL ? rollingMean(trendSeries.yield) : undefined}
-                trend={dSel !== ALL ? (trendSeries as Series).trend : undefined} />
-              <Insight>
-                {Number.isFinite(pctPerYr)
-                  ? `${crop} yield in ${where} changed by ${signed(pctPerYr, 2)}% of its mean per year (linear fit, ${tp[0]?.[0]}–${tp[tp.length - 1]?.[0]}).`
-                  : "Too few years for a trend."}
-                {dSel === ALL && " State yield = total production ÷ total area of reporting districts."}
-              </Insight>
-            </>
-          ) : <p className="text-sm text-muted">No series for this selection.</p>}
-        </Card>
+        <Reveal>
+          <Card title="Yield trend" subtitle={`${crop} · ${where}`} icon={TrendingUp}>
+            {trendSeries ? (
+              <>
+                <WhenVisible height={260}>
+                  <YieldTrendChart years={trendSeries.year} values={trendSeries.yield}
+                    smooth={dSel === ALL ? rollingMean(trendSeries.yield) : undefined}
+                    trend={dSel !== ALL ? (trendSeries as Series).trend : undefined} />
+                </WhenVisible>
+                <Insight>
+                  {Number.isFinite(pctPerYr)
+                    ? `${crop} yield in ${where} changed by ${signed(pctPerYr, 2)}% of its mean per year (linear fit, ${tp[0]?.[0]}–${tp[tp.length - 1]?.[0]}).`
+                    : "Too few years for a trend."}
+                  {dSel === ALL && " State yield = total production ÷ total area of reporting districts."}
+                </Insight>
+              </>
+            ) : <p className="text-sm text-muted">No series for this selection.</p>}
+          </Card>
+        </Reveal>
 
-        <Card title={`Seasonal rainfall vs yield — ${crop}, ${where}`}>
-          {sc.length >= 3 ? (
-            <>
-              <RainYieldScatter points={sc} />
-              <Insight>
-                Rainfall vs yield r = {fmt(rRaw)} (n = {sc.length}). Against detrended yield anomaly, rainfall departure gives
-                r = {fmt(rAnom)} — {Math.abs(rAnom) < 0.2 ? "a weak link: other factors dominate year-to-year swings." : rAnom > 0 ? "wetter seasons tend to yield more." : "wetter seasons tend to yield less."}
-              </Insight>
-            </>
-          ) : <p className="text-sm text-muted">Not enough points.</p>}
-        </Card>
+        <Reveal delay={80}>
+          <Card title="Seasonal rainfall vs yield" subtitle={`${crop} · ${where}`} icon={ChartScatter}>
+            {sc.length >= 3 ? (
+              <>
+                <WhenVisible height={300}>
+                  <RainYieldScatter points={sc} />
+                </WhenVisible>
+                <Insight>
+                  Rainfall vs yield r = {fmt(rRaw)} (n = {sc.length}). Against detrended yield anomaly, rainfall departure gives
+                  r = {fmt(rAnom)} — {Math.abs(rAnom) < 0.2 ? "a weak link: other factors dominate year-to-year swings." : rAnom > 0 ? "wetter seasons tend to yield more." : "wetter seasons tend to yield less."}
+                </Insight>
+              </>
+            ) : <p className="text-sm text-muted">Not enough points.</p>}
+          </Card>
+        </Reveal>
 
-        <Card title={`Yield anomaly by rainfall category — ${crop}, ${where}`}>
-          <BoxPlot groups={groups} yLabel="Yield anomaly vs trend (%)" />
-          <Insight>
-            {Number.isFinite(medDef) && Number.isFinite(medNor)
-              ? `Median yield anomaly is ${signed(medDef)}% in rainfall-deficit seasons vs ${signed(medNor)}% in normal ones (deficit/excess = ≤ −${DEP}% / ≥ +${DEP}% of the district's average seasonal rain).`
-              : "Too few deficit or normal seasons in this selection to compare."}
-          </Insight>
-        </Card>
+        <Reveal>
+          <Card title="Yield anomaly by rainfall category" subtitle={`${crop} · ${where}`} icon={ChartColumn}>
+            <WhenVisible height={280}>
+              <BoxPlot groups={groups} yLabel="Yield anomaly vs trend (%)" />
+            </WhenVisible>
+            <Insight>
+              {Number.isFinite(medDef) && Number.isFinite(medNor)
+                ? `Median yield anomaly is ${signed(medDef)}% in rainfall-deficit seasons vs ${signed(medNor)}% in normal ones (deficit/excess = ≤ −${DEP}% / ≥ +${DEP}% of the district's average seasonal rain).`
+                : "Too few deficit or normal seasons in this selection to compare."}
+            </Insight>
+          </Card>
+        </Reveal>
 
-        <Card title="Climate features vs yield anomaly (state level)">
-          {corr.data && featureKeys.length ? (
-            <>
-              <CorrHeatmap rows={featureKeys} cols={corrCols} cell={cell} />
-              <Insight>
-                {strongest
-                  ? `${nSig} of ${corrRows.length} correlations are significant (p < 0.05); the strongest is ${strongest.label} for ${strongest.crop} (r = ${fmt(strongest.r)}).`
-                  : "No feature-crop correlation is significant at p < 0.05."}{" "}
-                Computed across all districts; the district filter does not apply here.
-              </Insight>
-            </>
-          ) : <NoData error={corr.error} />}
-        </Card>
+        <Reveal delay={80}>
+          <Card title="Climate features vs yield anomaly" subtitle="State level · all districts" icon={Grid3x3}>
+            {corr.data && featureKeys.length ? (
+              <>
+                <CorrHeatmap rows={featureKeys} cols={corrCols} cell={cell} />
+                <Insight>
+                  {strongest
+                    ? `${nSig} of ${corrRows.length} correlations are significant (p < 0.05); the strongest is ${strongest.label} for ${strongest.crop} (r = ${fmt(strongest.r)}).`
+                    : "No feature-crop correlation is significant at p < 0.05."}{" "}
+                  Computed across all districts; the district filter does not apply here.
+                </Insight>
+              </>
+            ) : <NoData error={corr.error} />}
+          </Card>
+        </Reveal>
       </div>
     </div>
   );
