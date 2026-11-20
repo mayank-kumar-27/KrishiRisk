@@ -26,6 +26,24 @@ RAW_CROP = RAW / "crop"
 RAW_SOIL = RAW / "soil"
 
 
+def redact(text: str) -> str:
+    """Hide API keys in URLs / messages before they are logged."""
+    return re.sub(r"(api[-_]?key=)[^&\s'\"]+", r"\1***", str(text), flags=re.I)
+
+
+def load_env() -> None:
+    """Load KEY=VALUE lines from the repo's .env (gitignored) into os.environ, without
+    overriding variables that are already set. Used for API keys - never commit them."""
+    path = ROOT / ".env"
+    if not path.exists():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "=" in line:
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
 class ManualDownloadRequired(RuntimeError):
     """Raised when a data file must be downloaded by hand. Message says exactly what to do."""
 
@@ -79,12 +97,14 @@ class PoliteClient:
             try:
                 r = self.session.get(url, params=params, timeout=self.timeout_s, stream=stream)
             except requests.RequestException as e:
-                err, retry_after = f"{type(e).__name__}: {e}", None
+                err, retry_after = redact(f"{type(e).__name__}: {e}"), None
             else:
                 if r.status_code == 200:
                     return r
                 if r.status_code not in (429, 500, 502, 503, 504):
-                    r.raise_for_status()  # 4xx other than 429: retrying won't help
+                    # 4xx other than 429: retrying won't help. Raise without the query string,
+                    # which can contain an API key.
+                    raise RuntimeError(f"GET {url} failed: HTTP {r.status_code} {redact(r.text[:200])}")
                 err, retry_after = f"HTTP {r.status_code}", r.headers.get("Retry-After")
             if attempt == self.max_retries:
                 raise RuntimeError(f"GET {url} failed after {attempt} attempts ({err})")

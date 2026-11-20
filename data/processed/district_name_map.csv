@@ -1,0 +1,14 @@
+source,source_name,geo_name,status,score,candidates
+crop,ALMORA,Almora,exact,1.0,Almora (1.00); Hardwar (0.46); Chamoli (0.46)
+crop,BAGESHWAR,Bageshwar,exact,1.0,Bageshwar (1.00); Hardwar (0.50); Garhwal (0.50)
+crop,CHAMOLI,Chamoli,exact,1.0,Chamoli (1.00); Champawat (0.50); Almora (0.46)
+crop,CHAMPAWAT,Champawat,exact,1.0,Champawat (1.00); Hardwar (0.50); Chamoli (0.50)
+crop,DEHRADUN,Dehradun,exact,1.0,Dehradun (1.00); Tehri Garhwal (0.40); Bageshwar (0.35)
+crop,NAINITAL,Nainital,exact,1.0,Nainital (1.00); Garhwal (0.40); Pithoragarh (0.32)
+crop,PITHORAGARH,Pithoragarh,exact,1.0,Pithoragarh (1.00); Udham Singh Nagar (0.46); Garhwal (0.44)
+crop,RUDRA PRAYAG,Rudraprayag,exact,1.0,Rudraprayag (1.00); Champawat (0.40); Udham Singh Nagar (0.38)
+crop,TEHRI GARHWAL,Tehri Garhwal,exact,1.0,Tehri Garhwal (1.00); Garhwal (0.74); Pithoragarh (0.61)
+crop,UTTAR KASHI,Uttarkashi,exact,1.0,Uttarkashi (1.00); Rudraprayag (0.38); Pithoragarh (0.38)
+crop,HARIDWAR,Hardwar,manual,0.933,Hardwar (0.93); Garhwal (0.53); Tehri Garhwal (0.50) | confirmed: Census 2011 name
+crop,PAURI GARHWAL,Garhwal,manual,0.75,name containment -> Garhwal; Tehri Garhwal (0.75); Garhwal (0.74); Pithoragarh (0.52) | confirmed: Census 2011 name
+crop,UDAM SINGH NAGAR,Udham Singh Nagar,manual,0.966,Udham Singh Nagar (0.97); Pithoragarh (0.48); Rudraprayag (0.40) | confirmed: Census 2011 name

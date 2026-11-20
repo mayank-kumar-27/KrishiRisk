@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import difflib
+import os
 import re
 import sys
 
@@ -35,7 +36,7 @@ import pandas as pd
 import config
 from common import (
     PROCESSED, RAW_CLIMATE, RAW_CROP, RAW_GEO, RAW_SOIL,
-    ManualDownloadRequired, PoliteClient, get_logger, norm_name, norm_state,
+    ManualDownloadRequired, PoliteClient, get_logger, load_env, norm_name, norm_state,
     read_json_or_none, rel, slug, write_json_atomic,
 )
 
@@ -390,11 +391,62 @@ def _detect_long(cols_norm: dict[str, str]) -> dict[str, str] | None:
     return None
 
 
+def fetch_crop_api(state: str) -> str | None:
+    """Download the state's rows of the data.gov.in crop production dataset via its API.
+    Needs DATA_GOV_IN_API_KEY (env var or gitignored .env). Returns a reason string on failure.
+    The key is passed only as a request parameter and never logged."""
+    load_env()
+    key = os.environ.get("DATA_GOV_IN_API_KEY", "").strip()
+    if not key:
+        return "no DATA_GOV_IN_API_KEY set"
+    client = PoliteClient(min_interval_s=1.0, max_retries=4, timeout_s=180, logger=log)
+    reasons = []
+    names = [state] + [s for s, n in {"Uttaranchal": "uttarakhand", "Orissa": "odisha"}.items()
+                       if n == norm_state(state)]
+    for rid in config.DATA_GOV_IN_RESOURCES:
+        url = config.DATA_GOV_IN_URL.format(rid=rid)
+        for name in names:
+            rows, offset, total = [], 0, None
+            try:
+                while total is None or offset < total:
+                    r = client.get(url, params={"api-key": key, "format": "json", "limit": config.DATA_GOV_IN_PAGE,
+                                                "offset": offset, "filters[state_name]": name})
+                    d = r.json()
+                    recs = d.get("records") or []
+                    total = int(d.get("total") or 0)
+                    if not recs:
+                        break
+                    rows += recs
+                    offset += len(recs)
+                    log.info(f"  data.gov.in {rid[:8]}: {len(rows):,} / {total:,} rows for '{name}'")
+            except Exception as e:  # noqa: BLE001 - report and try the next resource
+                reasons.append(f"{rid[:8]} ({name}): {str(e).split('?')[0]}")  # strip query (holds the key)
+                break
+            if rows:
+                df = pd.DataFrame(rows)
+                if not {"district_name", "crop"} <= set(map(_norm_col, df.columns)):
+                    reasons.append(f"{rid[:8]}: unexpected columns {list(df.columns)[:8]}")
+                    break
+                RAW_CROP.mkdir(parents=True, exist_ok=True)
+                out = RAW_CROP / f"datagovin_crop_production_{slug(state)}.csv"
+                tmp = out.with_suffix(".csv.part")
+                df.to_csv(tmp, index=False)
+                tmp.replace(out)
+                log.info(f"  saved {len(df):,} rows -> {rel(out)} (source: data.gov.in API, resource {rid})")
+                return None
+            reasons.append(f"{rid[:8]} ({name}): no records")
+    return "; ".join(reasons)
+
+
 def load_crop(state: str, start: int, end: int) -> pd.DataFrame:
-    log.info("== 4. Crop yield (manual file)")
+    log.info("== 4. Crop yield (manual file or data.gov.in API)")
     files = _data_files(RAW_CROP)
     if not files:
-        raise ManualDownloadRequired(crop_download_instructions(state))
+        reason = fetch_crop_api(state)
+        files = _data_files(RAW_CROP)
+        if not files:
+            raise ManualDownloadRequired(crop_download_instructions(state)
+                                         + f"\n(Automatic download via data.gov.in API failed: {reason})\n")
 
     frames = []
     for f in files:

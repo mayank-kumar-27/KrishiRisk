@@ -1,0 +1,14 @@
+district,state,censuscode,lat,lon,point_method
+Almora,Uttarakhand,64,29.6893,79.5022,centroid
+Bageshwar,Uttarakhand,63,29.991,79.8594,centroid
+Chamoli,Uttarakhand,57,30.4947,79.5784,centroid
+Champawat,Uttarakhand,65,29.2988,80.0697,centroid
+Dehradun,Uttarakhand,60,30.463,77.9737,centroid
+Garhwal,Uttarakhand,61,29.8927,78.7695,centroid
+Hardwar,Uttarakhand,68,29.8717,78.0013,centroid
+Nainital,Uttarakhand,66,29.3128,79.455,centroid
+Pithoragarh,Uttarakhand,62,30.1112,80.3475,centroid
+Rudraprayag,Uttarakhand,58,30.5302,79.0588,centroid
+Tehri Garhwal,Uttarakhand,59,30.4372,78.5367,centroid
+Udham Singh Nagar,Uttarakhand,67,29.0279,79.5242,centroid
+Uttarkashi,Uttarakhand,56,30.9733,78.6032,centroid

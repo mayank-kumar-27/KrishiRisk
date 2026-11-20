@@ -39,7 +39,19 @@ python analysis/run_all.py
 _(Pipeline scripts not written yet.)_
 
 ## Running the website
-_(Coming soon — Next.js app in `web/`.)_
+The dashboard in `web/` is a fully static Next.js app (App Router, TypeScript, Tailwind, Recharts,
+react-leaflet). It reads only the JSON files that `analysis/06_export_web.py` writes to
+`web/public/data/`.
+
+```bash
+cd web
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export to web/out/
+```
+
+Pages: Overview · Risk Map · Explore · What-If Simulator · Model · About.
+Deploy on Vercel with **Root Directory = `web`**.
 
 ## Data sources
 | Dataset | Provider | URL | Licence | Accessed |

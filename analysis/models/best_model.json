@@ -1,0 +1,45 @@
+{
+  "model": "LinearRegression",
+  "params": {},
+  "features": [
+    "rain_mm",
+    "rain_anomaly_z",
+    "spi3_mean",
+    "spi3_min",
+    "dry_spell_count",
+    "onset_delay_days",
+    "rain_cv_weekly",
+    "heat_stress_days",
+    "gdd_base10",
+    "tmax_mean_c",
+    "tmin_mean_c",
+    "rh_mean_pct",
+    "soil_degradation_score",
+    "crop_Maize",
+    "crop_Ragi",
+    "crop_Rice",
+    "crop_Wheat"
+  ],
+  "crops": [
+    "Maize",
+    "Ragi",
+    "Rice",
+    "Wheat"
+  ],
+  "train_years": [
+    2000,
+    2009
+  ],
+  "test_years": [
+    2010,
+    2014
+  ],
+  "target": "yield / train-only district-crop trend - 1",
+  "beats_trend_only_cv": true,
+  "cv_rmse_pct": {
+    "TrendOnly": 16.309,
+    "LinearRegression": 15.345,
+    "RandomForest": 16.411,
+    "XGBoost": 16.534
+  }
+}

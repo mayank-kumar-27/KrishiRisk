@@ -56,6 +56,7 @@ IN_MASTER = PROCESSED / "master.csv"
 OUT_METRICS = PROCESSED / "model_metrics.csv"
 OUT_METRICS_MD = PROCESSED / "model_metrics.md"
 OUT_SHAP = PROCESSED / "shap_importance.csv"
+OUT_PRED = PROCESSED / "test_predictions.csv"  # best model, test years
 MODELS_DIR = ANALYSIS / "models"
 OUT_INSIGHTS = FIGURES / "insights.md"
 MODEL_START, MODEL_END = "<!-- model-section:start -->", "<!-- model-section:end -->"
@@ -439,6 +440,10 @@ def main() -> int:
 
     log.info("== Figures")
     pred = test_preds[best]
+    test_out = pred.assign(predicted_t_ha=pred["trend"] * (1 + pred["pred_rel"]))
+    test_out = test_out[["district", "crop", "year", "yield_t_ha", "predicted_t_ha"]].rename(
+        columns={"yield_t_ha": "actual_t_ha"})
+    test_out.to_csv(OUT_PRED, index=False, float_format="%.4f")
     test_all = met[(met["split"] == "test") & (met["crop"] == "All crops")].set_index("model")
     fig_actual_vs_pred(pred, best, crops, test_all)
     resid_line = fig_residuals(pred, best, crops)

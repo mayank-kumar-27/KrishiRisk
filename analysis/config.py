@@ -10,11 +10,11 @@ import datetime as _dt
 # ---- Scope (TBD: set these!) -------------------------------------------------
 # State name as it appears in the Census 2011 district map (e.g. "Uttarakhand",
 # "Maharashtra"). None = not chosen yet; scripts refuse to run until it is set.
-STATE: str | None = None
+STATE: str | None = "Uttarakhand"
 
 # Crops to keep, e.g. ["Rice", "Wheat", "Maize"]. Empty list = keep all crops
 # (01 prints the crops found so you can choose).
-CROPS: list[str] = []
+CROPS: list[str] = ["Rice", "Wheat", "Maize", "Ragi"]
 
 YEAR_START: int = 1997
 # None = latest full calendar year.
@@ -43,6 +43,14 @@ SOILGRIDS_URL = "https://rest.isric.org/soilgrids/v2.0/properties/query"
 SOILGRIDS_PROPERTIES = ["nitrogen", "phh2o", "soc", "clay", "sand", "silt"]
 SOILGRIDS_DEPTHS = ["0-5cm", "5-15cm", "15-30cm"]  # aggregated to a 0-30 cm weighted mean
 SOILGRIDS_MIN_INTERVAL_S = 12.5  # ISRIC fair-use limit: 5 requests / minute
+
+# data.gov.in "District-wise, season-wise crop production statistics from 1997".
+# Used only when data/raw/crop/ is empty AND an API key is set as DATA_GOV_IN_API_KEY
+# (environment variable or the gitignored .env file). Both IDs appear on the dataset page;
+# the first one that returns district crop records is used.
+DATA_GOV_IN_URL = "https://api.data.gov.in/resource/{rid}"
+DATA_GOV_IN_RESOURCES = ["35be999b-0208-4354-b557-f6ca9a5355de", "f4435c3b-96be-4002-9839-aa3897dc732b"]
+DATA_GOV_IN_PAGE = 1000
 
 # ---- Name matching ----------------------------------------------------------------
 FUZZY_AUTO_ACCEPT = 0.90  # >= this: accepted automatically (still listed for review)

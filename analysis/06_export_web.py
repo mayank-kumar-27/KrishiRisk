@@ -33,6 +33,9 @@ MODEL_DIR = ANALYSIS / "models"
 BUDGET_BYTES = 5 * 1024 * 1024
 SIMPLIFY_DEG = 0.005   # ~500 m; enough for a district map at web zoom levels
 COORD_DECIMALS = 4     # ~10 m
+DRIVER_LABELS = {"rain_variability": "Erratic rainfall", "drought_frequency": "Frequent drought",
+                 "heat_stress": "Heat stress", "soil_degradation": "Soil degradation",
+                 "yield_volatility": "Volatile yields"}
 
 
 def clean(o, nd: int = 3):
@@ -90,14 +93,23 @@ def main() -> int:
     state = state or (geo["state"].iloc[0] if "state" in geo else None)
     geo["geometry"] = geo.geometry.simplify(SIMPLIFY_DEG, preserve_topology=True)
     geo = geo.merge(dist[["district", "risk_index", "risk_category", "cluster_name"]], on="district", how="left")
-    by_crop = {d: {r.crop: {"index": r.risk_index, "category": r.risk_category, "mean_yield": r.mean_yield_t_ha}
+    # Top risk driver = component with the largest weighted contribution to the index.
+    w = weights["weights"]
+    contrib = pd.DataFrame({k: w[k] * risk[f"{k}_norm"] for k in DRIVER_LABELS}, index=risk.index)
+    risk["driver"] = contrib.idxmax(axis=1, skipna=True).map(DRIVER_LABELS)
+    by_crop = {d: {r.crop: {"index": r.risk_index, "category": r.risk_category, "mean_yield": r.mean_yield_t_ha,
+                            "driver": r.driver,
+                            "components": {k: getattr(r, f"{k}_norm") for k in DRIVER_LABELS}}
                    for r in g.itertuples()} for d, g in risk.groupby("district")}
+    dist_contrib = contrib.mul(risk["mean_area_ha"], axis=0).groupby(risk["district"]).sum(min_count=1)
+    dist_driver = dist_contrib.idxmax(axis=1, skipna=True).map(DRIVER_LABELS).to_dict()
     feats = []
     for r in geo.itertuples():
         gj = json.loads(gpd.GeoSeries([r.geometry]).to_json())["features"][0]["geometry"]
         feats.append({"type": "Feature", "geometry": gj,
                       "properties": {"district": r.district, "risk_index": r.risk_index,
                                      "risk_category": r.risk_category, "cluster": r.cluster_name,
+                                     "driver": dist_driver.get(r.district),
                                      "crops": by_crop.get(r.district, {})}})
     total += write("districts.geojson", {"type": "FeatureCollection", "features": feats}, COORD_DECIMALS)
 
@@ -139,9 +151,11 @@ def main() -> int:
 
     # ---- metrics.json
     met = pd.read_csv(PROCESSED / "model_metrics.csv")
+    pred_path = PROCESSED / "test_predictions.csv"
+    preds = pd.read_csv(pred_path).to_dict(orient="records") if pred_path.exists() else []
     total += write("metrics.json", {"best_model": meta.get("model"), "beats_trend_only_cv": meta.get("beats_trend_only_cv"),
                                     "train_years": meta.get("train_years"), "test_years": meta.get("test_years"),
-                                    "rows": met.to_dict(orient="records")})
+                                    "rows": met.to_dict(orient="records"), "test_predictions": preds})
 
     # ---- shap_importance.json
     shap_path = PROCESSED / "shap_importance.csv"
@@ -188,6 +202,8 @@ def main() -> int:
                   "test_r2_deviation": tm.loc[best, "r2_anomaly"] if best in tm.index else None,
                   "beats_trend_only_cv": meta.get("beats_trend_only_cv")},
         "risk_weights": weights.get("weights"), "risk_weight_method": weights.get("method"),
+        "pair_category_cutoffs": weights.get("category_cutoffs"),
+        "district_category_cutoffs": weights.get("district_category_cutoffs"),
         "scenario_state_pct": {"rain_-20": state_change(-20, 0), "temp_+2": state_change(0, 2.0),
                                "rain_-40_temp_+3": state_change(-40, 3.0)},
     }

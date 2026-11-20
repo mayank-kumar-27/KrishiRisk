@@ -184,8 +184,11 @@ def cluster_districts(comp: pd.DataFrame, cut: dict) -> pd.DataFrame:
     dist = pd.DataFrame([{"district": d, "risk_index": wavg(g, "risk_index"),
                           **{k: wavg(g, k) for k in COMPONENTS}, "n_crops": len(g)}
                          for d, g in comp.groupby("district")])
-    edges = [cut["Moderate"][0], cut["High"][0], cut["Severe"][0]]
-    dist["risk_category"] = pd.cut(dist["risk_index"], [-0.01, *edges, 100.01], labels=CATEGORIES).astype(str)
+    # District (all-crop) scores are area-weighted averages, which pull toward the middle; classify them by
+    # quartiles of the district scores themselves so the "all crops" map still separates districts.
+    q = dist["risk_index"].quantile([0.25, 0.5, 0.75]).tolist()
+    dist["risk_category"] = pd.cut(dist["risk_index"], [-0.01, *q, 100.01], labels=CATEGORIES).astype(str)
+    dist.attrs["cutoffs"] = {"Low": [0, q[0]], "Moderate": [q[0], q[1]], "High": [q[1], q[2]], "Severe": [q[2], 100]}
     feats = list(COMPONENTS)
     ok = dist[feats].notna().all(axis=1)
     dist["cluster"] = -1
@@ -343,6 +346,10 @@ def main() -> int:
 
     log.info("== 2. Clustering districts")
     dist = cluster_districts(comp, cut)
+    wj = json.loads(OUT_WEIGHTS.read_text(encoding="utf-8"))
+    wj["district_category_cutoffs"] = {k: [round(x, 2), round(y, 2)] for k, (x, y) in dist.attrs["cutoffs"].items()}
+    wj["district_category_rule"] = "quartiles of the district (area-weighted all-crop) index"
+    OUT_WEIGHTS.write_text(json.dumps(wj, indent=2), encoding="utf-8")
     comp = comp.merge(dist[["district", "cluster", "cluster_name"]], on="district", how="left")
     dist.to_csv(OUT_DISTRICT, index=False, float_format="%.4f")
     for name, g in dist[dist["cluster"] >= 0].groupby("cluster_name"):
@@ -396,8 +403,13 @@ def main() -> int:
     if not meta.get("beats_trend_only_cv", False):
         lines_sc.append("Caution: the model did not beat the trend-only reference in CV, so scenario responses are weak "
                         "and should be read as indicative only.")
-    lines_sc.append("Tree-based models cannot extrapolate beyond the observed climate range, so extreme scenarios are "
-                    "likely to understate impacts.")
+    if meta.get("model") in ("RandomForest", "XGBoost"):
+        lines_sc.append("Tree-based models cannot extrapolate beyond the observed climate range, so extreme scenarios "
+                        "are likely to understate impacts.")
+    else:
+        lines_sc.append("The linear model extrapolates straight-line effects beyond the observed climate range; with "
+                        "correlated rainfall features, individual effects can have counter-intuitive signs, so read "
+                        "extreme scenarios with caution.")
     section = ("## Climate Stress Risk Index\n\n"
                "Index (0-100) = weighted mean of five min-max normalised components: "
                + "; ".join(COMPONENTS.values()) + ".\n\n"

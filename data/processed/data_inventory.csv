@@ -1,0 +1,5 @@
+source,path,rows,years,districts,status
+District boundaries (datameet Census 2011),data/processed/districts.geojson,13,2011,13/13,OK
+Climate daily (NASA POWER),data/raw/climate/climate_daily.csv,137696,1997-2025,13/13,OK
+Soil (SoilGrids v2.0),data/processed/soil_district.csv,13,static,13/13,OK
+Crop area/production/yield,data/processed/crop_long.csv,857,2000-2014,13/13,OK

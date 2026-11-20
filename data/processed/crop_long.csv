@@ -1,0 +1,858 @@
+state,district,year,crop,season,area,production,source_file,format,geo_district
+Uttarakhand,ALMORA,2000,Maize,Kharif,1922,2504.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2000,Ragi,Kharif,31583,34356.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2000,Rice,Kharif,21297,21003.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2000,Wheat,Rabi,40825,42476.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2001,Maize,Kharif,2104,2495.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2001,Ragi,Kharif,34170,37620.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2001,Rice,Kharif,20696,25969.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2001,Wheat,Rabi,40102,32333.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2002,Maize,Kharif,1917,1601.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2002,Ragi,Kharif,34578,27597.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2002,Rice,Kharif,23828,15941.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2002,Wheat,Rabi,45193,42431.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2003,Maize,Kharif,2445,2690.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2003,Ragi,Kharif,34268,35680.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2003,Rice,Kharif,20137,20615.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2003,Wheat,Rabi,42793,28843.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2004,Maize,Kharif,2052,2257.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2004,Ragi,Kharif,35617,37385.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2004,Rice,Kharif,21444,21008.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2004,Wheat,Rabi,43026,52461.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2005,Maize,Kharif,1887,1234.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2005,Ragi,Kharif,33648,35043.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2005,Rice,Kharif,21212,22000.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2005,Wheat,Rabi,39917,23932.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2006,Maize,Kharif,1726,1597.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2006,Ragi,Kharif,34215,41329.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2006,Rice,Kharif,23031,28882.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2006,Wheat,Rabi,42173,45430.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2007,Maize,Kharif,1857,1857.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2007,Ragi,Kharif,36138,42998.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2007,Rice,Kharif,22299,25409.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2007,Wheat,Rabi,42750,30587.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2008,Maize,Kharif,1690,1690.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2008,Ragi,Kharif,31210,40697.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2008,Rice,Kharif,20493,20160.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2008,Wheat,Rabi,41699,30078.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2009,Maize,Kharif,1924,1924.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2009,Ragi,Kharif,32920,34777.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2009,Rice,Kharif,21069,20655.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2009,Wheat,Rabi,41022,38381.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2010,Maize,Kharif,1656,2887.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2010,Ragi,Kharif,35970,43859.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2010,Rice,Kharif,19294,19886.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2010,Wheat,Rabi,39933,51314.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2011,Maize,Kharif,1487,2653.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2011,Ragi,Kharif,34053,43573.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2011,Rice,Kharif,18736,21252.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2011,Wheat,Rabi,36774,37345.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2012,Maize,Kharif,2028,3103.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2012,Ragi,Kharif,32971,39118.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2012,Rice,Kharif,18288,19656.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2012,Wheat,Rabi,37533,49359.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2013,Maize,Kharif,1623,1962.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2013,Ragi,Kharif,33882,39550.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2013,Rice,Kharif,15597,18545.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2013,Wheat,Rabi,34854,45099.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2014,Maize,Kharif,1999,2303.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2014,Ragi,Kharif,33569,40898.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2014,Rice,Kharif,16897,19776.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2014,Wheat,Rabi,35964,41250.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,ALMORA,2014,Rice,Whole Year,16897,19776.0,datagovin_crop_production_uttarakhand.csv,long,Almora
+Uttarakhand,BAGESHWAR,2000,Maize,Kharif,391,432.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2000,Ragi,Kharif,7469,10370.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2000,Rice,Kharif,13020,25585.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2000,Wheat,Rabi,14725,19025.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2001,Maize,Kharif,393,428.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2001,Ragi,Kharif,7075,9066.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2001,Rice,Kharif,14239,17553.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2001,Wheat,Rabi,14639,18882.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2002,Maize,Kharif,573,382.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2002,Ragi,Kharif,5770,5544.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2002,Rice,Kharif,13348,13177.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2002,Wheat,Rabi,14306,18445.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2003,Maize,Kharif,1275,1705.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2003,Ragi,Kharif,5780,9803.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2003,Rice,Kharif,12602,18981.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2003,Wheat,Rabi,14170,13787.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2004,Maize,Kharif,428,529.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2004,Ragi,Kharif,6261,7736.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2004,Rice,Kharif,12481,16619.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2004,Wheat,Rabi,13621,21527.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2005,Maize,Kharif,1468,1058.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2005,Ragi,Kharif,5840,7160.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2005,Rice,Kharif,15699,22304.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2005,Wheat,Rabi,17565,17334.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2006,Maize,Kharif,355,337.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2006,Ragi,Kharif,6230,6973.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2006,Rice,Kharif,13759,16922.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2006,Wheat,Rabi,15907,18907.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2007,Maize,Kharif,806,988.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2007,Ragi,Kharif,6053,8623.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2007,Rice,Kharif,12781,16239.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2007,Wheat,Rabi,14872,17266.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2008,Maize,Kharif,381,519.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2008,Ragi,Kharif,5828,9387.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2008,Rice,Kharif,14862,20439.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2008,Wheat,Rabi,15894,16426.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2009,Maize,Kharif,376,512.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2009,Ragi,Kharif,6341,9327.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2009,Rice,Kharif,12629,16972.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2009,Wheat,Rabi,14552,16585.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2010,Maize,Kharif,303,400.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2010,Ragi,Kharif,6319,7238.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2010,Rice,Kharif,13700,16519.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2010,Wheat,Rabi,14903,18950.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2011,Maize,Kharif,406,577.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2011,Ragi,Kharif,5534,7895.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2011,Rice,Kharif,13727,19455.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2011,Wheat,Rabi,14509,20632.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2012,Maize,Kharif,429,603.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2012,Ragi,Kharif,5994,9211.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2012,Rice,Kharif,13272,19740.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2012,Wheat,Rabi,15252,24090.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2013,Maize,Kharif,337,473.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2013,Ragi,Kharif,5451,8086.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2013,Rice,Kharif,13580,19492.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2013,Wheat,Rabi,14603,25288.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2014,Maize,Kharif,279,279.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2014,Ragi,Kharif,6374,8455.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2014,Rice,Kharif,13130,19916.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2014,Wheat,Rabi,14904,13702.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,BAGESHWAR,2014,Rice,Whole Year,13130,19916.0,datagovin_crop_production_uttarakhand.csv,long,Bageshwar
+Uttarakhand,CHAMOLI,2000,Maize,Kharif,211,268.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2000,Ragi,Kharif,10639,17942.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2000,Rice,Kharif,14294,15263.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2000,Wheat,Rabi,14699,17359.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2001,Maize,Kharif,233,245.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2001,Ragi,Kharif,9133,11520.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2001,Rice,Kharif,11108,13503.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2001,Wheat,Rabi,13006,17131.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2002,Maize,Kharif,169,154.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2002,Ragi,Kharif,9728,12271.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2002,Rice,Kharif,11321,12945.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2002,Wheat,Rabi,14750,19955.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2003,Maize,Kharif,233,324.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2003,Ragi,Kharif,10034,14650.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2003,Rice,Kharif,14193,17611.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2003,Wheat,Rabi,14082,13440.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2004,Maize,Kharif,187,238.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2004,Ragi,Kharif,10268,16517.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2004,Rice,Kharif,12768,16579.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2004,Wheat,Rabi,12525,16803.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2005,Maize,Kharif,195,171.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2005,Ragi,Kharif,8665,11984.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2005,Rice,Kharif,10219,14658.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2005,Wheat,Rabi,13492,11464.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2006,Maize,Kharif,192,173.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2006,Ragi,Kharif,10746,15518.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2006,Rice,Kharif,12317,16421.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2006,Wheat,Rabi,14702,22130.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2007,Maize,Kharif,177,172.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2007,Ragi,Kharif,9099,13875.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2007,Rice,Kharif,11905,17754.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2007,Wheat,Rabi,14210,18225.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2008,Maize,Kharif,204,131.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2008,Ragi,Kharif,9472,14286.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2008,Rice,Kharif,11714,15380.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2008,Wheat,Rabi,13756,12257.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2009,Maize,Kharif,205,132.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2009,Ragi,Kharif,10142,14645.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2009,Rice,Kharif,11673,13813.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2009,Wheat,Rabi,14235,17854.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2010,Maize,Kharif,196,175.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2010,Ragi,Kharif,10069,14964.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2010,Rice,Kharif,12407,17532.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2010,Wheat,Rabi,15295,21943.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2011,Maize,Kharif,199,178.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2011,Ragi,Kharif,9583,13977.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2011,Rice,Kharif,11001,14557.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2011,Wheat,Rabi,13471,19786.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2012,Maize,Kharif,197,177.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2012,Ragi,Kharif,10058,15521.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2012,Rice,Kharif,11983,16414.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2012,Wheat,Rabi,14346,20585.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2013,Maize,Kharif,187,168.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2013,Ragi,Kharif,9828,15062.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2013,Rice,Kharif,11779,15234.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2013,Wheat,Rabi,14362,19922.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2014,Maize,Kharif,181,320.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2014,Ragi,Kharif,8784,12676.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2014,Rice,Kharif,11265,14414.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2014,Wheat,Rabi,13506,15386.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMOLI,2014,Rice,Whole Year,11265,14414.0,datagovin_crop_production_uttarakhand.csv,long,Chamoli
+Uttarakhand,CHAMPAWAT,2000,Maize,Kharif,934,1377.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2000,Ragi,Kharif,8061,7279.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2000,Rice,Kharif,11388,13786.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2000,Maize,Rabi,5,7.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2000,Wheat,Rabi,12969,18935.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2001,Maize,Kharif,777,891.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2001,Ragi,Kharif,7518,11999.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2001,Rice,Kharif,11458,13187.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2001,Maize,Rabi,10,12.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2001,Rice,Rabi,3,4.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2001,Wheat,Rabi,11969,15259.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2002,Maize,Kharif,773,812.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2002,Ragi,Kharif,4879,6911.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2002,Rice,Kharif,8625,10526.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2002,Maize,Rabi,5,7.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2002,Wheat,Rabi,10351,14567.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2003,Maize,Kharif,556,737.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2003,Ragi,Kharif,5750,8780.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2003,Rice,Kharif,8726,11134.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2003,Wheat,Rabi,9641,15568.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2003,Maize,Summer,5,8.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2004,Maize,Kharif,923,1131.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2004,Ragi,Kharif,7280,10201.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2004,Rice,Kharif,9861,12201.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2004,Wheat,Rabi,11991,19635.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2004,Maize,Summer,5,9.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2005,Maize,Kharif,848,692.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2005,Ragi,Kharif,6655,12168.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2005,Rice,Kharif,9395,11923.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2005,Wheat,Rabi,11440,13954.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2005,Maize,Summer,5,9.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2006,Maize,Kharif,870,879.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2006,Ragi,Kharif,7302,8028.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2006,Rice,Kharif,10109,12137.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2006,Maize,Rabi,11,18.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2006,Wheat,Rabi,10570,12896.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2007,Maize,Kharif,618,587.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2007,Ragi,Kharif,4787,8259.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2007,Rice,Kharif,6948,9490.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2007,Wheat,Rabi,8114,7593.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2007,Maize,Summer,19,31.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2008,Maize,Kharif,658,624.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2008,Ragi,Kharif,6747,10617.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2008,Rice,Kharif,10060,9498.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2008,Wheat,Rabi,10043,9987.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2008,Maize,Summer,11,15.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2009,Maize,Kharif,495,470.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2009,Ragi,Kharif,4696,5484.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2009,Rice,Kharif,6848,8222.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2009,Maize,Rabi,10,15.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2009,Wheat,Rabi,7310,8809.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2010,Maize,Kharif,592,552.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2010,Ragi,Kharif,5858,8030.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2010,Rice,Kharif,7216,7455.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2010,Maize,Rabi,10,16.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2010,Rice,Rabi,10,,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2010,Wheat,Rabi,9435,11861.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2011,Maize,Kharif,645,603.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2011,Ragi,Kharif,6335,8290.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2011,Rice,Kharif,7360,9130.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2011,Wheat,Rabi,8477,10140.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2011,Maize,Summer,11,17.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2012,Maize,Kharif,769,721.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2012,Ragi,Kharif,4870,6810.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2012,Rice,Kharif,6006,8150.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2012,Wheat,Rabi,6943,8909.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2012,Maize,Summer,13,12.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2013,Maize,Kharif,632,591.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2013,Ragi,Kharif,4846,7328.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2013,Rice,Kharif,6406,9417.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2013,Wheat,Rabi,6971,10463.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2013,Maize,Summer,4,10.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2014,Maize,Kharif,563,563.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2014,Ragi,Kharif,4336,6405.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2014,Rice,Kharif,6312,8191.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2014,Wheat,Rabi,7229,11558.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2014,Maize,Summer,4,10.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,CHAMPAWAT,2014,Rice,Whole Year,6312,8191.0,datagovin_crop_production_uttarakhand.csv,long,Champawat
+Uttarakhand,DEHRADUN,2000,Maize,Kharif,11602,19229.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2000,Ragi,Kharif,2694,4054.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2000,Rice,Kharif,13786,25606.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2000,Maize,Rabi,7,11.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2000,Wheat,Rabi,24142,31074.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2001,Maize,Kharif,11527,14420.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2001,Ragi,Kharif,3215,4670.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2001,Rice,Kharif,13364,24396.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2001,Maize,Rabi,5,8.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2001,Wheat,Rabi,24899,43065.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2002,Maize,Kharif,11713,15611.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2002,Ragi,Kharif,2706,3185.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2002,Rice,Kharif,13106,25244.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2002,Maize,Rabi,1,1.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2002,Wheat,Rabi,23295,41447.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2003,Maize,Kharif,10439,17994.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2003,Ragi,Kharif,2810,4130.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2003,Rice,Kharif,13220,27981.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2003,Wheat,Rabi,25386,41161.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2004,Maize,Kharif,11500,19106.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2004,Ragi,Kharif,2437,3591.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2004,Rice,Kharif,12317,23415.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2004,Wheat,Rabi,23608,46131.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2004,Maize,Summer,1,2.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2005,Maize,Kharif,10917,16854.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2005,Ragi,Kharif,2692,3589.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2005,Rice,Kharif,12344,25667.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2005,Wheat,Rabi,23057,34236.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2006,Maize,Kharif,10681,17667.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2006,Ragi,Kharif,1993,2664.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2006,Rice,Kharif,12091,24734.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2006,Wheat,Rabi,23270,51809.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2007,Maize,Kharif,11006,23349.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2007,Ragi,Kharif,2108,3612.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2007,Rice,Kharif,11795,25112.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2007,Wheat,Rabi,21717,48286.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2008,Maize,Kharif,10659,16938.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2008,Ragi,Kharif,1966,3541.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2008,Rice,Kharif,11428,23706.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2008,Wheat,Rabi,20700,39422.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2009,Maize,Kharif,10325,16427.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2009,Ragi,Kharif,1817,2525.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2009,Rice,Kharif,11168,21268.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2009,Wheat,Rabi,20796,44126.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2010,Maize,Kharif,9540,17522.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2010,Ragi,Kharif,1902,3191.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2010,Rice,Kharif,11193,21827.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2010,Wheat,Rabi,20956,48703.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2011,Maize,Kharif,9244,15920.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2011,Ragi,Kharif,1830,2810.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2011,Rice,Kharif,10905,23083.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2011,Wheat,Rabi,21250,51864.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2012,Maize,Kharif,8811,13126.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2012,Ragi,Kharif,1322,1774.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2012,Rice,Kharif,11047,22704.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2012,Wheat,Rabi,19931,45287.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2012,Maize,Summer,2,2.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2013,Maize,Kharif,8647,10335.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2013,Ragi,Kharif,1611,2568.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2013,Rice,Kharif,10112,21537.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2013,Wheat,Rabi,19062,47191.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2013,Maize,Summer,3,7.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2014,Maize,Kharif,8367,20194.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2014,Ragi,Kharif,1187,2139.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2014,Rice,Kharif,9179,17672.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2014,Wheat,Rabi,18821,29415.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2014,Maize,Summer,2,5.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,DEHRADUN,2014,Rice,Whole Year,9179,17672.0,datagovin_crop_production_uttarakhand.csv,long,Dehradun
+Uttarakhand,HARIDWAR,2000,Maize,Kharif,1962,2876.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2000,Rice,Kharif,23046,48675.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2000,Maize,Rabi,33,53.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2000,Wheat,Rabi,45701,113134.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2001,Maize,Kharif,1763,2674.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2001,Rice,Kharif,21616,45520.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2001,Maize,Rabi,102,163.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2001,Rice,Rabi,2,4.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2001,Wheat,Rabi,43020,108978.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2002,Maize,Kharif,1196,2154.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2002,Rice,Kharif,16208,34127.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2002,Maize,Rabi,65,98.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2002,Wheat,Rabi,41267,96891.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2003,Maize,Kharif,1344,2412.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2003,Rice,Kharif,18833,38260.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2003,Wheat,Rabi,44239,100645.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2003,Maize,Summer,81,133.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2003,Rice,Summer,2,7.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2004,Maize,Kharif,1396,2246.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2004,Rice,Kharif,19891,45130.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2004,Wheat,Rabi,45326,97771.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2004,Maize,Summer,48,96.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2005,Maize,Kharif,1288,2519.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2005,Rice,Kharif,17137,31462.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2005,Wheat,Rabi,42147,101746.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2005,Maize,Summer,47,92.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2006,Maize,Kharif,1056,1498.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2006,Rice,Kharif,12611,24586.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2006,Maize,Rabi,32,52.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2006,Wheat,Rabi,42028,115351.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2007,Maize,Kharif,883,1080.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2007,Rice,Kharif,10953,24659.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2007,Wheat,Rabi,42591,110529.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2007,Maize,Summer,9,15.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2007,Rice,Summer,2,7.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2008,Maize,Kharif,1106,1830.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2008,Rice,Kharif,17140,37098.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2008,Wheat,Rabi,48301,133799.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2008,Maize,Summer,25,37.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2008,Rice,Summer,1,3.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2009,Maize,Kharif,1014,2047.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2009,Rice,Kharif,19245,42373.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2009,Maize,Rabi,20,32.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2009,Wheat,Rabi,48268,131649.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2010,Maize,Kharif,838,1556.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2010,Rice,Kharif,18237,29285.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2010,Maize,Rabi,16,30.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2010,Rice,Rabi,16,38.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2010,Wheat,Rabi,45410,116064.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2011,Maize,Kharif,775,1134.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2011,Rice,Kharif,15440,30652.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2011,Wheat,Rabi,43595,121697.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2011,Maize,Summer,7,13.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2012,Maize,Kharif,779,1339.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2012,Rice,Kharif,13575,30673.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2012,Wheat,Rabi,42752,123830.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2013,Maize,Kharif,561,1056.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2013,Rice,Kharif,11781,23232.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2013,Wheat,Rabi,43982,118889.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2013,Maize,Summer,7,17.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2013,Rice,Summer,5,17.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2014,Maize,Kharif,483,681.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2014,Rice,Kharif,12985,28856.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2014,Wheat,Rabi,44297,91526.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2014,Maize,Summer,7,10.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2014,Rice,Summer,48,151.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,HARIDWAR,2014,Rice,Whole Year,13033,29007.0,datagovin_crop_production_uttarakhand.csv,long,Hardwar
+Uttarakhand,NAINITAL,2000,Maize,Kharif,7620,10614.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2000,Ragi,Kharif,3845,6062.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2000,Rice,Kharif,15012,36426.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2000,Rice,Rabi,42,131.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2000,Wheat,Rabi,24706,58551.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2001,Maize,Kharif,6258,8285.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2001,Ragi,Kharif,3048,4893.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2001,Rice,Kharif,15546,37644.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2001,Rice,Rabi,54,138.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2001,Wheat,Rabi,27861,61450.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2002,Maize,Kharif,3903,4173.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2002,Ragi,Kharif,5079,6558.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2002,Rice,Kharif,11960,28567.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2002,Rice,Rabi,80,220.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2002,Wheat,Rabi,26423,66752.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2003,Maize,Kharif,6284,9579.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2003,Ragi,Kharif,3105,4228.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2003,Rice,Kharif,11985,30665.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2003,Wheat,Rabi,26607,66039.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2003,Rice,Summer,117,437.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2004,Maize,Kharif,4899,9745.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2004,Ragi,Kharif,3220,4332.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2004,Rice,Kharif,12032,29665.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2004,Wheat,Rabi,26637,66306.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2004,Maize,Summer,1,2.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2004,Rice,Summer,116,345.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2005,Maize,Kharif,5829,8529.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2005,Ragi,Kharif,3481,5067.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2005,Rice,Kharif,12251,32381.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2005,Wheat,Rabi,26205,58752.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2005,Maize,Summer,1,2.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2005,Rice,Summer,127,381.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2006,Maize,Kharif,4114,5819.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2006,Ragi,Kharif,3373,5236.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2006,Rice,Kharif,11584,29414.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2006,Rice,Rabi,107,337.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2006,Wheat,Rabi,24352,54786.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2007,Maize,Kharif,4991,7924.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2007,Ragi,Kharif,4205,6830.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2007,Rice,Kharif,12778,32173.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2007,Wheat,Rabi,25055,60168.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2007,Rice,Summer,45,152.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2008,Maize,Kharif,4950,7389.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2008,Ragi,Kharif,3357,4228.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2008,Rice,Kharif,13320,29248.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2008,Wheat,Rabi,24237,61970.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2008,Rice,Summer,164,516.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2009,Maize,Kharif,4487,7249.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2009,Ragi,Kharif,3004,4245.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2009,Rice,Kharif,13190,38931.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2009,Rice,Rabi,141,402.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2009,Wheat,Rabi,23931,61979.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2010,Maize,Kharif,5404,9116.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2010,Ragi,Kharif,2914,3719.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2010,Rice,Kharif,12543,29300.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2010,Rice,Rabi,124,410.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2010,Wheat,Rabi,23947,67161.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2011,Maize,Kharif,4703,8623.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2011,Ragi,Kharif,2875,4260.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2011,Rice,Kharif,12914,36461.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2011,Wheat,Rabi,24277,66130.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2011,Rice,Summer,140,463.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2012,Maize,Kharif,4448,9554.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2012,Ragi,Kharif,2815,3769.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2012,Rice,Kharif,11777,34682.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2012,Wheat,Rabi,23052,72264.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2012,Rice,Summer,176,565.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2013,Maize,Kharif,3889,8276.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2013,Ragi,Kharif,3224,4471.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2013,Rice,Kharif,12158,31691.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2013,Wheat,Rabi,23558,69400.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2013,Rice,Summer,177,589.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2014,Maize,Kharif,3770,7655.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2014,Ragi,Kharif,2374,3561.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2014,Rice,Kharif,11597,32544.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2014,Wheat,Rabi,23524,55137.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2014,Rice,Summer,196,617.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,NAINITAL,2014,Rice,Whole Year,11793,33161.0,datagovin_crop_production_uttarakhand.csv,long,Nainital
+Uttarakhand,PAURI GARHWAL,2000,Maize,Kharif,1920,2221.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2000,Ragi,Kharif,25430,31871.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2000,Rice,Kharif,21654,23225.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2000,Wheat,Rabi,33371,29105.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2001,Maize,Kharif,2108,1809.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2001,Ragi,Kharif,31368,38446.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2001,Rice,Kharif,22633,25051.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2001,Wheat,Rabi,35127,35332.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2002,Maize,Kharif,2412,1930.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2002,Ragi,Kharif,28491,22656.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2002,Rice,Kharif,24263,17844.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2002,Wheat,Rabi,34679,41324.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2003,Maize,Kharif,2305,3105.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2003,Ragi,Kharif,29243,34038.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2003,Rice,Kharif,23354,26596.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2003,Wheat,Rabi,35720,33221.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2004,Maize,Kharif,2305,2651.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2004,Ragi,Kharif,28370,32138.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2004,Rice,Kharif,21854,25259.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2004,Wheat,Rabi,33530,41765.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2005,Maize,Kharif,2305,1816.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2005,Ragi,Kharif,28363,32283.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2005,Rice,Kharif,22335,22878.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2005,Wheat,Rabi,35005,13198.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2006,Maize,Kharif,2286,1829.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2006,Ragi,Kharif,27967,40196.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2006,Rice,Kharif,23476,24496.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2006,Wheat,Rabi,33706,41418.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2007,Maize,Kharif,2065,1757.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2007,Ragi,Kharif,26135,32789.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2007,Rice,Kharif,21179,20499.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2007,Wheat,Rabi,31068,29201.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2008,Maize,Kharif,2069,1761.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2008,Ragi,Kharif,25359,33073.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2008,Rice,Kharif,19373,20652.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2008,Wheat,Rabi,29334,20847.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2009,Maize,Kharif,2093,1781.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2009,Ragi,Kharif,23441,26100.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2009,Rice,Kharif,18829,20304.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2009,Wheat,Rabi,28246,25523.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2010,Maize,Kharif,1952,1708.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2010,Ragi,Kharif,22794,26877.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2010,Rice,Kharif,17180,18646.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2010,Wheat,Rabi,28243,32893.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2011,Maize,Kharif,2435,2195.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2011,Ragi,Kharif,21641,28377.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2011,Rice,Kharif,15980,18438.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2011,Wheat,Rabi,25293,32345.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2012,Maize,Kharif,2124,2166.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2012,Ragi,Kharif,22065,30360.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2012,Rice,Kharif,15526,18211.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2012,Wheat,Rabi,22730,31016.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2013,Maize,Kharif,2095,2136.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2013,Ragi,Kharif,19798,25075.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2013,Rice,Kharif,13923,17909.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2013,Wheat,Rabi,22431,30675.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2014,Maize,Kharif,2348,4118.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2014,Ragi,Kharif,20634,28065.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2014,Rice,Kharif,14566,17359.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2014,Wheat,Rabi,20852,25147.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PAURI GARHWAL,2014,Rice,Whole Year,14566,17359.0,datagovin_crop_production_uttarakhand.csv,long,Garhwal
+Uttarakhand,PITHORAGARH,2000,Maize,Kharif,3586,4665.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2000,Ragi,Kharif,8717,11608.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2000,Rice,Kharif,23052,26656.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2000,Wheat,Rabi,26883,36139.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2001,Maize,Kharif,4948,6195.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2001,Ragi,Kharif,8416,10723.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2001,Rice,Kharif,23070,28672.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2001,Wheat,Rabi,28203,42374.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2002,Maize,Kharif,3290,3237.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2002,Ragi,Kharif,9135,11710.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2002,Rice,Kharif,23911,29266.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2002,Wheat,Rabi,27462,36862.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2003,Maize,Kharif,3616,4480.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2003,Ragi,Kharif,7050,10385.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2003,Rice,Kharif,19629,25879.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2003,Wheat,Rabi,25348,31179.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2004,Maize,Kharif,2960,3546.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2004,Ragi,Kharif,10159,14568.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2004,Rice,Kharif,25060,32672.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2004,Wheat,Rabi,27728,46059.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2005,Maize,Kharif,3585,3657.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2005,Ragi,Kharif,8511,12142.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2005,Rice,Kharif,22696,28472.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2005,Wheat,Rabi,26082,31728.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2006,Maize,Kharif,3282,3446.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2006,Ragi,Kharif,7921,12007.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2006,Rice,Kharif,21000,27134.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2006,Wheat,Rabi,24923,38536.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2007,Maize,Kharif,2975,3168.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2007,Ragi,Kharif,8171,12676.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2007,Rice,Kharif,21247,28915.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2007,Wheat,Rabi,23025,33348.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2007,Maize,Summer,54,87.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2008,Maize,Kharif,2625,2756.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2008,Ragi,Kharif,8978,13042.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2008,Rice,Kharif,20875,29805.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2008,Wheat,Rabi,22543,23218.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2009,Maize,Kharif,2635,2767.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2009,Ragi,Kharif,8752,13261.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2009,Rice,Kharif,21239,27527.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2009,Wheat,Rabi,25225,33811.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2010,Maize,Kharif,3038,3494.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2010,Ragi,Kharif,8193,11538.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2010,Rice,Kharif,22525,28454.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2010,Wheat,Rabi,24540,33734.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2011,Maize,Kharif,3141,3628.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2011,Ragi,Kharif,7729,11475.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2011,Rice,Kharif,21606,27841.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2011,Wheat,Rabi,24488,33616.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2012,Maize,Kharif,3600,4626.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2012,Ragi,Kharif,8055,11837.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2012,Rice,Kharif,20204,26027.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2012,Wheat,Rabi,23696,36813.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2013,Maize,Kharif,2557,5370.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2013,Ragi,Kharif,7501,11646.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2013,Rice,Kharif,20597,28280.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2013,Wheat,Rabi,22572,36007.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2014,Maize,Kharif,3079,6370.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2014,Ragi,Kharif,7227,10270.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2014,Rice,Kharif,20131,25550.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2014,Wheat,Rabi,21796,30989.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,PITHORAGARH,2014,Rice,Whole Year,20131,25550.0,datagovin_crop_production_uttarakhand.csv,long,Pithoragarh
+Uttarakhand,RUDRA PRAYAG,2000,Maize,Kharif,162,175.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2000,Ragi,Kharif,6846,8945.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2000,Rice,Kharif,10050,12865.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2000,Wheat,Rabi,10916,12959.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2001,Maize,Kharif,156,149.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2001,Ragi,Kharif,7080,8030.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2001,Rice,Kharif,9307,11419.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2001,Wheat,Rabi,10528,14144.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2002,Maize,Kharif,157,128.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2002,Ragi,Kharif,6755,9939.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2002,Rice,Kharif,8675,11012.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2002,Wheat,Rabi,9579,12201.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2003,Maize,Kharif,155,198.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2003,Ragi,Kharif,6382,9330.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2003,Rice,Kharif,9274,12151.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2003,Wheat,Rabi,10386,11427.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2004,Maize,Kharif,186,231.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2004,Ragi,Kharif,7126,8769.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2004,Rice,Kharif,8799,11669.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2004,Wheat,Rabi,9789,14043.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2005,Maize,Kharif,194,159.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2005,Ragi,Kharif,5719,7953.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2005,Rice,Kharif,8016,10720.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2005,Wheat,Rabi,9054,9227.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2006,Maize,Kharif,156,128.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2006,Ragi,Kharif,5950,9100.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2006,Rice,Kharif,8876,13713.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2006,Wheat,Rabi,9695,13752.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2007,Maize,Kharif,171,207.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2007,Ragi,Kharif,6571,11435.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2007,Rice,Kharif,9614,15150.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2007,Wheat,Rabi,11333,14848.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2008,Maize,Kharif,204,245.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2008,Ragi,Kharif,6504,10941.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2008,Rice,Kharif,9719,16340.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2008,Wheat,Rabi,11115,13358.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2009,Maize,Kharif,200,240.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2009,Ragi,Kharif,6335,8950.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2009,Rice,Kharif,7940,11077.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2009,Wheat,Rabi,9425,12493.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2010,Maize,Kharif,191,228.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2010,Ragi,Kharif,6961,11832.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2010,Rice,Kharif,9726,14897.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2010,Wheat,Rabi,10554,16347.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2011,Maize,Kharif,175,191.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2011,Ragi,Kharif,6323,9392.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2011,Rice,Kharif,9017,12658.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2011,Wheat,Rabi,9644,14363.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2012,Maize,Kharif,190,177.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2012,Ragi,Kharif,7005,10506.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2012,Rice,Kharif,9268,12439.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2012,Wheat,Rabi,10411,16260.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2013,Maize,Kharif,156,145.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2013,Ragi,Kharif,5841,9588.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2013,Rice,Kharif,8495,11408.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2013,Wheat,Rabi,9929,16337.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2014,Maize,Kharif,205,363.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2014,Ragi,Kharif,6388,9627.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2014,Rice,Kharif,8944,11675.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2014,Wheat,Rabi,9925,11961.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,RUDRA PRAYAG,2014,Rice,Whole Year,8944,11675.0,datagovin_crop_production_uttarakhand.csv,long,Rudraprayag
+Uttarakhand,TEHRI GARHWAL,2000,Maize,Kharif,1926,2017.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2000,Ragi,Kharif,15802,21047.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2000,Rice,Kharif,14289,24913.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2000,Wheat,Rabi,31952,30370.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2001,Maize,Kharif,1884,2069.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2001,Ragi,Kharif,14683,15366.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2001,Rice,Kharif,12750,20753.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2001,Wheat,Rabi,27140,32631.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2002,Maize,Kharif,1641,1042.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2002,Ragi,Kharif,14630,15907.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2002,Rice,Kharif,12642,15232.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2002,Wheat,Rabi,26962,35700.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2003,Maize,Kharif,1711,2945.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2003,Ragi,Kharif,15768,24630.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2003,Rice,Kharif,13038,19395.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2003,Wheat,Rabi,29585,39970.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2004,Maize,Kharif,2060,2163.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2004,Ragi,Kharif,14836,20241.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2004,Rice,Kharif,13909,19229.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2004,Wheat,Rabi,31846,50045.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2005,Maize,Kharif,1972,1885.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2005,Ragi,Kharif,13733,18681.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2005,Rice,Kharif,12164,17668.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2005,Wheat,Rabi,28409,29649.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2006,Maize,Kharif,1882,1799.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2006,Ragi,Kharif,14002,20773.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2006,Rice,Kharif,12573,19964.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2006,Wheat,Rabi,27625,40873.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2007,Maize,Kharif,1728,1621.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2007,Ragi,Kharif,13403,21395.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2007,Rice,Kharif,12991,20457.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2007,Wheat,Rabi,28357,34275.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2008,Maize,Kharif,1818,1863.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2008,Ragi,Kharif,15129,22820.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2008,Rice,Kharif,13844,22795.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2008,Wheat,Rabi,29670,23922.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2009,Maize,Kharif,1851,1897.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2009,Ragi,Kharif,13106,14978.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2009,Rice,Kharif,11129,13318.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2009,Wheat,Rabi,23617,24202.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2010,Maize,Kharif,1936,2120.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2010,Ragi,Kharif,12299,17161.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2010,Rice,Kharif,11396,16656.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2010,Wheat,Rabi,23815,36932.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2011,Maize,Kharif,1782,1964.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2011,Ragi,Kharif,13220,19995.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2011,Rice,Kharif,12377,18413.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2011,Wheat,Rabi,24140,33558.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2012,Maize,Kharif,2107,2436.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2012,Ragi,Kharif,12497,18674.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2012,Rice,Kharif,11108,16012.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2012,Wheat,Rabi,24807,37149.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2013,Maize,Kharif,1788,2068.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2013,Ragi,Kharif,12131,17695.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2013,Rice,Kharif,11352,17596.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2013,Wheat,Rabi,22379,32752.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2014,Maize,Kharif,2049,5172.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2014,Ragi,Kharif,11756,17704.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2014,Rice,Kharif,11291,18985.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2014,Wheat,Rabi,23743,25991.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,TEHRI GARHWAL,2014,Rice,Whole Year,11291,18985.0,datagovin_crop_production_uttarakhand.csv,long,Tehri Garhwal
+Uttarakhand,UDAM SINGH NAGAR,2000,Maize,Kharif,604,1110.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2000,Rice,Kharif,94531,290122.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2000,Maize,Rabi,18,28.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2000,Rice,Rabi,3020,9447.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2000,Wheat,Rabi,83673,285412.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2001,Maize,Kharif,316,479.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2001,Rice,Kharif,94713,289134.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2001,Maize,Rabi,8,,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2001,Rice,Rabi,3702,11709.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2001,Wheat,Rabi,85908,279034.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2002,Maize,Kharif,265,477.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2002,Rice,Kharif,94281,288037.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2002,Maize,Rabi,11,21.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2002,Rice,Rabi,4010,11429.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2002,Wheat,Rabi,88050,275550.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2003,Maize,Kharif,310,563.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2003,Ragi,Kharif,2,2.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2003,Rice,Kharif,96566,254699.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2003,Wheat,Rabi,92086,318680.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2003,Maize,Summer,51,83.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2003,Rice,Summer,5536,20682.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2004,Maize,Kharif,252,685.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2004,Rice,Kharif,100560,270220.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2004,Wheat,Rabi,95309,307290.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2004,Maize,Summer,19,38.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2004,Rice,Summer,7395,22022.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2005,Maize,Kharif,203,443.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2005,Ragi,Kharif,50,73.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2005,Rice,Kharif,101780,269787.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2005,Wheat,Rabi,93451,281919.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2005,Maize,Summer,36,79.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2005,Rice,Summer,8844,42265.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2006,Maize,Kharif,108,200.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2006,Rice,Kharif,100822,283757.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2006,Maize,Rabi,38,61.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2006,Rice,Rabi,9816,30871.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2006,Wheat,Rabi,96024,319090.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2007,Maize,Kharif,166,252.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2007,Rice,Kharif,94447,268565.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2007,Wheat,Rabi,97910,373379.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2007,Rice,Summer,12317,41705.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2008,Maize,Kharif,77,117.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2008,Rice,Kharif,102098,265223.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2008,Wheat,Rabi,99870,373227.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2008,Maize,Summer,56,98.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2008,Rice,Summer,12489,39278.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2009,Maize,Kharif,69,105.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2009,Rice,Kharif,105297,303122.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2009,Maize,Rabi,33,56.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2009,Rice,Rabi,13634,38898.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2009,Wheat,Rabi,104469,397478.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2010,Maize,Kharif,64,141.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2010,Rice,Kharif,104602,257494.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2010,Maize,Rabi,38,84.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2010,Rice,Rabi,15127,50055.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2010,Wheat,Rabi,102068,406529.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2011,Maize,Kharif,18,41.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2011,Rice,Kharif,101637,295392.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2011,Wheat,Rabi,98128,404453.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2011,Maize,Summer,29,64.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2011,Rice,Summer,13540,44804.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2012,Maize,Kharif,26,64.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2012,Rice,Kharif,103064,318027.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2012,Wheat,Rabi,97632,369820.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2012,Maize,Summer,36,88.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2012,Rice,Summer,14024,44987.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2013,Maize,Kharif,22,54.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2013,Rice,Kharif,102169,321436.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2013,Wheat,Rabi,98911,378237.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2013,Maize,Summer,34,84.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2013,Rice,Summer,12238,40704.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2014,Maize,Kharif,24,53.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2014,Rice,Kharif,101482,330419.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2014,Wheat,Rabi,99357,296321.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2014,Maize,Summer,23,55.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2014,Rice,Summer,12150,38236.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UDAM SINGH NAGAR,2014,Rice,Whole Year,113632,368655.0,datagovin_crop_production_uttarakhand.csv,long,Udham Singh Nagar
+Uttarakhand,UTTAR KASHI,2000,Maize,Kharif,627,814.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2000,Ragi,Kharif,6647,8752.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2000,Rice,Kharif,10126,14949.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2000,Wheat,Rabi,12778,16497.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2001,Maize,Kharif,471,543.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2001,Ragi,Kharif,6073,9630.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2001,Rice,Kharif,10316,14861.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2001,Wheat,Rabi,13565,21005.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2002,Maize,Kharif,497,426.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2002,Ragi,Kharif,5640,7308.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2002,Rice,Kharif,9051,9608.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2002,Wheat,Rabi,12485,19528.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2003,Maize,Kharif,536,714.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2003,Ragi,Kharif,6229,9893.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2003,Rice,Kharif,10114,16864.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2003,Wheat,Rabi,13344,15693.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2004,Maize,Kharif,353,439.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2004,Ragi,Kharif,5429,8618.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2004,Rice,Kharif,10488,14210.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2004,Wheat,Rabi,12167,19385.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2005,Maize,Kharif,681,718.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2005,Ragi,Kharif,7022,10577.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2005,Rice,Kharif,10211,16600.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2005,Wheat,Rabi,13413,15077.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2006,Maize,Kharif,455,478.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2006,Ragi,Kharif,5941,9357.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2006,Rice,Kharif,11413,17968.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2006,Wheat,Rabi,12895,21570.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2007,Maize,Kharif,557,697.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2007,Ragi,Kharif,5828,9665.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2007,Rice,Kharif,10868,18781.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2007,Wheat,Rabi,11917,20528.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2008,Maize,Kharif,339,424.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2008,Ragi,Kharif,6157,10995.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2008,Rice,Kharif,10785,18180.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2008,Wheat,Rabi,11919,12423.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2009,Maize,Kharif,429,537.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2009,Ragi,Kharif,5608,8686.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2009,Rice,Kharif,10352,14134.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2009,Wheat,Rabi,11750,16429.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2010,Maize,Kharif,483,595.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2010,Ragi,Kharif,5928,10877.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2010,Rice,Kharif,10397,17132.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2010,Wheat,Rabi,12126,20489.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2011,Maize,Kharif,462,577.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2011,Ragi,Kharif,5388,9990.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2011,Rice,Kharif,10619,17165.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2011,Wheat,Rabi,11503,18907.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2012,Maize,Kharif,588,609.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2012,Ragi,Kharif,5558,10212.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2012,Rice,Kharif,9919,18604.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2012,Wheat,Rabi,10584,18387.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2013,Maize,Kharif,1040,1078.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2013,Ragi,Kharif,4543,7734.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2013,Rice,Kharif,9010,15981.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2013,Wheat,Rabi,10023,17874.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2014,Maize,Kharif,410,1064.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2014,Ragi,Kharif,5275,9233.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2014,Rice,Kharif,9919,16499.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2014,Wheat,Rabi,9961,13643.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
+Uttarakhand,UTTAR KASHI,2014,Rice,Whole Year,9919,16499.0,datagovin_crop_production_uttarakhand.csv,long,Uttarkashi
