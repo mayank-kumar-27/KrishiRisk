@@ -109,7 +109,7 @@ class PoliteClient:
             if attempt == self.max_retries:
                 raise RuntimeError(f"GET {url} failed after {attempt} attempts ({err})")
             backoff = float(retry_after) if retry_after and retry_after.isdigit() else 2 ** attempt * 3
-            self.log.warning(f"  {err} — retry {attempt}/{self.max_retries - 1} in {backoff:.0f}s")
+            self.log.warning(f"  {err}; retry {attempt}/{self.max_retries - 1} in {backoff:.0f}s")
             time.sleep(backoff)
         raise AssertionError("unreachable")
 

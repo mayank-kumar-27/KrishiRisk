@@ -3,14 +3,14 @@
 </p>
 
 <h1 align="center">KrishiRisk</h1>
-<p align="center"><b>Agricultural Yield Prediction &amp; Climate Stress Modeling</b><br/>
+<p align="center"><b>Agricultural Yield Prediction & Climate Stress Modeling</b><br/>
 <i>Predict yields. Map climate risk. Protect smallholders.</i></p>
 
 <p align="center">
   <b>Live demo:</b> <a href="https://krishirisk.vercel.app">krishirisk.vercel.app</a> <i>(link is active)</i>
 </p>
 
-Data Visualization &amp; Interpretation (DVI) team project — **Mayank Kumar and Team**, B.Tech CSE, UPES Dehradun.
+Data Visualization &amp; Interpretation (DVI) team project by **Mayank Kumar and team**, B.Tech CSE, UPES Dehradun.
 
 ---
 
@@ -20,17 +20,17 @@ Unpredictable rainfall and soil degradation threaten the yields of smallholder f
 buffer against a bad season. KrishiRisk turns open crop, climate and soil data into **district-level yield
 models and climate-risk assessments** for **Uttarakhand** (13 districts; maize, ragi, rice and wheat):
 
-- Which districts and crops are most exposed to climate stress — and **why**?
+- Which districts and crops are most exposed to climate stress, and **why**?
 - How strongly do rainfall, drought, heat and soil actually move yields?
 - What would a drier or hotter season do to yields?
 
 ## Screenshots
 
-| Overview | Risk Map |
-|---|---|
-| ![Overview](docs/screenshots/overview.png) | ![Risk Map](docs/screenshots/risk-map.png) |
-| **What-If Simulator** | **Model** |
-| ![Simulator](docs/screenshots/simulator.png) | ![Model](docs/screenshots/model.png) |
+| Overview                                     | Risk Map                                   |
+| -------------------------------------------- | ------------------------------------------ |
+| ![Overview](docs/screenshots/overview.png)   | ![Risk Map](docs/screenshots/risk-map.png) |
+| **What-If Simulator**                  | **Model**                            |
+| ![Simulator](docs/screenshots/simulator.png) | ![Model](docs/screenshots/model.png)       |
 
 Report figures (300 dpi) are in [`report/figures/`](report/figures/), with computed interpretations in
 [`report/figures/insights.md`](report/figures/insights.md).
@@ -45,7 +45,7 @@ flowchart LR
     A3["ISRIC SoilGrids<br/>soil properties"]
     A4["DataMeet<br/>district boundaries"]
   end
-  subgraph Pipeline["analysis/ — Python pipeline (run_all.py)"]
+  subgraph Pipeline["analysis/: Python pipeline (run_all.py)"]
     P1["01_fetch_data<br/>download, cache, name matching"]
     P2["02_features<br/>season climate, SPI-3, dry spells,<br/>onset, heat days, GDD, soil score"]
     P3["03_eda<br/>figures + insights"]
@@ -57,7 +57,7 @@ flowchart LR
     O1["report/figures<br/>PNG + insights.md"]
     O2["web/public/data<br/>*.json (0.16 MB)"]
   end
-  W["web/ — Next.js static site<br/>Recharts · Leaflet · SVG maps"]
+  W["web/: Next.js static site<br/>Recharts · Leaflet · SVG maps"]
   V(("Vercel"))
   A1 & A2 & A3 & A4 --> P1 --> P2 --> P3 & P4
   P4 --> P5 --> P6
@@ -72,18 +72,18 @@ analysis/         Python pipeline: 01_fetch_data.py … 06_export_web.py, run_al
 data/raw/         downloads and caches (not committed)
 data/processed/   cleaned tables, model metrics, risk index, scenarios
 report/figures/   report figures (PNG) and insights.md
-web/              Next.js (App Router, TypeScript, Tailwind) — reads only web/public/data/*.json
+web/              Next.js (App Router, TypeScript, Tailwind), reads only web/public/data/*.json
 docs/screenshots/ README screenshots
 ```
 
 ## Datasets
 
-| Data | Source | Used for | Licence |
-|---|---|---|---|
-| District-wise, season-wise crop production statistics (area, production), Uttarakhand 2000–2014 | Directorate of Economics &amp; Statistics, Ministry of Agriculture &amp; Farmers Welfare, via the [Open Government Data Platform India](https://www.data.gov.in/resource/district-wise-season-wise-crop-production-statistics-1997) | yields (t/ha) | Government Open Data License – India |
-| Daily precipitation, Tmax, Tmin, relative humidity at district centroids, 1997–2025 | [NASA POWER](https://power.larc.nasa.gov/) daily point API (v2) | all climate features | NASA open data |
-| Organic carbon, pH, nitrogen, sand/silt/clay (0–30 cm) | [ISRIC SoilGrids v2.0](https://www.isric.org/explore/soilgrids) | soil degradation score | CC BY 4.0 |
-| Census 2011 district boundaries | [DataMeet community maps](https://github.com/datameet/maps) | maps, centroids | see repository |
+| Data                                                                                             | Source                                                                                                                                                                                                                             | Used for               | Licence                               |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------------------------- |
+| District-wise, season-wise crop production statistics (area, production), Uttarakhand 2000–2014 | Directorate of Economics &amp; Statistics, Ministry of Agriculture &amp; Farmers Welfare, via the [Open Government Data Platform India](https://www.data.gov.in/resource/district-wise-season-wise-crop-production-statistics-1997) | yields (t/ha)          | Government Open Data License – India |
+| Daily precipitation, Tmax, Tmin, relative humidity at district centroids, 1997–2025             | [NASA POWER](https://power.larc.nasa.gov/) daily point API (v2)                                                                                                                                                                     | all climate features   | NASA open data                        |
+| Organic carbon, pH, nitrogen, sand/silt/clay (0–30 cm)                                          | [ISRIC SoilGrids v2.0](https://www.isric.org/explore/soilgrids)                                                                                                                                                                     | soil degradation score | CC BY 4.0                             |
+| Census 2011 district boundaries                                                                  | [DataMeet community maps](https://github.com/datameet/maps)                                                                                                                                                                         | maps, centroids        | see repository                        |
 
 **Citations**
 
@@ -95,23 +95,23 @@ docs/screenshots/ README screenshots
 
 ## Methodology
 
-1. **Clean &amp; join** — units normalised (bales → tonnes), impossible yields removed, IQR outliers flagged (kept),
+1. **Clean &amp; join**: units normalised (bales → tonnes), impossible yields removed, IQR outliers flagged (kept),
    district names matched to the map (fuzzy match + manual review; current official names such as Haridwar and
    Pauri Garhwal). Nothing is imputed: missing values stay missing and every gap is reported.
 2. **Season climate features** (Kharif = Jun–Oct, Rabi = Nov–Mar): seasonal rainfall and its z-score anomaly,
    SPI-3 (gamma-fitted per district and month), dry spells (≥ 7 days &lt; 2.5 mm), monsoon onset delay,
    weekly rainfall CV, heat-stress days (Tmax &gt; 35 °C), growing degree days (base 10 °C), mean Tmax/Tmin.
-3. **Soil Degradation Score (0–1)** — min-max scaled low organic carbon (weight 0.30), |pH − 6.5| (0.20) and
+3. **Soil Degradation Score (0–1)**: min-max scaled low organic carbon (weight 0.30), |pH − 6.5| (0.20) and
    low nitrogen (0.20); weights rescaled because SoilGrids has no P or K.
-4. **Models** — target is the yield deviation from each district-crop trend, with the trend fitted on
+4. **Models**: target is the yield deviation from each district-crop trend, with the trend fitted on
    training years only (no leakage). **Time-based split**: train 2000–2009, test 2010–2014. Linear Regression,
    Random Forest and XGBoost (light grid search with expanding-window CV), compared against a **trend-only
    baseline**; the best model is chosen by grouped CV by year, never by the test set. SHAP explains the model.
-5. **Climate Stress Risk Index (0–100)** per district × crop — rainfall variability, drought frequency
+5. **Climate Stress Risk Index (0–100)** per district × crop, rainfall variability, drought frequency
    (SPI-3 &lt; −1), heat stress, soil degradation and yield volatility, weighted by mean |SHAP|
    (0.33 / 0.32 / 0.14 / 0.01, yield volatility fixed at 0.20). Quartile categories (Low → Severe);
    K-means (k by silhouette) groups districts into risk profiles.
-6. **Scenarios** — rainfall −40 % … +20 % × temperature +0 … +3 °C (91 combinations): the observed daily
+6. **Scenarios**: rainfall −40 % … +20 % × temperature +0 … +3 °C (91 combinations): the observed daily
    climate of 2005–2014 is perturbed, every feature is recomputed, and the model predicts the yield change.
 
 ## Key findings
@@ -135,15 +135,15 @@ All numbers come from the pipeline outputs ([`insights.md`](report/figures/insig
 
 ### Model metrics (all crops)
 
-| Model | CV error (% of trend yield) | CV R² of deviation | Test RMSE (t/ha) | Test MAE (t/ha) | Test R² | Test R² of deviation |
-|---|---|---|---|---|---|---|
-| Trend only (baseline) | 16.3 | 0.00 | 0.353 | 0.240 | 0.63 | −0.16 |
-| **Linear Regression** (best in CV) | **15.3** | **0.12** | 0.368 | 0.245 | 0.60 | −0.08 |
-| Random Forest | 16.5 | −0.02 | 0.353 | 0.240 | 0.64 | −0.11 |
-| XGBoost | 16.5 | −0.03 | 0.357 | 0.240 | 0.63 | −0.11 |
+| Model                                    | CV error (% of trend yield) | CV R² of deviation | Test RMSE (t/ha) | Test MAE (t/ha) | Test R² | Test R² of deviation |
+| ---------------------------------------- | --------------------------- | ------------------- | ---------------- | --------------- | -------- | --------------------- |
+| Trend only (baseline)                    | 16.3                        | 0.00                | 0.353            | 0.240           | 0.63     | −0.16                |
+| **Linear Regression** (best in CV) | **15.3**              | **0.12**      | 0.368            | 0.245           | 0.60     | −0.08                |
+| Random Forest                            | 16.5                        | −0.02              | 0.353            | 0.240           | 0.64     | −0.11                |
+| XGBoost                                  | 16.5                        | −0.03              | 0.357            | 0.240           | 0.63     | −0.11                |
 
 CV = grouped by year on 2000–2009; test = 2010–2014. "R² of deviation" measures how much of the year-to-year
-swing around the trend a model explains — the honest test of what climate and soil add. Per-crop results are in
+swing around the trend a model explains, the honest test of what climate and soil add. Per-crop results are in
 [`data/processed/model_metrics.md`](data/processed/model_metrics.md).
 
 ## How to reproduce
@@ -198,4 +198,4 @@ The data files in `web/public/data/` are committed, so the deployment does not r
 
 ## License
 
-Code: [MIT](LICENSE) © 2026 Mayank Kumar &amp; Team. Datasets remain under their own licences (see *Datasets*).
+Code: [MIT](LICENSE) © 2026 Mayank Kumar and team. Datasets remain under their own licences (see *Datasets*).

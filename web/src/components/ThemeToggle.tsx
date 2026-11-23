@@ -20,7 +20,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
-      className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full border border-line bg-surface text-ink-2 shadow-sm transition-colors hover:text-ink"
+      className="relative grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded border border-line bg-surface text-ink-2 transition-colors hover:bg-surface-2 hover:text-ink"
     >
       <Moon size={16} aria-hidden="true"
         className="absolute rotate-0 scale-100 opacity-100 transition-all duration-300 dark:-rotate-90 dark:scale-50 dark:opacity-0" />

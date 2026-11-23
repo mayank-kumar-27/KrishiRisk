@@ -5,7 +5,7 @@
 // styles and tooltips are updated in place so colours transition smoothly between selections.
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import { GeoJSON, MapContainer, useMap } from "react-leaflet";
 import type { DistrictProps, DistrictsGeo } from "@/lib/types";
 
@@ -62,7 +62,7 @@ export default function ChoroplethMap(props: ChoroplethProps) {
   }, [styleKey, selected]);
 
   return (
-    <div style={{ height }} className="w-full">
+    <div style={{ "--map-h": `${height}px` } as CSSProperties} className="kr-map-h w-full">
       <MapContainer
         center={[22, 79]}
         zoom={6}

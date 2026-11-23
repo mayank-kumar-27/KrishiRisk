@@ -89,10 +89,11 @@ export default function ExploreView() {
   return (
     <div>
       <PageHeader eyebrow="Explore the data" icon={ChartLine} title="How climate shapes the harvest"
-        lead="How yields have moved, and how they respond to rainfall and climate — for any crop and district. Every insight below is computed live from the data on screen." />
+        lead="How yields have moved, and how they respond to rainfall and climate, for any crop and district. Every insight below is computed live from the data on screen."
+        meta={[`${crops.length} crops`, `${Object.keys(ts.data.district).length} districts`, "data.gov.in · NASA POWER", "SPI-3 drought index"]} />
 
-      <div className="sticky top-16 z-[500] -mx-4 mb-6 border-b border-line/70 bg-page/80 px-4 py-3 backdrop-blur-xl sm:-mx-6 sm:px-6">
-        <div className="flex flex-wrap items-end gap-4">
+      <div className="sticky top-14 z-[500] -mx-4 mb-5 border-b border-line bg-page/90 px-4 py-2.5 backdrop-blur-xl sm:-mx-6 sm:px-6 md:top-24 lg:-mx-8 lg:px-8">
+        <div className="flex flex-wrap items-end gap-3 sm:gap-4">
           <Segmented id="explore-crop" label="Crop" value={crop} onChange={setCrop} options={crops.map((c) => ({ value: c, label: c }))} />
           <Select label="District" value={dSel} onChange={setDistrict}
             options={[{ value: ALL, label: "All districts" }, ...districts.map((d) => ({ value: d, label: d }))]} />
@@ -116,7 +117,7 @@ export default function ExploreView() {
                   {dSel === ALL && " State yield = total production ÷ total area of reporting districts."}
                 </Insight>
               </>
-            ) : <p className="text-sm text-muted">No series for this selection.</p>}
+            ) : <p className="font-mono text-xs text-muted">No series for this selection.</p>}
           </Card>
         </Reveal>
 
@@ -129,10 +130,10 @@ export default function ExploreView() {
                 </WhenVisible>
                 <Insight>
                   Rainfall vs yield r = {fmt(rRaw)} (n = {sc.length}). Against detrended yield anomaly, rainfall departure gives
-                  r = {fmt(rAnom)} — {Math.abs(rAnom) < 0.2 ? "a weak link: other factors dominate year-to-year swings." : rAnom > 0 ? "wetter seasons tend to yield more." : "wetter seasons tend to yield less."}
+                  r = {fmt(rAnom)}: {Math.abs(rAnom) < 0.2 ? "a weak link: other factors dominate year-to-year swings." : rAnom > 0 ? "wetter seasons tend to yield more." : "wetter seasons tend to yield less."}
                 </Insight>
               </>
-            ) : <p className="text-sm text-muted">Not enough points.</p>}
+            ) : <p className="font-mono text-xs text-muted">Not enough points.</p>}
           </Card>
         </Reveal>
 

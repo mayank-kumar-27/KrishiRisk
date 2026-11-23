@@ -28,15 +28,15 @@ function Slider({ id, label, icon: I, value, min, max, step, onChange, format, t
   return (
     <div>
       <div className="flex items-center justify-between">
-        <label htmlFor={id} className="flex items-center gap-2 text-sm font-semibold">
-          <I size={16} className="text-muted" /> {label}
+        <label htmlFor={id} className="flex items-center gap-2 text-[13px] font-semibold">
+          <I size={15} className="text-brand-ink" /> {label}
         </label>
-        <output htmlFor={id} className="font-display text-2xl font-extrabold tabular-nums">{format(value)}</output>
+        <output htmlFor={id} className="num rounded border border-line bg-surface-2 px-2 py-0.5 text-lg font-semibold">{format(value)}</output>
       </div>
       <input id={id} type="range" min={min} max={max} step={step} value={value} aria-valuetext={format(value)}
         onChange={(e) => onChange(Number(e.target.value))} className="range mt-3"
         style={{ "--track": track, "--thumb": thumb } as CSSProperties} />
-      <div className="mt-1.5 flex justify-between text-xs text-muted"><span>{format(min)}</span><span>{format(max)}</span></div>
+      <div className="mt-1.5 flex justify-between font-mono text-[11px] text-muted"><span>{format(min)}</span><span>{format(max)}</span></div>
     </div>
   );
 }
@@ -83,43 +83,43 @@ export default function SimulatorView() {
   const pos = (v: number) => (100 * (v - rMin)) / (rMax - rMin);
   const zero = pos(0);
   const rainTrack = rain === 0 ? "var(--line)"
-    : `linear-gradient(to right, var(--line) 0 ${Math.min(zero, pos(rain))}%, ${rain < 0 ? p.red : p.blue} ${Math.min(zero, pos(rain))}% ${Math.max(zero, pos(rain))}%, var(--line) ${Math.max(zero, pos(rain))}% 100%)`;
+    : `linear-gradient(to right, var(--line) 0 ${Math.min(zero, pos(rain))}%, ${rain < 0 ? p.red : p.rain} ${Math.min(zero, pos(rain))}% ${Math.max(zero, pos(rain))}%, var(--line) ${Math.max(zero, pos(rain))}% 100%)`;
   const tPos = (100 * temp) / tMax;
   const tempTrack = `linear-gradient(to right, #f59e0b 0%, ${p.red} ${tPos}%, var(--line) ${tPos}% 100%)`;
-  const deltaColor = pct == null || Math.abs(pct) < 0.05 ? "var(--muted)" : pct < 0 ? p.red : p.blue;
+  const deltaColor = pct == null || Math.abs(pct) < 0.05 ? "var(--muted)" : pct < 0 ? p.red : p.gain;
   const activePreset = PRESETS.find((x) => x.rain === rain && x.temp === temp)?.label;
 
   return (
     <div>
       <PageHeader eyebrow="What-If Simulator" icon={SlidersHorizontal} title="What if the monsoon fails?"
-        lead={`Dial seasonal rainfall and temperature and watch predicted yields respond. Each scenario re-scales the observed daily climate of the last ten years, recomputes every climate feature (dry spells, SPI, heat days, growing degree days) and re-runs the ${s.model} model.`} />
+        lead={`Dial seasonal rainfall and temperature and watch predicted yields respond. Each scenario re-scales the observed daily climate of the last ten years, recomputes every climate feature (dry spells, SPI, heat days, growing degree days) and re-runs the ${s.model} model.`}
+        meta={[`Model: ${s.model}`, `${s.rain_change_pct.length} × ${s.temp_change_c.length} scenario grid`, "Last ten seasons re-scaled", s.reliable ? "Beats trend baseline" : "Indicative only"]} />
       {!s.reliable && (
-        <div className="mb-6">
+        <div className="mb-5">
           <Callout>The yield model did not beat a simple trend forecast in cross-validation, so these responses are weak and indicative only.</Callout>
         </div>
       )}
 
       <div className="grid gap-4 lg:grid-cols-[1fr_1.35fr]">
         <Card title="Scenario" icon={SlidersHorizontal} action={
-          <button onClick={() => { setRain(0); setTemp(0); }} className="inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-xs font-semibold text-ink-2 hover:text-ink">
+          <button onClick={() => { setRain(0); setTemp(0); }} className="btn btn-ghost !h-8 !px-2.5 !text-xs">
             <RotateCcw size={13} /> Reset
           </button>
         }>
-          <div className="space-y-7">
+          <div className="space-y-6">
             <div className="flex flex-wrap gap-4">
               <Segmented id="sim-crop" label="Crop" value={crop} onChange={setCrop} options={crops.map((c) => ({ value: c, label: c }))} />
               <Select label="District" value={district ?? ""} onChange={setDistrict} options={districts.map((d) => ({ value: d, label: d }))} />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted">Quick scenarios</p>
-              <div className="mt-2 flex flex-wrap gap-2">
+              <p className="micro">Quick scenarios</p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
                 {PRESETS.map((x) => (
                   <button key={x.label} onClick={() => { setRain(x.rain); setTemp(x.temp); }}
                     aria-pressed={activePreset === x.label}
-                    className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-all ${
-                      activePreset === x.label ? "border-transparent text-white shadow-md" : "border-line bg-surface text-ink-2 hover:border-ink-2/40 hover:text-ink"
-                    }`}
-                    style={activePreset === x.label ? { background: "linear-gradient(100deg, var(--brand), var(--accent))" } : undefined}>
+                    className={`h-7 rounded border px-2.5 font-mono text-[11px] font-medium transition-colors ${
+                      activePreset === x.label ? "border-brand-solid bg-brand-solid text-white" : "border-line bg-surface text-ink-2 hover:border-line-strong hover:bg-surface-2 hover:text-ink"
+                    }`}>
                     {x.label}
                   </button>
                 ))}
@@ -127,13 +127,13 @@ export default function SimulatorView() {
             </div>
             <Slider id="rain" label="Rainfall change" icon={CloudRain} value={rain} min={rMin} max={rMax}
               step={s.rain_change_pct[1] - s.rain_change_pct[0]} onChange={setRain} format={(v) => `${signed(v, 0)}%`}
-              track={rainTrack} thumb={rain < 0 ? p.red : rain > 0 ? p.blue : p.muted} />
+              track={rainTrack} thumb={rain < 0 ? p.red : rain > 0 ? p.rain : p.muted} />
             <Slider id="temp" label="Temperature change" icon={Thermometer} value={temp} min={s.temp_change_c[0]} max={tMax}
               step={s.temp_change_c[1] - s.temp_change_c[0]} onChange={setTemp} format={(v) => `+${v.toFixed(1)} °C`}
               track={tempTrack} thumb={temp > 0 ? p.red : p.muted} />
-            <div className="rounded-2xl border border-line bg-surface-2/50 p-4">
-              <p className="text-xs font-semibold uppercase tracking-wide text-muted">How a scenario is computed</p>
-              <ol className="mt-3 space-y-2 text-sm text-ink-2">
+            <div className="rounded-md border border-line bg-surface-2/60 p-3.5">
+              <p className="micro">How a scenario is computed</p>
+              <ol className="mt-3 space-y-2 text-[13px] leading-5 text-ink-2">
                 {[
                   "Every day's rainfall in the last ten seasons is scaled by the rainfall change.",
                   "Daily maximum and minimum temperatures are shifted by the temperature change.",
@@ -141,8 +141,7 @@ export default function SimulatorView() {
                   `The ${s.model} model predicts each season's yield against the district trend.`,
                 ].map((t, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] font-bold text-white"
-                      style={{ background: "linear-gradient(135deg, var(--brand), var(--accent))" }}>{i + 1}</span>
+                    <span className="shrink-0 pt-px font-mono text-[11px] font-semibold text-brand-ink">{String(i + 1).padStart(2, "0")}</span>
                     {t}
                   </li>
                 ))}
@@ -152,24 +151,26 @@ export default function SimulatorView() {
         </Card>
 
         <div className="grid min-w-0 gap-4">
-          <section className="card relative overflow-hidden p-6" aria-live="polite">
-            <div aria-hidden="true" className="absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-60 blur-3xl"
-              style={{ background: pct != null && pct < 0 ? "color-mix(in srgb, var(--warn-bg) 80%, transparent)" : "var(--glow-2)" }} />
-            <p className="relative text-xs font-semibold uppercase tracking-wide text-muted">Predicted {crop} yield · {district}</p>
-            <div className="relative mt-2 flex flex-wrap items-end gap-x-6 gap-y-2">
-              <p className="font-display text-6xl font-extrabold tabular-nums tracking-tight">
+          <section className="card relative overflow-hidden p-4 sm:p-5" aria-live="polite">
+            <span aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 transition-colors" style={{ background: deltaColor }} />
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="micro">Projected yield outcome</p>
+              <span className="tag">{crop} · {district}</span>
+            </div>
+            <div className="relative mt-3 flex flex-wrap items-end gap-x-5 gap-y-2">
+              <p className="num text-5xl font-semibold leading-[52px] sm:text-6xl sm:leading-[64px]">
                 {tPred == null ? "–" : tPred.toFixed(2)}
-                <span className="ml-2 text-xl font-bold text-ink-2">t/ha</span>
+                <span className="ml-2 font-sans text-base font-medium text-muted">t/ha</span>
               </p>
-              <p className="font-display mb-2 rounded-full px-3 py-1 text-lg font-extrabold tabular-nums text-white transition-colors" style={{ background: deltaColor }}>
+              <p className="num mb-2 rounded px-2 py-1 text-base font-semibold text-white transition-colors" style={{ background: deltaColor }}>
                 {tPct == null ? "–" : `${signed(tPct)}%`}
               </p>
             </div>
             <div className="relative mt-5">
-              <div className="relative h-3 overflow-hidden rounded-full bg-surface-2">
+              <div className="relative h-2 overflow-hidden rounded-sm bg-surface-2">
                 <span className="absolute inset-y-0 left-1/2 w-px bg-ink-2/40" aria-hidden="true" />
                 {tPct != null && (
-                  <span className="absolute inset-y-0 rounded-full"
+                  <span className="absolute inset-y-0 rounded-sm"
                     style={{
                       background: deltaColor,
                       left: tPct < 0 ? `${50 - (50 * Math.min(Math.abs(tPct), maxAbs)) / maxAbs}%` : "50%",
@@ -177,19 +178,20 @@ export default function SimulatorView() {
                     }} />
                 )}
               </div>
-              <div className="mt-1.5 flex justify-between text-[11px] text-muted">
+              <div className="mt-1.5 flex justify-between font-mono text-[11px] text-muted">
                 <span>−{fmt(maxAbs, 1)}%</span><span>no change</span><span>+{fmt(maxAbs, 1)}%</span>
               </div>
             </div>
-            <dl className="relative mt-5 grid grid-cols-2 gap-4 border-t border-line pt-4 text-sm">
-              <div><dt className="text-muted">Unchanged climate</dt><dd className="font-semibold tabular-nums">{fmt(base)} t/ha</dd></div>
-              <div><dt className="text-muted">State average change</dt><dd className="font-semibold tabular-nums">{tState == null ? "–" : `${signed(tState)}%`}</dd></div>
+            <dl className="relative mt-4 grid grid-cols-2 gap-px overflow-hidden rounded-md border border-line bg-line text-sm">
+              <div className="bg-surface-2/60 p-3"><dt className="micro">Unchanged climate</dt><dd className="num mt-1 text-lg font-semibold">{fmt(base)} <span className="font-sans text-xs font-medium text-muted">t/ha</span></dd></div>
+              <div className="bg-surface-2/60 p-3"><dt className="micro">State average change</dt><dd className="num mt-1 text-lg font-semibold">{tState == null ? "–" : `${signed(tState)}%`}</dd></div>
             </dl>
           </section>
 
           <Card title={`Predicted ${crop} yield change by district`} subtitle="Click a district to select it">
             {geo.data ? (
               <>
+                <div className="map-canvas p-2 sm:p-4">
                 <StateMap
                   geo={geo.data}
                   ariaLabel={`Predicted ${crop} yield change by district`}
@@ -198,17 +200,18 @@ export default function SimulatorView() {
                   onSelect={setDistrict}
                   tooltip={(d) => {
                     const v = pctOf(d.district);
-                    return (<><strong className="text-sm">{d.district}</strong><br />{v == null ? `No ${crop} data` : `${signed(v)}% predicted ${crop.toLowerCase()} yield`}</>);
+                    return (<><strong className="text-[13px]">{d.district}</strong><br /><span className="font-mono">{v == null ? `No ${crop} data` : `${signed(v)}% predicted ${crop.toLowerCase()} yield`}</span></>);
                   }}
                 />
+                </div>
                 <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs" aria-label="Legend">
-                  <span className="tabular-nums text-ink-2">−{fmt(maxAbs, 1)}%</span>
-                  <span className="inline-block h-2.5 w-44 rounded-full" aria-hidden="true"
+                  <span className="num text-ink-2">−{fmt(maxAbs, 1)}%</span>
+                  <span className="inline-block h-2 w-44 rounded-sm" aria-hidden="true"
                     style={{ background: `linear-gradient(90deg, ${p.diverging[0]}, ${p.neutral}, ${p.diverging[5]})` }} />
-                  <span className="tabular-nums text-ink-2">+{fmt(maxAbs, 1)}%</span>
-                  <span className="text-muted">scale fitted to the largest change for {crop.toLowerCase()}</span>
+                  <span className="num text-ink-2">+{fmt(maxAbs, 1)}%</span>
+                  <span className="font-mono text-[11px] text-muted">scale fitted to the largest change for {crop.toLowerCase()}</span>
                   <span className="inline-flex items-center gap-1.5">
-                    <span className="inline-block h-3 w-5 rounded border border-dashed" style={{ borderColor: p.muted }} aria-hidden="true" />
+                    <span className="inline-block h-2.5 w-5 rounded-sm border border-dashed" style={{ borderColor: p.muted }} aria-hidden="true" />
                     No data
                   </span>
                 </div>
@@ -218,34 +221,34 @@ export default function SimulatorView() {
         </div>
       </div>
 
-      <Reveal className="mt-6">
+      <Reveal className="mt-4">
         <Card title="Hardest hit → least affected" subtitle={`${crop} · rainfall ${signed(rain, 0)}% · temperature +${temp.toFixed(1)} °C`}>
           {rain === 0 && temp === 0 && (
-            <p className="mb-3 rounded-xl bg-surface-2/70 px-3 py-2 text-sm text-ink-2">
-              This is today&apos;s climate, so every change is zero. Pick a quick scenario or move a slider — districts re-rank as you go.
+            <p className="mb-3 rounded-md border border-line bg-surface-2/70 px-3 py-2 text-[13px] text-ink-2">
+              This is today&apos;s climate, so every change is zero. Pick a quick scenario or move a slider; districts re-rank as you go.
             </p>
           )}
-          <ul className="space-y-1.5">
+          <ul className="space-y-0.5">
             {ranked.map((r) => (
               <motion.li key={r.d} layout transition={{ type: "spring", stiffness: 380, damping: 34 }}>
                 <button onClick={() => setDistrict(r.d)}
-                  className={`grid w-full grid-cols-[9rem_1fr_4.5rem] items-center gap-3 rounded-xl px-3 py-2 text-left text-sm transition-colors hover:bg-surface-2/70 ${r.d === district ? "bg-brand-soft/50" : ""}`}>
+                  className={`grid w-full grid-cols-[7.5rem_1fr_4.25rem] items-center gap-3 rounded px-2.5 py-2 text-left text-[13px] transition-colors hover:bg-surface-2/70 sm:grid-cols-[9rem_1fr_4.5rem] ${r.d === district ? "bg-brand-soft shadow-[inset_2px_0_0_var(--brand)]" : ""}`}>
                   <span className="truncate font-semibold">{r.d}</span>
-                  <span className="relative h-2.5 rounded-full bg-surface-2">
+                  <span className="relative h-1.5 rounded-sm bg-surface-2">
                     <span className="absolute inset-y-0 left-1/2 w-px bg-ink-2/30" aria-hidden="true" />
-                    <span className="absolute inset-y-0 rounded-full transition-all duration-500"
+                    <span className="absolute inset-y-0 rounded-sm transition-all duration-500"
                       style={{
                         background: divergingColor(p, r.v, maxAbs),
                         left: r.v < 0 ? `${50 - (50 * Math.min(Math.abs(r.v), maxAbs)) / maxAbs}%` : "50%",
                         width: `${Math.max(1, (50 * Math.min(Math.abs(r.v), maxAbs)) / maxAbs)}%`,
                       }} />
                   </span>
-                  <span className="text-right font-semibold tabular-nums">{signed(r.v)}%</span>
+                  <span className="num text-right font-semibold">{signed(r.v)}%</span>
                 </button>
               </motion.li>
             ))}
           </ul>
-          <p className="mt-4 text-xs text-muted">
+          <p className="mt-4 font-mono text-[11px] leading-4 text-muted">
             {s.model === "RandomForest" || s.model === "XGBoost"
               ? "Tree-based models cannot extrapolate beyond the climate they were trained on, so extreme scenarios are likely to understate impacts."
               : "The linear model extends straight-line effects beyond the observed climate, so read extreme scenarios with caution."}{" "}

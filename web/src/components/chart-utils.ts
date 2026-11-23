@@ -6,7 +6,7 @@ export type RainClass = "Drought" | "Normal" | "Excess";
 export const RAIN_CLASSES: RainClass[] = ["Drought", "Normal", "Excess"];
 
 export function rainClassColor(p: Palette, c: RainClass): string {
-  return c === "Drought" ? p.red : c === "Excess" ? p.blue : p.muted;
+  return c === "Drought" ? p.red : c === "Excess" ? p.rain : p.muted;
 }
 
 function hexToRgb(h: string): [number, number, number] {

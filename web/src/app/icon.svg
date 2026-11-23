@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>
-    .leaf { fill: #2F9E44; }
-    @media (prefers-color-scheme: dark) { .leaf { fill: #51CF66; } }
-  </style>
-  <path class="leaf" d="M8 56C8 28 26 8 56 8C56 38 36 56 10 56Z"/>
-  <polyline points="13,50 23,38 30,43 40,26 48,18" fill="none" stroke="#FFFFFF" stroke-width="5.5"
-            stroke-linecap="round" stroke-linejoin="round"/>
-</svg>

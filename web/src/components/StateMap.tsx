@@ -136,7 +136,7 @@ export default function StateMap({ geo, fill, tooltip, onSelect, selected, label
                 textAnchor="middle"
                 dominantBaseline="middle"
                 className="pointer-events-none select-none"
-                style={{ fontSize: 22, fontWeight: 700, fill: "var(--ink)", stroke: "var(--surface)", strokeWidth: 5, paintOrder: "stroke" }}
+                style={{ fontSize: 20, fontWeight: 600, fill: "var(--ink)", stroke: "var(--surface)", strokeWidth: 5, paintOrder: "stroke", letterSpacing: "-0.01em" }}
               >
                 {t}
               </text>
@@ -146,7 +146,7 @@ export default function StateMap({ geo, fill, tooltip, onSelect, selected, label
       {hover && tooltip && (
         <div
           role="tooltip"
-          className="pointer-events-none absolute z-10 w-max max-w-60 -translate-x-1/2 -translate-y-[calc(100%+14px)] rounded-xl border border-line bg-surface px-3 py-2 text-xs leading-relaxed shadow-[var(--shadow-lift)]"
+          className="pointer-events-none absolute z-10 w-max max-w-64 -translate-x-1/2 -translate-y-[calc(100%+12px)] rounded-md border border-line-strong bg-surface px-2.5 py-2 text-xs leading-relaxed shadow-[var(--shadow-lift)]"
           style={{ left: hover.x, top: hover.y }}
         >
           {tooltip(hover.d)}
