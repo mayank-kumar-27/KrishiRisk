@@ -78,7 +78,7 @@ export default function ModelView() {
                     </span>
                   )}
                 </div>
-                <p className="mt-1 text-xs leading-[18px] text-muted">{MODEL_NOTE[name]}</p>
+                <p className="mt-1 min-h-[36px] text-xs leading-[18px] text-muted">{MODEL_NOTE[name]}</p>
                 <p className="micro mt-4">Test error (RMSE)</p>
                 <p className="num mt-1 text-[28px] font-semibold leading-8">
                   <CountUp value={t.rmse_t_ha} decimals={3} /> <span className="text-sm font-medium text-muted">t/ha</span>
@@ -142,12 +142,12 @@ export default function ModelView() {
       </Reveal>
 
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
-        <Reveal>
+        <Reveal className="h-full">
           <Card title="What moves yield" subtitle="Mean |SHAP|, average effect per season" icon={Sparkles}>
             {bars.length ? (
               <>
-                <WhenVisible height={420}>
-                  <HorizontalBars data={bars} unit="% of trend yield" />
+                <WhenVisible height={400}>
+                  <HorizontalBars data={bars} unit="% of trend yield" height={400} />
                 </WhenVisible>
                 <Insight>
                   {bars[0].label} has the largest average effect ({fmt(bars[0].value)}% of trend yield per season), followed
@@ -157,12 +157,12 @@ export default function ModelView() {
             ) : <NoData error={shap.error} />}
           </Card>
         </Reveal>
-        <Reveal delay={80}>
+        <Reveal delay={80} className="h-full">
           <Card title="Actual vs predicted" subtitle={`Test years ${d.test_years[0]}–${d.test_years[1]}`} icon={ChartScatter}>
             {pts.length ? (
               <>
-                <WhenVisible height={320}>
-                  <ActualPredicted points={pts} />
+                <WhenVisible height={400}>
+                  <ActualPredicted points={pts} height={400} />
                 </WhenVisible>
                 <Insight>
                   Actual and predicted yields correlate at r = {fmt(pearson(pts.map((q) => [q.x, q.y])))} over {pts.length} district-years,

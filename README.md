@@ -29,51 +29,75 @@ models and climate-risk assessments** for **Uttarakhand** (13 districts; maize, 
 | Overview                                     | Risk Map                                   |
 | -------------------------------------------- | ------------------------------------------ |
 | ![Overview](docs/screenshots/overview.png)   | ![Risk Map](docs/screenshots/risk-map.png) |
-| **What-If Simulator**                  | **Model**                            |
+| **What-If Simulator**                        | **Model**                                  |
 | ![Simulator](docs/screenshots/simulator.png) | ![Model](docs/screenshots/model.png)       |
 
 Report figures (300 dpi) are in [`report/figures/`](report/figures/), with computed interpretations in
 [`report/figures/insights.md`](report/figures/insights.md).
 
+## Website
+
+| Page                  | What it shows                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Overview**          | Headline numbers, the state risk map and six key findings                                              |
+| **Risk Map**          | Interactive district map by crop, hotspot ranking, district profiles with yield, rainfall and actions  |
+| **Explore**           | Yield trends, rainfall vs yield, yield anomaly by rainfall category, climate correlation heatmap       |
+| **What-If Simulator** | Rainfall and temperature sliders with quick scenarios, predicted yield change by district              |
+| **Model**             | Model comparison against the trend baseline, SHAP feature importance, actual vs predicted              |
+| **About**             | Data sources, method and limitations                                                                   |
+| **Report**            | Printable climate risk report (save as PDF) and CSV download of the district risk table                |
+
+The site has light and dark themes and works on phones.
+
 ## Architecture
 
 ```mermaid
 flowchart LR
-  subgraph Sources["Open data sources"]
-    A1["data.gov.in<br/>crop statistics"]
-    A2["NASA POWER<br/>daily climate"]
-    A3["ISRIC SoilGrids<br/>soil properties"]
-    A4["DataMeet<br/>district boundaries"]
+  subgraph SRC["1. Open data"]
+    A1["Crop statistics<br/>data.gov.in, 2000 to 2014"]
+    A2["Daily weather<br/>NASA POWER, 1997 to 2025"]
+    A3["Soil properties<br/>ISRIC SoilGrids v2.0"]
+    A4["District boundaries<br/>DataMeet, Census 2011"]
   end
-  subgraph Pipeline["analysis/: Python pipeline (run_all.py)"]
-    P1["01_fetch_data<br/>download, cache, name matching"]
-    P2["02_features<br/>season climate, SPI-3, dry spells,<br/>onset, heat days, GDD, soil score"]
-    P3["03_eda<br/>figures + insights"]
-    P4["04_model<br/>time-split LR / RF / XGBoost + SHAP"]
-    P5["05_risk<br/>risk index, clusters, scenarios"]
-    P6["06_export_web<br/>compact JSON"]
+  subgraph PIPE["2. Python pipeline (analysis/run_all.py)"]
+    P1["01 Fetch<br/>download, cache, match district names"]
+    P2["02 Features<br/>seasonal rain, SPI-3, dry spells,<br/>monsoon onset, heat days, soil score"]
+    P3["03 Explore<br/>report figures and insights"]
+    P4["04 Model<br/>Linear, Random Forest, XGBoost<br/>vs trend baseline, explained with SHAP"]
+    P5["05 Risk<br/>risk index, risk profiles,<br/>rainfall x heat scenarios"]
+    P6["06 Export<br/>small JSON files for the site"]
   end
-  subgraph Outputs
-    O1["report/figures<br/>PNG + insights.md"]
-    O2["web/public/data<br/>*.json (0.16 MB)"]
+  subgraph OUT["3. Outputs"]
+    O1["report/figures<br/>12 PNG charts + insights.md"]
+    O2["web/public/data<br/>8 JSON files, about 0.16 MB"]
   end
-  W["web/: Next.js static site<br/>Recharts · Leaflet · SVG maps"]
-  V(("Vercel"))
-  A1 & A2 & A3 & A4 --> P1 --> P2 --> P3 & P4
+  subgraph WEB["4. Website (Next.js static export)"]
+    W1["Overview, Risk Map, Explore"]
+    W2["What-If Simulator, Model, About"]
+    W3["Printable report (PDF)<br/>and CSV download"]
+  end
+  V(("Hosted on Vercel"))
+  A1 & A2 & A3 & A4 --> P1 --> P2
+  P2 --> P3 & P4
   P4 --> P5 --> P6
   P3 --> O1
-  P6 --> O2 --> W --> V
+  P6 --> O2
+  O2 --> W1 & W2 & W3
+  W1 & W2 & W3 --> V
 ```
 
 ```
-analysis/         Python pipeline: 01_fetch_data.py … 06_export_web.py, run_all.py
-  config.py       scope (state, crops, years) and source settings
-  climate.py      season climate features shared by 02 (history) and 05 (scenarios)
-data/raw/         downloads and caches (not committed)
-data/processed/   cleaned tables, model metrics, risk index, scenarios
-report/figures/   report figures (PNG) and insights.md
-web/              Next.js (App Router, TypeScript, Tailwind), reads only web/public/data/*.json
-docs/screenshots/ README screenshots
+analysis/            Python pipeline: 01_fetch_data.py ... 06_export_web.py, run_all.py
+  config.py          scope (state, crops, years) and source settings
+  climate.py         season climate features shared by 02 (history) and 05 (scenarios)
+data/raw/            downloads and caches (not committed)
+data/processed/      cleaned tables, model metrics, risk index, scenarios
+report/figures/      report figures (PNG) and insights.md
+web/                 Next.js (App Router, TypeScript, Tailwind), reads only web/public/data/*.json
+  src/app/           pages: overview, risk-map, explore, simulator, model, about, report
+  src/components/    shared UI, charts (Recharts), maps (Leaflet and SVG)
+assets/brand/        logo and favicon sources
+docs/screenshots/    README screenshots
 ```
 
 ## Datasets

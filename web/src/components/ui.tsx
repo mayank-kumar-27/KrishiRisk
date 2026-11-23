@@ -60,7 +60,7 @@ export function Card({ title, subtitle, icon: I, children, className = "", actio
   hover?: boolean;
 }) {
   return (
-    <section className={`card min-w-0 p-4 sm:p-5 ${hover ? "card-hover" : ""} ${className}`}>
+    <section className={`card flex h-full min-w-0 flex-col p-4 sm:p-5 ${hover ? "card-hover" : ""} ${className}`}>
       {(title || action) && (
         <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
           <div className="flex min-w-0 items-start gap-2.5">
@@ -77,19 +77,21 @@ export function Card({ title, subtitle, icon: I, children, className = "", actio
           {action}
         </div>
       )}
-      {children}
+      <div className="flex min-w-0 flex-1 flex-col">{children}</div>
     </section>
   );
 }
 
 export function Insight({ children }: { children: ReactNode }) {
   return (
-    <div className="mt-4 flex gap-2.5 rounded-r border-l-2 border-brand bg-brand-soft px-3 py-2.5 text-[13px] leading-5 text-ink-2">
+    <div className="mt-auto pt-4">
+    <div className="flex gap-2.5 rounded-r border-l-2 border-brand bg-brand-soft px-3 py-2.5 text-[13px] leading-5 text-ink-2">
       <Lightbulb size={15} className="mt-0.5 shrink-0 text-brand-ink" aria-hidden="true" />
       <p>
         <span className="mr-1 font-mono text-[11px] font-semibold uppercase tracking-wide text-brand-ink">Insight</span>
         {children}
       </p>
+    </div>
     </div>
   );
 }

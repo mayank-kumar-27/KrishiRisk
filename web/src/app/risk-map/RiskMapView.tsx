@@ -133,10 +133,10 @@ export default function RiskMapView() {
                     <h2 className="text-lg font-semibold tracking-[-0.015em]">Vulnerability hotspots</h2>
                     <p className="font-mono text-[11px] text-muted">Ranked by risk score · {cropLabel}</p>
                   </div>
-                  <span className="tag">Top {Math.min(5, stats.n)} of {stats.n}</span>
+                  <span className="tag">Top {Math.min(7, stats.n)} of {stats.n}</span>
                 </div>
                 <ol className="mt-4 space-y-2">
-                  {table.filter((r) => r.index != null).slice(0, 5).map((r, i) => (
+                  {table.filter((r) => r.index != null).slice(0, 7).map((r, i) => (
                     <li key={r.d.district}>
                       <button onClick={() => setSelected(r.d.district)}
                         className="group grid w-full grid-cols-[1.75rem_1fr_auto] items-center gap-3 rounded-md border border-line bg-surface-2/60 p-2.5 text-left transition-colors hover:border-brand/50 hover:bg-surface">

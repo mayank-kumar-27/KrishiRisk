@@ -101,12 +101,12 @@ export default function ExploreView() {
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <Reveal>
+        <Reveal className="h-full">
           <Card title="Yield trend" subtitle={`${crop} · ${where}`} icon={TrendingUp}>
             {trendSeries ? (
               <>
-                <WhenVisible height={260}>
-                  <YieldTrendChart years={trendSeries.year} values={trendSeries.yield}
+                <WhenVisible height={300}>
+                  <YieldTrendChart height={300} years={trendSeries.year} values={trendSeries.yield}
                     smooth={dSel === ALL ? rollingMean(trendSeries.yield) : undefined}
                     trend={dSel !== ALL ? (trendSeries as Series).trend : undefined} />
                 </WhenVisible>
@@ -121,7 +121,7 @@ export default function ExploreView() {
           </Card>
         </Reveal>
 
-        <Reveal delay={80}>
+        <Reveal delay={80} className="h-full">
           <Card title="Seasonal rainfall vs yield" subtitle={`${crop} · ${where}`} icon={ChartScatter}>
             {sc.length >= 3 ? (
               <>
@@ -137,10 +137,10 @@ export default function ExploreView() {
           </Card>
         </Reveal>
 
-        <Reveal>
+        <Reveal className="h-full">
           <Card title="Yield anomaly by rainfall category" subtitle={`${crop} · ${where}`} icon={ChartColumn}>
-            <WhenVisible height={280}>
-              <BoxPlot groups={groups} yLabel="Yield anomaly vs trend (%)" />
+            <WhenVisible height={360}>
+              <BoxPlot height={360} groups={groups} yLabel="Yield anomaly vs trend (%)" />
             </WhenVisible>
             <Insight>
               {Number.isFinite(medDef) && Number.isFinite(medNor)
@@ -150,7 +150,7 @@ export default function ExploreView() {
           </Card>
         </Reveal>
 
-        <Reveal delay={80}>
+        <Reveal delay={80} className="h-full">
           <Card title="Climate features vs yield anomaly" subtitle="State level · all districts" icon={Grid3x3}>
             {corr.data && featureKeys.length ? (
               <>

@@ -106,7 +106,7 @@ export default function SimulatorView() {
             <RotateCcw size={13} /> Reset
           </button>
         }>
-          <div className="space-y-6">
+          <div className="flex flex-1 flex-col justify-between gap-6">
             <div className="flex flex-wrap gap-4">
               <Segmented id="sim-crop" label="Crop" value={crop} onChange={setCrop} options={crops.map((c) => ({ value: c, label: c }))} />
               <Select label="District" value={district ?? ""} onChange={setDistrict} options={districts.map((d) => ({ value: d, label: d }))} />
@@ -193,6 +193,7 @@ export default function SimulatorView() {
               <>
                 <div className="map-canvas p-2 sm:p-4">
                 <StateMap
+                  className="mx-auto max-w-[380px]"
                   geo={geo.data}
                   ariaLabel={`Predicted ${crop} yield change by district`}
                   fill={(d) => { const v = pctOf(d.district); return v == null ? null : divergingColor(p, v, maxAbs); }}
