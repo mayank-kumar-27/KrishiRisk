@@ -28,24 +28,24 @@ models and climate-risk assessments** for **Uttarakhand** (13 districts; maize, 
 
 | Overview                                     | Risk Map                                   |
 | -------------------------------------------- | ------------------------------------------ |
-| ![Overview](docs/screenshots/overview.png)   | ![Risk Map](docs/screenshots/risk-map.png) |
-| **What-If Simulator**                        | **Model**                                  |
-| ![Simulator](docs/screenshots/simulator.png) | ![Model](docs/screenshots/model.png)       |
+| ![Overview](docs/screenshots/overview-2026.png)   | ![Risk Map](docs/screenshots/risk-map-2026.png) |
+| **What-If Simulator**                  | **Model**                            |
+| ![Simulator](docs/screenshots/simulator-2026.png) | ![Model](docs/screenshots/model-2026.png)       |
 
 Report figures (300 dpi) are in [`report/figures/`](report/figures/), with computed interpretations in
 [`report/figures/insights.md`](report/figures/insights.md).
 
 ## Website
 
-| Page                  | What it shows                                                                                          |
-| --------------------- | ------------------------------------------------------------------------------------------------------ |
-| **Overview**          | Headline numbers, the state risk map and six key findings                                              |
-| **Risk Map**          | Interactive district map by crop, hotspot ranking, district profiles with yield, rainfall and actions  |
-| **Explore**           | Yield trends, rainfall vs yield, yield anomaly by rainfall category, climate correlation heatmap       |
-| **What-If Simulator** | Rainfall and temperature sliders with quick scenarios, predicted yield change by district              |
-| **Model**             | Model comparison against the trend baseline, SHAP feature importance, actual vs predicted              |
-| **About**             | Data sources, method and limitations                                                                   |
-| **Report**            | Printable climate risk report (save as PDF) and CSV download of the district risk table                |
+| Page                        | What it shows                                                                                         |
+| --------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Overview**          | Headline numbers, the state risk map and six key findings                                             |
+| **Risk Map**          | Interactive district map by crop, hotspot ranking, district profiles with yield, rainfall and actions |
+| **Explore**           | Yield trends, rainfall vs yield, yield anomaly by rainfall category, climate correlation heatmap      |
+| **What-If Simulator** | Rainfall and temperature sliders with quick scenarios, predicted yield change by district             |
+| **Model**             | Model comparison against the trend baseline, SHAP feature importance, actual vs predicted             |
+| **About**             | Data sources, method and limitations                                                                  |
+| **Report**            | Printable climate risk report (save as PDF) and CSV download of the district risk table               |
 
 The site has light and dark themes and works on phones.
 
