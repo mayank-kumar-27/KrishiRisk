@@ -26,11 +26,11 @@ models and climate-risk assessments** for **Uttarakhand** (13 districts; maize, 
 
 ## Screenshots
 
-| Overview                                     | Risk Map                                   |
-| -------------------------------------------- | ------------------------------------------ |
-| ![Overview](docs/screenshots/overview-2026.png)   | ![Risk Map](docs/screenshots/risk-map-2026.png) |
-| **What-If Simulator**                  | **Model**                            |
-| ![Simulator](docs/screenshots/simulator-2026.png) | ![Model](docs/screenshots/model-2026.png)       |
+| Overview | Risk Map |
+|:---:|:---:|
+| ![Overview](docs/screenshots/overview-2026.png) | ![Risk Map](docs/screenshots/risk-map-2026.png) |
+| **What-If Simulator** | **Model** |
+| ![Simulator](docs/screenshots/simulator-2026.png) | ![Model](docs/screenshots/model-2026.png) |
 
 Report figures (300 dpi) are in [`report/figures/`](report/figures/), with computed interpretations in
 [`report/figures/insights.md`](report/figures/insights.md).
